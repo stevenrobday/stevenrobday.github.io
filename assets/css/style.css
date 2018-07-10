@@ -1,5 +1,6 @@
 * { 
-    padding: 0; margin: 0; 
+    padding: 0; 
+    margin: 0;
 }
 
 body{
@@ -7,16 +8,32 @@ body{
     width: 100%;
 }
 
+header{
+    background-color: #ffffff;
+    height:  80px;
+    border-bottom: 3px solid #cccccc;
+}
+
 #headerWrapper{
     left: 0; 
     right: 0;
     margin: auto;
     text-align: center;
+    width: 960px;
+    line-height: 80px;
+    background-color: #ffffff;
+    border-bottom: 3px solid #cccccc;
 }
 
 #name{
+    float: left;
+    padding: 0 30px;
     background-color: #4aaaa5;
     color: #ffffff;
+}
+
+nav{
+    float: right;
 }
 
 h1{
@@ -54,11 +71,14 @@ nav span a:hover{
 }
 
 #contentWrapper{
+    width: 960px;
     margin: 30px auto 60px auto;
     min-height: calc(100vh - 263px);
 }
 
 #content{
+    width: 556px;
+    left: 0; 
     background-color: #ffffff;
     padding: 30px;
     border: 2px solid #dddddd;
@@ -78,37 +98,47 @@ nav span a:hover{
 
 #fruityPebbles{
     background: url(../images/fruitypebbles.png);
-    background-size: 400px;
     background-repeat: no-repeat;
-    margin-right: 84px;
+}
+
+#fruityPebbles, #theRealStevester{
+    margin-right: 45px;
+}
+
+#fruityPebbles, #pacMental, #theRealStevester, #reagan{
+    margin-bottom: 30px;
 }
 
 #pacMental{
     background: url(../images/pacmental.png);
-    background-size: 400px;
     background-repeat: no-repeat;
 }
 
 #theRealStevester{
     background: url(../images/thestevester.jpg);
-    background-size: 400px;
     background-repeat: no-repeat;
-    margin-left: 247px;
 }
 
-#fruityPebbles, #pacMental, #theRealStevester{
-    width: 400px;
-    height: 430px;
+#reagan{
+    background: url(../images/reagan.jpg);
+    background-repeat: no-repeat;
+}
+
+#breakingBad{
+    background: url(../images/bbAssessment.jpg);
+    background-repeat: no-repeat;
+}
+
+#fruityPebbles, #pacMental, #theRealStevester, #reagan, #breakingBad{
+    background-size: 250px;
+    width: 250px;
+    height: 280px;
     background-color: #000000;
 }
 
-#fruityPebbles, #pacMental{
-    margin-bottom: 84px;
-}
-
 .portBox{ 
-    position: relative;
     float: left;
+    position: relative;
     border: 3px solid #cccccc;
     border-radius: 50px; 
     opacity: .5;
@@ -144,7 +174,7 @@ footer{
 
 .inputField {
     padding: 10px;
-    width: 876px;
+    width: 536px;
     margin: 5px 0 20px 0;
 }
 
@@ -155,46 +185,7 @@ footer{
     padding: 10px 30px;
 }
 
-@media only screen and (min-width: 980px) {
-    header{
-        background-color: #ffffff;
-        height:  80px;
-        border-bottom: 3px solid #cccccc;
-    }
-
-    #headerWrapper{
-        width: 960px;
-        line-height: 80px;
-        background-color: #ffffff;
-        border-bottom: 3px solid #cccccc;
-    }
-
-    #name{
-        float: left;
-        padding: 0 30px;
-    }
-
-    nav{
-        float: right;
-    }
-
-    #contentWrapper{
-        width: 960px;
-    }
-
-    #content{
-        width: 556px;
-        left: 0; 
-    }
-}
-
-@media only screen and (min-width: 769px) and (max-width: 979px) {
-    header{
-        background-color: #ffffff;
-        height:  80px;
-        border-bottom: 3px solid #cccccc;
-    }
-
+@media only screen and (max-width: 980px) {
     #headerWrapper{
         width: 750px;
         line-height: 80px;
@@ -202,32 +193,12 @@ footer{
         border-bottom: 3px solid #cccccc;
     }
 
-    #name{
-        float: left;
-        padding: 0 30px;
-    }
-
-    nav{
-        float: right;
-    }
-
     #contentWrapper{
         width: 750px;
     }
-
-    #content{
-        width: 556px;
-        left: 0; 
-    }
 }
 
-@media only screen and (min-width: 641px) and (max-width: 768px) {
-    header{
-        background-color: #ffffff;
-        height:  80px;
-        border-bottom: 3px solid #cccccc;
-    }
-
+@media only screen and (max-width: 768px) {
     #headerWrapper{
         width: 620px;
         line-height: 80px;
@@ -235,32 +206,41 @@ footer{
         border-bottom: 3px solid #cccccc;
     }
 
-    #name{
-        float: left;
-        padding: 0 30px;
-    }
-
-    nav{
-        float: right;
+    #contentWrapper{
+        width: 620px;
     }
 
     #content{
-        width: 556px;
-        left: 0; 
         right: 0;
         margin: auto;
     }
 }
 
 @media only screen and (max-width: 640px) {
+    header{
+        height: 140px;
+    }
+
+    #headerWrapper{
+        width: 100%;
+        border: none;
+    }
+
     #name{
         line-height: 80px;
+        padding: 0;
+        float: none;
     }
 
     nav{
-       line-height: 60px;
-       background-color: #ffffff; 
-       border-bottom: 3px solid #cccccc;
+        float: none;
+        line-height: 60px;
+        background-color: #ffffff; 
+        border-bottom: 3px solid #cccccc;
+    }
+
+    #contentWrapper{
+        width: 100%;
     }
 
     #content{
@@ -268,5 +248,31 @@ footer{
         left: 0; 
         right: 0;
         margin: auto;
+    }
+
+    #theStevester{
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #fruityPebbles, #pacMental, #theRealStevester, #reagan, #breakingBad{
+        background-size: 400px;
+        width: 400px;
+        height: 430px;
+        background-color: #000000;
+    }
+
+    #fruityPebbles, #reagan{
+        margin-right: 0;
+    }
+
+    #theRealStevester{
+        margin-bottom: 30px;
+    }
+
+    .inputField {
+        width: 380px;
     }
 }
