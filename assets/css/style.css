@@ -7,39 +7,43 @@ body{
     width: 100%;
 }
 
-header{
-    background-color: #ffffff;
-    height:  80px;
-    border-bottom: 3px solid #cccccc;
-}
-
 #headerWrapper{
     left: 0; 
     right: 0;
     margin: auto;
-    width: 960px;
-    line-height: 80px;
     text-align: center;
 }
 
 #name{
     background-color: #4aaaa5;
     color: #ffffff;
-    width: 22%;
-    float: left;
 }
 
 h1{
     font-family: 'Georgia', Times, Times New Roman, serif;
 }
 
-nav{
-    float: right;
+nav span a, #contentMain, footer{
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
-nav, #bio{
-    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+nav span a, #contentMain{
     color: #777777;
+}
+
+nav span a{
+    text-decoration: none;
+}
+
+nav span a:hover{
+    cursor: pointer;
+    color: #000000;
+}
+
+#headerWrapper::after{
+    content: "";
+    display: block;
+    clear: both;
 }
 
 #middleNavSpan{
@@ -49,24 +53,220 @@ nav, #bio{
     border-right: 1px solid #cccccc;
 }
 
+#contentWrapper{
+    margin: 30px auto 60px auto;
+    min-height: calc(100vh - 263px);
+}
+
 #content{
-    left: 0; 
-    right: 0;
-    margin: 30px auto;
-    width: 896px;
     background-color: #ffffff;
     padding: 30px;
     border: 2px solid #dddddd;
 }
 
-#about{
+#contentHeader{
     color: #4aaaa5;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     margin-bottom: 20px;
     border-bottom: 3px solid #dddddd;
 }
 
-img{
+#theStevester{
     float: left;
     margin-right: 20px;
+}
+
+#fruityPebbles{
+    background: url(../images/fruitypebbles.png);
+    background-size: 400px;
+    background-repeat: no-repeat;
+    margin-right: 84px;
+}
+
+#pacMental{
+    background: url(../images/pacmental.png);
+    background-size: 400px;
+    background-repeat: no-repeat;
+}
+
+#theRealStevester{
+    background: url(../images/thestevester.jpg);
+    background-size: 400px;
+    background-repeat: no-repeat;
+    margin-left: 247px;
+}
+
+#fruityPebbles, #pacMental, #theRealStevester{
+    width: 400px;
+    height: 430px;
+    background-color: #000000;
+}
+
+#fruityPebbles, #pacMental{
+    margin-bottom: 84px;
+}
+
+.portBox{ 
+    position: relative;
+    float: left;
+    border: 3px solid #cccccc;
+    border-radius: 50px; 
+    opacity: .5;
+}
+
+.portBox:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.portFooter{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: 30px;   
+    color: #ffffff;
+    text-align: center;
+}
+
+#contentMain::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+footer{
+    line-height: 80px;
+    background-color: #666666;
+    border-top: 10px solid #4aaaa5;
+    color: #ffffff;
+    text-align: center;
+}
+
+.inputField {
+    padding: 10px;
+    width: 876px;
+    margin: 5px 0 20px 0;
+}
+
+#submit{
+    background-color: #4aaaa5;
+    color: #ffffff;
+    border: none;
+    padding: 10px 30px;
+}
+
+@media only screen and (min-width: 980px) {
+    header{
+        background-color: #ffffff;
+        height:  80px;
+        border-bottom: 3px solid #cccccc;
+    }
+
+    #headerWrapper{
+        width: 960px;
+        line-height: 80px;
+        background-color: #ffffff;
+        border-bottom: 3px solid #cccccc;
+    }
+
+    #name{
+        float: left;
+        padding: 0 30px;
+    }
+
+    nav{
+        float: right;
+    }
+
+    #contentWrapper{
+        width: 960px;
+    }
+
+    #content{
+        width: 556px;
+        left: 0; 
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 979px) {
+    header{
+        background-color: #ffffff;
+        height:  80px;
+        border-bottom: 3px solid #cccccc;
+    }
+
+    #headerWrapper{
+        width: 750px;
+        line-height: 80px;
+        background-color: #ffffff;
+        border-bottom: 3px solid #cccccc;
+    }
+
+    #name{
+        float: left;
+        padding: 0 30px;
+    }
+
+    nav{
+        float: right;
+    }
+
+    #contentWrapper{
+        width: 750px;
+    }
+
+    #content{
+        width: 556px;
+        left: 0; 
+    }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 768px) {
+    header{
+        background-color: #ffffff;
+        height:  80px;
+        border-bottom: 3px solid #cccccc;
+    }
+
+    #headerWrapper{
+        width: 620px;
+        line-height: 80px;
+        background-color: #ffffff;
+        border-bottom: 3px solid #cccccc;
+    }
+
+    #name{
+        float: left;
+        padding: 0 30px;
+    }
+
+    nav{
+        float: right;
+    }
+
+    #content{
+        width: 556px;
+        left: 0; 
+        right: 0;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    #name{
+        line-height: 80px;
+    }
+
+    nav{
+       line-height: 60px;
+       background-color: #ffffff; 
+       border-bottom: 3px solid #cccccc;
+    }
+
+    #content{
+        width: 400px;
+        left: 0; 
+        right: 0;
+        margin: auto;
+    }
 }
