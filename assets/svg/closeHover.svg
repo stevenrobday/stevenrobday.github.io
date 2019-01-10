@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100"
+   height="100"
+   version="1.1"
+   viewBox="0 0 26.458 26.458"
+   id="svg4805"
+   sodipodi:docname="closeHover.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <defs
+     id="defs4809" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2560"
+     inkscape:window-height="1346"
+     id="namedview4807"
+     showgrid="true"
+     inkscape:zoom="7.9408092"
+     inkscape:cx="24.402226"
+     inkscape:cy="43.596612"
+     inkscape:window-x="-11"
+     inkscape:window-y="328"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4805">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4811" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata4779">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     style="fill:none;stroke:#890037;stroke-width:2.6458;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+     d="m 1.3229,1.3229 23.8122,23.8122 v 0"
+     id="path4813"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;stroke:#890037;stroke-width:2.6458;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+     d="M 1.3229,25.1351 25.1351,1.3229 v 0"
+     id="path4815"
+     inkscape:connector-curvature="0" />
+</svg>

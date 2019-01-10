@@ -1,0 +1,42 @@
+:root {
+  --div-width: 250px;
+}
+
+/* 640px */
+@media screen and (min-width: 40rem) {
+  :root {
+    --div-width: 300px;
+  }
+}
+
+/* 1600px */
+@media screen and (min-width: 100rem) {
+  :root {
+    --div-width: 350px;
+  }
+}
+
+/* 2400px */
+@media screen and (min-width: 150rem) {
+  :root {
+    --div-width: 450px;
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: calc(var(--font-size-l) * 1.5);
+  font-size: var(--font-size-s);
+}
+
+main div {
+  width: var(--div-width);
+  margin: 0 var(--font-size-s) calc(var(--font-size-s) / 2) var(--font-size-s);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}

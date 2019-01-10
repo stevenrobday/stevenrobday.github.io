@@ -1,0 +1,250 @@
+/*variables*/
+
+:root {
+  --font-size-xs: 1rem;
+  --font-size-s: 1rem;
+  --font-size-m: 1.2rem;
+  --font-size-l: 1.4rem;
+
+  --body-background: #ebf3ff;
+
+  /* navbar colors */
+  --navbar-background: #0066ff;
+  --navbar-selected: #0056d8;
+  --color-highlight: #f7f7ff;
+  --color-fade: #c4dcff;
+
+  /* navbar dynamic vars */
+  --pages-position: absolute;
+  --pages-top: calc(var(--font-size-l) * -1.5);
+  --pages-justify: center;
+  --pages-transition: top;
+  --pages-z-index: 2;
+  --icons-position: absolute;
+  --icons-width: 100%;
+  --icons-top: calc(var(--font-size-l) * -1.5);
+  --icons-transition: top;
+  --icons-z-index: 1;
+  --hamburger-display: flex;
+}
+
+/* 24.5 x 16px = 392px */
+@media screen and (min-width: 24.5rem) {
+  :root {
+    --pages-position: relative;
+    --pages-top: 0;
+    --pages-justify: flex-start;
+    --pages-transition: none;
+    --pages-z-index: 3;
+    --icons-position: absolute; 
+  }
+}
+
+/* 512px */
+@media screen and (min-width: 32rem) {
+  :root {
+    --icons-width: auto;
+    --icons-position: relative;
+    --icons-top: 0;
+    --icons-transition: none;
+    --icons-z-index: 3;
+    --hamburger-display: none;
+  }
+}
+
+/* 640px */
+@media screen and (min-width: 40rem) {
+  :root {
+    --font-size-s: 1.2rem;
+    --font-size-m: 1.4rem;
+    --font-size-l: 1.8rem;
+  }
+}
+
+/* 1600px */
+@media screen and (min-width: 100rem) {
+  :root {
+    --font-size-xs: 1.1rem;
+    --font-size-s: 1.3rem;
+    --font-size-m: 1.5rem;
+    --font-size-l: 1.9rem;
+  }
+}
+
+/* 1920px */
+@media screen and (min-width: 120rem) {
+  :root {
+    --font-size-xs: 1.2rem;
+    --font-size-s: 1.4rem;
+    --font-size-m: 1.6rem;
+    --font-size-l: 2rem;
+  }
+}
+
+/* 2400px */
+@media screen and (min-width: 150rem) {
+  :root {
+    --font-size-xs: 1.5rem;
+    --font-size-s: 1.7rem;
+    --font-size-m: 2rem;
+    --font-size-l: 2.6rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+  background-color: var(--body-background);
+  width: 100%;
+  height: 100%;
+}
+
+/* NAVBAR */
+
+nav {
+  top: 0;
+  height: calc(var(--font-size-l) * 1.5);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+}
+
+#nameContainer {
+  height: 100%;
+  color: var(--color-highlight);
+  background-color: var(--navbar-background);
+  font-size: var(--font-size-l);
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 0 calc(var(--font-size-s) / 2);
+  flex: 0 0 auto;
+  z-index: 3;
+}
+
+ul {
+	list-style: none;
+}
+
+#pages{
+  height: 100%;
+  display: flex;
+  margin-right: auto;
+  justify-content: var(--pages-justify);
+  width: 100%;
+  background-color: var(--navbar-background);
+  position: var(--pages-position);
+  top: var(--pages-top);
+  transition: var(--pages-transition) .5s;
+  z-index: var(--pages-z-index);
+}
+
+#pages li a {
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-fade);
+  font-size: var(--font-size-m);
+}
+
+#pages span{
+  padding: 0 var(--font-size-m);
+}
+
+#currentPage {
+  background-color: var(--navbar-selected);
+}
+
+#pages li a:hover, #currentPage span {
+  color: var(--color-highlight);
+}
+
+#icons {
+  display: flex;
+  width: var(--icons-width);
+  height: 100%;
+  background-color: var(--navbar-background);
+  position: var(--icons-position);
+  top: var(--icons-top);
+  transition: var(--icons-transition) .5s;
+  z-index: var(--icons-z-index);
+}
+
+#icons li {
+  height: 70%;
+  margin: auto;
+}
+
+#hamburger {
+  display: var(--hamburger-display);
+  height: 100%;
+  background-color: var(--navbar-background);
+  z-index: 3;
+  width: 100%;
+}
+
+#hamburger > div {
+  height: 70%;
+  margin: auto 0 auto auto;
+}
+
+#github {
+  background: url(../svg/github.svg) no-repeat center;
+}
+
+#github:hover {
+  background: url(../svg/githubHover.svg) no-repeat center;
+}
+
+#linkedIn {
+  background: url(../svg/linkedIn.svg) no-repeat center;
+}
+
+#linkedIn:hover {
+  background: url(../svg/linkedInHover.svg) no-repeat center;
+}
+
+#resume {
+  background: url(../svg/resume.svg) no-repeat center;
+}
+
+#resume:hover {
+  background: url(../svg/resumeHover.svg) no-repeat center;
+}
+
+#email {
+  background: url(../svg/email.svg) no-repeat center;
+}
+
+#email:hover {
+  background: url(../svg/emailHover.svg) no-repeat center;
+}
+
+#hamburgerImg {
+  background: url(../svg/hamburger.svg) no-repeat center;
+}
+
+#hamburgerImg:hover {
+  background: url(../svg/hamburgerHover.svg) no-repeat center;
+}
+
+#icons li div, #icons li div:hover, 
+#hamburgerImg, #hamburgerImg:hover {
+  background-size: auto 100%;
+  height: 100%; 
+  width: calc(var(--font-size-l) * 1.8);
+  cursor: pointer;
+}

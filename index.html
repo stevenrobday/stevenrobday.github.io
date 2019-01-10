@@ -2,73 +2,481 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steven Day</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/portfolio.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/modal.js"></script>
 </head>
 
 <body>
-    <header>
-        <div id="headerWrapper">
-            <h1>
-                <div id="name">Steven Day</div>
-            </h1>
-            <nav>
-                <span>
-                    <a href="index.html">About</a>
-                </span>
-                <span id="middleNavSpan">
-                    <a href="portfolio.html">Portfolio</a>
-                </span>
-                <span>
-                    <a href="contact.html">Contact</a>
-                </span>
-            </nav>
+  <header>
+    <nav>
+      <span id="nameContainer">
+        <p>Steven Day</p>
+      </span>
+      <ul id="pages">
+        <li>
+          <a id="currentPage" href="index.html">
+            <span>Portfolio</span>
+          </a>
+        </li>
+        <li>
+          <a href="about.html">
+            <span>About</span>
+          </a>
+        </li>
+      </ul>
+      <ul id="icons">
+        <li>
+          <a target="_blank" href="https://github.com/stevenrobday/">
+            <div id="github"></div>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.linkedin.com/in/stevenrobday/">
+            <div id="linkedIn"></div>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="assets/pdf/stevendayresume.pdf">
+            <div id="resume"></div>
+          </a>
+        </li>
+        <li>
+          <a href="mailto: stevenrobday@gmail.com">
+            <div id="email"></div>
+          </a>
+        </li>
+      </ul>
+      <div id="hamburger">
+        <div>
+          <div id="hamburgerImg"></div>
         </div>
-    </header>
-    <div id="contentWrapper">
-        <div id="content">
-            <h1 id="contentHeader">
-                About Me
-            </h1>
-            <div id="contentMain">
-                <img id="theStevester" src="assets/images/thestevester.png" width="300">
-                <p>
-                    The good graphics here are known as
-                    <i>The Stevenheimer</i>. This hi-res representation also goes by
-                    <i>His Excellence</i>, though the full extent of his glory has yet to be unveiled. Until that time comes,
-                    we must bask in the glow that emanates, and mayhaps if we grovel hard enough, he will grant us more content.
-                </p>
-                <br>
-                <p>
-                    But what glorious content he has provided us thus far! Who can forget Fred Flintstone's battle cry of "Barney!" over and
-                    over as he clobbers those snivelling clones into death's sweet embrace in pursuit of his cherished bowl
-                    of pebbles in the challenging, yet oddly satisfying,
-                    <i>Fruity Pebbles: The Game</i>?
-                </p>
-                <br>
-                <p>
-                    Then there's
-                    <i>Pac-Mental</i>. That game's pretty cool. It's about this yellow ball who drives these poor ghosts mad
-                    for no apparent reason! The story unfolds across three intermissions.
-                </p>
-                <br>
-                <p>
-                    Finally, there's the hosting platform these great games reside on:
-                    <i>Stevester Enterprises, Ink.
-                    </i> In 2017,
-                    <i>The Stevester</i>, a subsidiary of
-                    <i>The Stevenheimer</i>, trademarked
-                    <i>The No Spin Zone</i>
-                    in order to get slapped with litigation from Bill O'Reilly. Unfortunately, that litigation never came...
-                </p>
-            </div>
-        </div>
+      </div>
+    </nav>
+  </header>
+  <main role="main">
+    <div class="examples">
+      <div class="category">Databases</div>
+      <div class="exampleThumb" data-id="writeUpsModal">
+        <div id="writeUpsImg"></div>
+        <div class="thumbFilter"></div>
+        <div class="title">Write-Ups</div>
+      </div>
+      <div class="exampleThumb" data-id="employeeModal">
+        <div id="employeeImg"></div>
+        <div class="thumbFilter"></div>
+        <div class="title">Employee</div>
+      </div>
     </div>
-    <footer>
-        Copyright &copy; 2018, ALL RIGHTS RESERVED
-    </footer>
+    <div class="examples">
+      <div class="category">Games</div>
+      <div class="exampleThumb" data-id="pacmentalModal">
+        <div id="pacmentalImg"></div>
+        <div class="thumbFilter"></div>
+        <div class="title">Pac-Mental</div>
+      </div>
+      <div class="exampleThumb" data-id="pebblesModal">
+        <div id="pebblesImg"></div>
+        <div class="thumbFilter"></div>
+        <div class="title">Fruity Pebbles: The Game</div>
+      </div>
+    </div>
+    <div class="examples">
+      <div class="category">Boot Camp</div>
+      <div class="exampleThumb" data-id="triviaGameModal">
+        <div id="triviaGameImg"></div>
+        <div class="thumbFilter"></div>
+        <div class="title">Trivia Game</div>
+      </div>
+      <div class="exampleThumb" data-id="hangmanModal">
+        <div id="reaganImg"></div>
+        <div class="thumbFilter"></div>
+        <div class="title">Hangman</div>
+      </div>
+    </div>
+    <div id="modalShade"></div>
+    <div class="modal" id="writeUpsModal">
+      <div class="modalWrapper">
+        <div class="modalHeader">
+          <div></div>
+          <div class="modalTitle">
+            <p>Write-Ups Database</p>
+          </div>
+          <div class="close"></div>
+        </div>
+        <div class="modalBody">
+          <div class="technologies">
+            <p>
+              Technologies used: HTML5, CSS3, JavaScript, jQuery, PHP, MySQL, XAMPP, jSignature.js, Dropzone.js
+            </p>
+          </div>
+          <div class="summary">
+            <p>
+              Write-Ups database for retail chain that gave everybody a lot of write-ups, populated here with Mario characters...
+            </p>
+            <p class="biggerMargin">
+              Let's view some records!
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/writeUps/view.gif" />
+            </div>
+            <p class="biggerMargin">
+              Upper management can see all employees, while middle can only see the ones they manage (I'm using a key combo to log out).
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/writeUps/login.gif" />
+            </div>
+            <p class="biggerMargin">
+              The database interfaces with the employee database. Let's add Toad!
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/writeUps/addEmp.gif" />
+            </div>
+            <p class="biggerMargin">
+              Now let's add a picture...
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/writeUps/editEmp.gif" />
+            </div>
+            <p class="biggerMargin">
+              Let's write up Toad!
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/writeUps/addRecord.gif" />
+            </div>
+            <p class="biggerMargin">
+              Let's edit a record.
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/writeUps/editRecord.gif" />
+            </div>
+            <p class="biggerMargin">
+              Let's search for some employees:
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/writeUps/search.gif" />
+            </div>
+            <p class="biggerMargin">
+              Let's navigate our history!
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/writeUps/navigate.gif" />
+            </div>
+          </div>
+        </div>
+        <div class="modalFooter"></div>
+      </div>
+    </div>
+    <div class="modal" id="employeeModal">
+      <div class="modalWrapper">
+        <div class="modalHeader">
+          <div></div>
+          <div class="modalTitle">
+            <p>Employee Database</p>
+          </div>
+          <div class="close"></div>
+        </div>
+        <div class="modalBody">
+          <div class="technologies">
+            <p>
+              Technologies used: HTML5, CSS3, JavaScript, jQuery, PHP, MySQL, XAMPP, Dropzone.js
+            </p>
+          </div>
+          <div class="summary">
+            <p>
+              Employee database I made for a retail chain. I wrote this a couple years ago; I'd say I've improved at design. Populated
+              with Mario characters...
+            </p>
+            <p class="biggerMargin">
+              Let's filter and sort!
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/employee/viewSort.gif" />
+            </div>
+            <p class="biggerMargin">
+              Let's add Luigi!
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/employee/add.gif" />
+            </div>
+            <p class="biggerMargin">
+              Let's edit Spewart.
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/employee/edit.gif" />
+            </div>
+            <p class="biggerMargin">
+              Now, let's look for Koopas!
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/employee/search.gif" />
+            </div>
+            <p class="biggerMargin">
+              Time to navigate!
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/employee/nav.gif" />
+            </div>
+          </div>
+        </div>
+        <div class="modalFooter"></div>
+      </div>
+    </div>
+    <div class="modal" id="pacmentalModal">
+      <div class="modalWrapper">
+        <div class="modalHeader">
+          <div></div>
+          <div class="modalTitle"><a href="http://thestevester.com/pacmental/index.html" target="_blank">Pac-Mental</a></div>
+          <div class="close"></div>
+        </div>
+        <div class="modalBody">
+          <div class="technologies">
+            <p>
+              Technologies used: HTML5, CSS3, JavaScript, jQuery, MySQL, PHP, Howler.js
+            </p>
+          </div>
+          <div class="summary">
+            <p>
+              <i>Pac-Mental</i> is a twist on the original <i>Pac-Man</i> and <i>Ms. Pac-Man</i> arcade games. I made it
+              with the help of
+              <a href="http://www.gamasutra.com/view/feature/3938/the_pacman_dossier.php?print=1" target="_blank">The Pac-Man
+                Dossier
+              </a>
+              by Jamey Pittman, and Shaun Williams's
+              <a href="https://bitbucket.org/shaunew/pac-man" target="_blank">JavaScript rewrite</a>
+              of the originals, both invaluable resources.
+            </p>
+            <p class="biggerMargin">
+              The energizers in <i>Pac-Mental</i> are elemental-powered:
+            </p>
+            <div id="energizers">
+              <div>
+                <div>
+                  <img class="thumbnail" src="assets/gif/pacmental/earth.gif" />
+                  <div>
+                    <p>
+                      Earth
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <img class="thumbnail" src="assets/gif/pacmental/fire.gif" />
+                  <div>
+                    <p>
+                      Fire
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <img class="thumbnail" src="assets/gif/pacmental/air.gif" />
+                  <div>
+                    <p>
+                      Air
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <img class="thumbnail" src="assets/gif/pacmental/water.gif" />
+                  <div>
+                    <p>
+                      Water
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="biggerMargin">
+              The ghosts and maze double after the first intermission:
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/pacmental/level3.gif" />
+            </div>
+            <p class="biggerMargin">
+              And triple after the second:
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/pacmental/level6.gif" />
+            </div>
+            <p class="biggerMargin">
+              The intermissions are parodies of the original's. Here's my favorite (originally, Blinky rips his sheet on the nail):
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/pacmental/intermission2.gif" />
+            </div>
+            <p class="biggerMargin">
+              The game has a leaderboard, as well.
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/png/pacmental/leaderboard.png" />
+            </div>
+          </div>
+        </div>
+        <div class="modalFooter"></div>
+      </div>
+    </div>
+    <div class="modal" id="pebblesModal">
+      <div class="modalWrapper">
+        <div class="modalHeader">
+          <div></div>
+          <div class="modalTitle">
+            <a href="http://thestevester.com/FruityPebblesTheGame/index.html" target="_blank">Fruity Pebbles: The Game</a></div>
+          <div class="close"></div>
+        </div>
+        <div class="modalBody">
+          <div class="technologies">
+            <p>
+              Technologies used: HTML5, CSS3, JavaScript, Howler.js
+            </p>
+          </div>
+          <div class="summary">
+            <p>
+              I was always curious how games worked, and had an idea for a simple and absurd game. So in 2014, I read a few books, and
+              developed a very inefficient <i>Fruity Pebbles: The Game</i>. I rewrote it in 2016, and brought
+              it to <i>ZapCon</i>, a local arcade convention. After that, it appeared on a podcast, YouTube, and even a top
+              games of 2016 list.
+            </p>
+            <p class="biggerMargin">
+              <i>Fruity Pebbles: The Game</i> tells the story of what happens next after a Fruity Pebbles commercial. The
+              game starts with the commercial. Because this is important to the plot, it can't be skipped:
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/pebbles/pebblesCommercial.gif" />
+            </div>
+            <p class="biggerMargin">
+              Learn important tips for surviving this brutally difficult game in the tutorial:
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/pebbles/tutorial.gif" />
+            </div>
+            <p class="biggerMargin">
+              In the first stage, Fred must face off against multiplying Barnies:
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/pebbles/stageOne.gif" />
+            </div>
+            <p class="biggerMargin">
+              In the second, Fred goes up against the Master Rapper, who turns out to be Barney:
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/pebbles/stageTwo.gif" />
+            </div>
+            <p class="biggerMargin">
+              Finally, Fred must utilize all the skills he's learned in order to defeat the final boss:
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/pebbles/stageThree.gif" />
+            </div>
+            <p class="biggerMargin">
+              With MegaBarney defeated, and Fred's pebbles in their rightful stomach, peace is restored to Bedrock:
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/pebbles/ending.gif" />
+            </div>
+          </div>
+        </div>
+        <div class="modalFooter"></div>
+      </div>
+    </div>
+    <div class="modal" id="triviaGameModal">
+      <div class="modalWrapper">
+        <div class="modalHeader">
+          <div></div>
+          <div class="modalTitle">
+            <a href="https://stevenrobday.github.io/TriviaGame/" target="_blank">Trivia Game</a></div>
+          <div class="close"></div>
+        </div>
+        <div class="modalBody">
+          <div class="technologies">
+            <p>
+              Technologies used: HTML5, CSS3, JavaScript, jQuery
+            </p>
+          </div>
+          <div class="summary">
+            <p>
+              Trivia game assignment. Questions about a TV show that ended four years ago...
+            </p>
+            <p class="biggerMargin">
+              In your journey to destroy everyone and everything around you, you will be faced with ten challenging questions.
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/png/triviaGame/question.png" />
+            </div>
+            <p class="biggerMargin">
+              A clip showing the correct answer plays after each question:
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/triviaGame/answer.gif" />
+            </div>
+            <p class="biggerMargin">
+              When you're done, results!
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/gif/triviaGame/results.gif" />
+            </div>
+          </div>
+        </div>
+        <div class="modalFooter"></div>
+      </div>
+    </div>
+    <div class="modal" id="hangmanModal">
+      <div class="modalWrapper">
+        <div class="modalHeader">
+          <div></div>
+          <div class="modalTitle">
+            <a href="https://stevenrobday.github.io/Word-Guess-Game/" target="_blank">Hangman</a></div>
+          <div class="close"></div>
+        </div>
+        <div class="modalBody">
+          <div class="technologies">
+            <p>
+              Technologies used: HTML5, CSS3, JavaScript
+            </p>
+          </div>
+          <div class="summary">
+            <p>
+              Simple hangman game, 80s politician-themed. One of the first assignments for a summer bootcamp.
+            </p>
+            <p class="biggerMargin">
+              Guess correctly, or you'll squander your remaining years in office:
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/png/hangman/guess.png" />
+            </div>
+            <p class="biggerMargin">
+              Win the round, and you'll be rewarded with topical political humor:
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/png/hangman/dukakis.png" />
+            </div>
+            <p class="biggerMargin">
+              Otherwise, you're a communist spy:
+            </p>
+            <div class="exampleImg">
+              <img class="thumbnail" src="assets/png/hangman/gameOver.png" />
+            </div>
+          </div>
+        </div>
+        <div class="modalFooter"></div>
+      </div>
+    </div>
+    <div id="superShade"></div>
+    <div id="superModal">
+      <div id="superModalImgWrap">
+        <div id="superCloseWrap">
+          <div id="superClose"></div>
+        </div>
+        <div id="superModalImg"></div>
+      </div>
+    </div>
+  </main>
 </body>
 
 </html>

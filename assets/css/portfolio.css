@@ -1,0 +1,325 @@
+/*variables*/
+
+:root {
+  /* portfolio colors */
+  --thumb-border: #0047b3;
+  --thumb-font-hover: #474b52;
+  --shade-color: #4d94ff;
+
+  /* portfolio dynamic vars */
+  --border-radius: 10px;
+  --thumb-width: 200px;
+  --thumb-height: 150px;
+  --modal-width: 85%;
+  --superModal-width: 85%;
+  --img-height: 75px;
+}
+
+/* 24.5 x 16px = 392px */
+@media screen and (min-width: 24.5rem) {
+  :root {  
+    --img-height: 100px;
+  }
+}
+
+/* 512px */
+@media screen and (min-width: 32rem) {
+  :root {
+    --img-height: 150px;
+  }
+}
+
+/* 640px */
+@media screen and (min-width: 40rem) {
+  :root {
+    --border-radius: 14px;
+    --thumb-width: 228px;
+    --thumb-height: 171px;
+    --modal-width: 80%;
+    --superModal-width: 80%;
+    --img-height: 200px;
+  }
+}
+
+/* 1600px */
+@media screen and (min-width: 100rem) {
+  :root {
+    --border-radius: 18px;
+    --thumb-width: 252px;
+    --thumb-height: 189px;
+    --modal-width: 70%;
+    --img-height: 225px;
+  }
+}
+
+/* 2400px */
+@media screen and (min-width: 150rem) {
+  :root {
+    --border-radius: 22px;
+    --thumb-width: 300px;
+    --thumb-height: 225px;
+    --modal-width: 60%;
+    --img-height: 300px;
+  }
+}
+
+/*PORTFOLIO*/
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: calc(var(--font-size-s) / 2);
+}
+
+/* container that contains category and projects */
+.examples {
+  display: flex;
+  flex-direction: column;
+}
+
+/* category for projects */
+.category {
+  font-size: var(--font-size-m);
+  font-weight: bold;
+  text-align: center;
+  margin: var(--font-size-s) auto calc(var(--font-size-s) / 2) auto;
+}
+
+/* project thumbnail image, thumbnail filter and modal */
+.exampleThumb div:first-child, .thumbFilter, .modal {
+  border: calc(var(--font-size-s) / 3) solid var(--thumb-border);
+  border-radius: var(--border-radius);
+}
+
+.exampleThumb {
+  cursor: pointer;
+  display: flex; 
+  flex-direction: column;
+  position: relative;
+  margin: calc(var(--font-size-s) / 3) auto;
+}
+
+.exampleThumb:hover {
+  color: var(--thumb-font-hover);
+}
+
+/* filter for hovering thumbnails */
+.thumbFilter {
+  position: absolute;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  width: var(--thumb-width);
+  height: var(--thumb-height); 
+  opacity: .2;
+  display: none;
+}
+
+.exampleThumb:hover .thumbFilter {
+  display: block;
+}
+
+#writeUpsImg {
+  background: url(../png/writeUps/writeUps.png) no-repeat center;
+}
+
+#employeeImg {
+  background: url(../png/employee/employee.png) no-repeat center;
+}
+
+#pacmentalImg {
+  background: url(../png/pacmental/pacmental.png) no-repeat center;
+}
+
+#pebblesImg {
+  background: url(../png/pebbles/pebbles.png) no-repeat center;
+}
+
+#triviaGameImg {
+  background: url(../png/triviaGame/startPage.png) no-repeat center;
+}
+
+#reaganImg {
+  background: url(../png/hangman/reagan.png) no-repeat center;
+}
+
+/* can't target with .exampleThumb div:firstChild here, mayhaps due to varying img size */
+#writeUpsImg, #employeeImg, #pacmentalImg, #pebblesImg, 
+#triviaGameImg, #reaganImg {
+  background-size: 100% 100%; 
+  width: var(--thumb-width);
+  height: var(--thumb-height); 
+  margin-bottom: calc(var(--font-size-s) / 5);
+}
+
+/* project title */
+.title {
+  font-size: var(--font-size-xs);
+  text-align: center;
+}
+
+/* bg shade for modal and super modal */
+#modalShade, #superShade {
+	display: none;
+	background: var(--shade-color);
+  position: fixed; 
+  left: 0; 
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  opacity: .3;
+  z-index: 3;
+}
+
+.modal, #superModal {
+  display: none;
+	position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: calc(100vh - var(--font-size-l) * 4);
+  z-index: 3;
+}
+
+.modal {
+  background: #fffaea;
+  width: var(--modal-width); 
+}
+
+#superModal {
+  width: var(--superModal-width);
+}
+
+/* wrapper for all modal content */
+.modalWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* modal title header. first child is an empty div, that way the second gets centered */
+.modalHeader {
+  display: flex;
+  top: 0;
+  background: #ffd64d;
+  width: 100%;
+  justify-content: space-between;
+  flex: 1 1 calc(var(--font-size-l) * 1.5);
+  border-radius: calc(var(--border-radius) / 1.7) 
+                  calc(var(--border-radius) / 1.7) 
+                  0 0;
+  font-size: var(--font-size-l);
+}
+
+.modalHeader div:first-child {
+  margin-left: 1%;
+  width: var(--font-size-s);
+  height: 100%;
+}
+
+.modalHeader div {
+  margin: auto calc(var(--font-size-l) / 3) auto 0;
+}
+
+/* we want the modal body to scroll, but not the title */
+.modalBody {
+  font-size: var(--font-size-s);
+  overflow: auto;
+  height: 100%;
+}
+
+/* list of technologies used for each project */
+.technologies {
+  text-align: center;
+  font-style: italic;
+}
+
+/* first paragraph under technologies */
+.summary {
+  text-align: center;
+  margin: var(--font-size-s) 10% var(--font-size-s) 10%;
+}
+
+/*energizer images will be 4 in a row or 2x2 depending space available*/
+#energizers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#energizers > div {
+  display: flex;
+}
+
+#energizers > div > div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px 10px 10px;
+}
+
+#energizers > div > div > img, .exampleImg img{
+  height: var(--img-height);
+}
+
+/* make a little footer, otherwise the scroll bar will be outside the rounded border corner */
+.modalFooter {
+  height: 10px;
+}
+
+/* sentence above each thumbnail inside project modal */
+.biggerMargin {
+  margin-top: var(--font-size-l);
+  margin-bottom: calc(var(--font-size-l) / 2);
+}
+
+.thumbnail {
+  cursor: pointer;
+}
+
+/* x for modal and super modal */
+.close, #superClose {
+  background: url(../svg/close.svg) no-repeat center;
+  cursor: pointer;
+}
+
+.close {
+  margin-right: 1%;
+}
+
+.close:hover, #superClose:hover, #superCloseWrap:hover > #superClose {
+  background: url(../svg/closeHover.svg) no-repeat center;
+}
+
+.close, #superClose, .close:hover, #superClose:hover, #superCloseWrap:hover #superClose {
+  background-size: auto 100%;
+  height: var(--font-size-xs);
+  width: var(--font-size-xs);
+}
+
+/* will be sized with js. */
+#superModalImgWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* super modal x wrapper, to give it padding. position to the upper right of image */
+#superCloseWrap {
+  position: absolute;
+  top: calc(var(--font-size-s) * -1.5);
+  right: calc(var(--font-size-s) * -1.5);
+  padding: calc(var(--font-size-s) / 4);
+  background-color: #000000;
+  cursor: pointer;
+}
+
+/* stretch image to super modal image wrapper */
+#superModalImg img {
+  width: 100%;
+  height: 100%;
+}
