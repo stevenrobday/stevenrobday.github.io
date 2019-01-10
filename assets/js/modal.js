@@ -1,13 +1,4 @@
 $(document).ready(function() {
-  function preload(files) {
-    for (i = 0; i < files.length; i++) {
-      images[i] = new Image();
-      images[i].src = path + files[i];
-    }
-  }
-
-  preload(files);
-
   // globals
   var isModal = false;
   var isSuper = false;
