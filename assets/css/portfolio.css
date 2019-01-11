@@ -45,8 +45,8 @@
 @media screen and (min-width: 100rem) {
   :root {
     --border-radius: 18px;
-    --thumb-width: 252px;
-    --thumb-height: 189px;
+    --thumb-width: 400px;
+    --thumb-height: 300px;
     --modal-width: 70%;
     --img-height: 225px;
   }
@@ -56,8 +56,8 @@
 @media screen and (min-width: 150rem) {
   :root {
     --border-radius: 22px;
-    --thumb-width: 300px;
-    --thumb-height: 225px;
+    --thumb-width: 600px;
+    --thumb-height: 450px;
     --modal-width: 60%;
     --img-height: 300px;
   }
@@ -203,7 +203,8 @@ main {
 .modalHeader {
   display: flex;
   top: 0;
-  background: #ffd64d;
+  background: #B29559;
+  color: #f7f7ff;
   width: 100%;
   justify-content: space-between;
   flex: 1 1 calc(var(--font-size-l) * 1.5);
@@ -232,6 +233,7 @@ main {
 
 /* list of technologies used for each project */
 .technologies {
+  margin-top: calc(var(--font-size-s) / 3);
   text-align: center;
   font-style: italic;
 }

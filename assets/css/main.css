@@ -10,7 +10,7 @@
 
   /* navbar colors */
   --navbar-background: #0066ff;
-  --navbar-selected: #0056d8;
+  --navbar-selected: #ebf3ff;
   --color-highlight: #f7f7ff;
   --color-fade: #c4dcff;
 
@@ -166,9 +166,14 @@ ul {
 
 #currentPage {
   background-color: var(--navbar-selected);
+  border-radius: 5px 5px 0 0;
 }
 
-#pages li a:hover, #currentPage span {
+#currentPage span {
+  color: black;
+}
+
+#pages li a:hover {
   color: var(--color-highlight);
 }
 
