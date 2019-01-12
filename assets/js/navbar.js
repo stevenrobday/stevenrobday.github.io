@@ -1,67 +1,54 @@
 $(document).ready(function () {
-
-  /* image preloader. otherwise the icons will flicker the first time you hover them
-    and we can't have that! */
-
-  var path = "https://stevenrobday.github.io/ProfessionalPortfolio/assets/svg/";
-  var files = [
-    "githubHover.svg", "linkedInHover.svg", "resumeHover.svg", "emailHover.svg", "closeHover.svg", "hamburgerHover.svg"
-  ];
-  var images = new Array();
-
-  function preload(files) {
-    for (i = 0; i < files.length; i++) {
-      images[i] = new Image();
-      images[i].src = path + files[i];
-    }
-  }
-
-  preload(files);
-
   // globals for hamburger nav
-  var isOpen = false;
 
-  var $pages = $("#pages");
-  var $icons = $("#icons");
+  var $navItems = $("nav li a");
+  var $navAbout = $("#navAbout");
+  var $navProjects = $("#navProjects");
+  var $navContact = $("#navContact");
 
-  // click the hamburger
-  $("#hamburgerImg").on("click", function () {
+  var $steveDay = $("#steveDay");
+  var $projects = $("#projects");
+  //var $cntact = $("#cntact");
 
-    var position = $pages.offset().left;
-    isOpen = !isOpen;
+  var animating = false;
 
-    // open navbar
-    if (isOpen) {
+  $navItems.on("click", function () {
+    var $this = $(this);
+    var $anchor = $this.attr("data-id");
 
-      // if #pages is absolute, it will be on the left edge
-      if (position === 0) {
+    animating = true;
 
-        // reposition nav pages and icons
-        $pages.css("top", "calc(var(--font-size-l) * 1.5)");
-        $icons.css("top", "calc(var(--font-size-l) * 3)");
-      }
-      else {
-
-        // #pages is relative here, so only reposition icons
-        $icons.css("top", "calc(var(--font-size-l) * 1.5)");
-      }
-    }
-
-    // close navbar
-    else {
-      $icons.css("top", "calc(var(--font-size-l) * -1.5)");
-
-      if (position === 0) {
-        $pages.css("top", "calc(var(--font-size-l) * -1.5)");
-      }
-    }
+    $('html, body').animate({
+      scrollTop: $($anchor).offset().top - $("nav").height() + 1
+    }, 400, function() {
+        animating = false;
+        removeCurrent();
+        $this.addClass("currentPage");
+      });
   });
 
-  // reset to default css on window resize,
-  // otherwise $pages and $icons will keep jquery css attributes
-  $(window).resize(function () {
-    isOpen = false;
-    $pages.css("top", "");
-    $icons.css("top", "");
-  });
+  $(document).on( 'scroll', function(){
+    if(!animating) {
+      removeCurrent();
+      addCurrent();
+    }
+ });
+
+ function removeCurrent() {
+  $navItems.removeClass("currentPage");
+ }
+
+ function addCurrent() {
+  var scrollPos = $(document).scrollTop() + $("nav").height();
+  var projectsPos = $projects.offset().top;
+
+  if(scrollPos < projectsPos) {
+    $navAbout.addClass("currentPage");
+  }
+  else {
+    $navProjects.addClass("currentPage");
+  }
+ }
+
+ addCurrent();
 });

@@ -5,14 +5,13 @@
   --font-size-s: 1rem;
   --font-size-m: 1.2rem;
   --font-size-l: 1.4rem;
-
-  --body-background: #ebf3ff;
+  --body-background: #A1CCCB;
 
   /* navbar colors */
-  --navbar-background: #0066ff;
-  --navbar-selected: #ebf3ff;
-  --color-highlight: #f7f7ff;
-  --color-fade: #c4dcff;
+  --navbar-background: #00A1BB;
+  --navbar-selected: #00A1BB;
+  --color-highlight: #fff;
+  --color-fade: #D5F1F7;
 
   /* navbar dynamic vars */
   --pages-position: absolute;
@@ -111,23 +110,11 @@ body {
 
 nav {
   top: 0;
-  height: calc(var(--font-size-l) * 1.5);
+  height: calc(var(--font-size-l) * 2);
   display: flex;
+  width: 100%;
+  position: fixed;
   justify-content: space-between;
-  position: relative;
-  z-index: 3;
-}
-
-#nameContainer {
-  height: 100%;
-  color: var(--color-highlight);
-  background-color: var(--navbar-background);
-  font-size: var(--font-size-l);
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  padding: 0 calc(var(--font-size-s) / 2);
-  flex: 0 0 auto;
   z-index: 3;
 }
 
@@ -139,7 +126,7 @@ ul {
   height: 100%;
   display: flex;
   margin-right: auto;
-  justify-content: var(--pages-justify);
+  justify-content: flex-end;
   width: 100%;
   background-color: var(--navbar-background);
   position: var(--pages-position);
@@ -164,33 +151,13 @@ ul {
   padding: 0 var(--font-size-m);
 }
 
-#currentPage {
-  background-color: var(--navbar-selected);
-  border-radius: 5px 5px 0 0;
-}
-
-#currentPage span {
-  color: black;
+.currentPage {
+  border-top: 5px solid #00A1BB;
+  border-bottom: 5px solid #006778;
 }
 
 #pages li a:hover {
   color: var(--color-highlight);
-}
-
-#icons {
-  display: flex;
-  width: var(--icons-width);
-  height: 100%;
-  background-color: var(--navbar-background);
-  position: var(--icons-position);
-  top: var(--icons-top);
-  transition: var(--icons-transition) .5s;
-  z-index: var(--icons-z-index);
-}
-
-#icons li {
-  height: 70%;
-  margin: auto;
 }
 
 #hamburger {

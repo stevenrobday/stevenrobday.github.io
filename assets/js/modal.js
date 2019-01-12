@@ -61,7 +61,7 @@ $(document).ready(function() {
   $(".exampleThumb").on("click", function () {
     isModal = true;
     $modalShade.fadeIn("fast");
-    $dataId = $("#" + $(this).attr("data-id"));
+    $dataId = $($(this).attr("data-id"));
     showModal();
   });
 

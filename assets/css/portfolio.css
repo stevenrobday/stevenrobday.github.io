@@ -46,8 +46,7 @@
   :root {
     --border-radius: 18px;
     --thumb-width: 400px;
-    --thumb-height: 300px;
-    --modal-width: 70%;
+    --thumb-height: 150px;
     --img-height: 225px;
   }
 }
@@ -63,33 +62,100 @@
   }
 }
 
+p {
+  margin: calc(var(--font-size-s) / 3) 0;
+}
+
+#content {
+  margin-top: calc(var(--font-size-l) * 2);
+}
+
+#steveDay {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #D5F1F7;
+  min-height: calc(50vh - var(--font-size-l));
+}
+
+#photoContainer {
+  background: url(../jpg/steveDay.jpg) no-repeat center;
+  background-size: 100% 100%;
+  height: 200px; 
+  width: 200px;
+  border-radius: 50%;
+  border: 5px solid #00A1BB;
+  margin: auto 25px auto auto;
+}
+
+#info {
+  font-size: var(--font-size-l);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: auto auto auto 25px;
+}
+
+#info div:first-child {
+  font-size: calc(var(--font-size-l) * 1.5);
+  color: #00A1BB;
+  font-weight: 900;
+}
+
+#icons {
+  display: flex;
+  width: 100%;
+  height: var(--font-size-l);
+  margin: var(--font-size-s) 0;
+}
+
+#icons li {
+  height: 100%;
+  margin: auto;
+}
+
+#story {
+  text-align: center;
+  font-size: var(--font-size-m);
+  min-height: calc(50vh - var(--font-size-l));
+  display: flex;
+}
+
+#story p {
+  width: 50%;
+  margin: auto;
+}
+
+#hamburger {
+  display: var(--hamburger-display);
+  height: 100%;
+  background-color: var(--navbar-background);
+  z-index: 3;
+  width: 100%;
+}
+
 /*PORTFOLIO*/
 
-main {
+#projects {
+  background-color: #D5F1F7;
+  min-height: calc(100vh - var(--font-size-l) * 2);
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin-top: calc(var(--font-size-s) / 2);
 }
 
 /* container that contains category and projects */
 .examples {
   display: flex;
-  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
 }
 
-/* category for projects */
-.category {
-  font-size: var(--font-size-m);
-  font-weight: bold;
-  text-align: center;
-  margin: var(--font-size-s) auto calc(var(--font-size-s) / 2) auto;
-}
-
-/* project thumbnail image, thumbnail filter and modal */
-.exampleThumb div:first-child, .thumbFilter, .modal {
-  border: calc(var(--font-size-s) / 3) solid var(--thumb-border);
-  border-radius: var(--border-radius);
+.modal {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 .exampleThumb {
@@ -97,71 +163,51 @@ main {
   display: flex; 
   flex-direction: column;
   position: relative;
-  margin: calc(var(--font-size-s) / 3) auto;
-}
-
-.exampleThumb:hover {
-  color: var(--thumb-font-hover);
-}
-
-/* filter for hovering thumbnails */
-.thumbFilter {
-  position: absolute;
-  background-color: #ffffff;
-  border-color: #ffffff;
   width: var(--thumb-width);
-  height: var(--thumb-height); 
-  opacity: .2;
-  display: none;
+  padding: var(--font-size-s);
+  margin: var(--font-size-s);
+  box-sizing: content-box;
 }
 
 .exampleThumb:hover .thumbFilter {
   display: block;
 }
 
-#writeUpsImg {
-  background: url(../png/writeUps/writeUps.png) no-repeat center;
-}
-
-#employeeImg {
-  background: url(../png/employee/employee.png) no-repeat center;
-}
-
-#pacmentalImg {
-  background: url(../png/pacmental/pacmental.png) no-repeat center;
-}
-
-#pebblesImg {
-  background: url(../png/pebbles/pebbles.png) no-repeat center;
-}
-
-#triviaGameImg {
-  background: url(../png/triviaGame/startPage.png) no-repeat center;
-}
-
-#reaganImg {
-  background: url(../png/hangman/reagan.png) no-repeat center;
+/* filter for hovering thumbnails */
+.thumbFilter {
+  position: absolute;
+  background-color: #006778;
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: .1;
+  display: none;
 }
 
 /* can't target with .exampleThumb div:firstChild here, mayhaps due to varying img size */
-#writeUpsImg, #employeeImg, #pacmentalImg, #pebblesImg, 
-#triviaGameImg, #reaganImg {
-  background-size: 100% 100%; 
+.imgContainer {
   width: var(--thumb-width);
   height: var(--thumb-height); 
   margin-bottom: calc(var(--font-size-s) / 5);
 }
 
+.imgContainer img {
+  width: 100%;
+  height: 100%;
+}
+
 /* project title */
 .title {
-  font-size: var(--font-size-xs);
-  text-align: center;
+  font-size: var(--font-size-m);
+  text-align: left;
 }
 
 /* bg shade for modal and super modal */
 #modalShade, #superShade {
 	display: none;
-	background: var(--shade-color);
+	background: #000;
   position: fixed; 
   left: 0; 
   top: 0;
@@ -184,7 +230,7 @@ main {
 }
 
 .modal {
-  background: #fffaea;
+  background: #D5F1F7;
   width: var(--modal-width); 
 }
 
@@ -203,8 +249,8 @@ main {
 .modalHeader {
   display: flex;
   top: 0;
-  background: #B29559;
-  color: #f7f7ff;
+  background: #00A1BB;
+  color: #D5F1F7;
   width: 100%;
   justify-content: space-between;
   flex: 1 1 calc(var(--font-size-l) * 1.5);
@@ -233,8 +279,7 @@ main {
 
 /* list of technologies used for each project */
 .technologies {
-  margin-top: calc(var(--font-size-s) / 3);
-  text-align: center;
+  text-align: left;
   font-style: italic;
 }
 
@@ -263,11 +308,6 @@ main {
 
 #energizers > div > div > img, .exampleImg img{
   height: var(--img-height);
-}
-
-/* make a little footer, otherwise the scroll bar will be outside the rounded border corner */
-.modalFooter {
-  height: 10px;
 }
 
 /* sentence above each thumbnail inside project modal */
