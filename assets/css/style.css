@@ -1,70 +1,211 @@
-/*variables*/
-
 :root {
-  /* portfolio colors */
-  --thumb-border: #0047b3;
-  --thumb-font-hover: #474b52;
-  --shade-color: #4d94ff;
+  --font-size-xs: 1rem;
+  --font-size-s: 1rem;
+  --font-size-m: 1.2rem;
+  --font-size-l: 1.4rem;
 
-  /* portfolio dynamic vars */
+  /* page colors */
+  --base-color: #00A1BB;
+  --accent1-color: #D5F1F7;
+  --accent2-color: #A1CCCB;
+  --accent3-color: #006778;
+
+  --pages-margin-right: auto;
+
+  /* projects dynamic vars */
   --border-radius: 10px;
   --thumb-width: 200px;
-  --thumb-height: 150px;
+  --thumb-height: 75px;
   --modal-width: 85%;
   --superModal-width: 85%;
-  --img-height: 75px;
-}
-
-/* 24.5 x 16px = 392px */
-@media screen and (min-width: 24.5rem) {
-  :root {  
-    --img-height: 100px;
-  }
-}
-
-/* 512px */
-@media screen and (min-width: 32rem) {
-  :root {
-    --img-height: 150px;
-  }
+  --modal-modal-img-height: 75px;
+  --photo-diameter: 200px;
+  --photo-border: 5px;
+  --info-margin: 10px;
 }
 
 /* 640px */
 @media screen and (min-width: 40rem) {
   :root {
-    --border-radius: 14px;
-    --thumb-width: 228px;
-    --thumb-height: 171px;
-    --modal-width: 80%;
-    --superModal-width: 80%;
-    --img-height: 200px;
+    --font-size-s: 1.2rem;
+    --font-size-m: 1.4rem;
+    --font-size-l: 1.8rem;
   }
 }
 
 /* 1600px */
 @media screen and (min-width: 100rem) {
   :root {
-    --border-radius: 18px;
-    --thumb-width: 400px;
-    --thumb-height: 150px;
-    --img-height: 225px;
+    --font-size-xs: 1.1rem;
+    --font-size-s: 1.3rem;
+    --font-size-m: 1.5rem;
+    --font-size-l: 1.9rem;
+  }
+}
+
+/* 1920px */
+@media screen and (min-width: 120rem) {
+  :root {
+    --font-size-xs: 1.2rem;
+    --font-size-s: 1.4rem;
+    --font-size-m: 1.6rem;
+    --font-size-l: 2rem;
   }
 }
 
 /* 2400px */
 @media screen and (min-width: 150rem) {
   :root {
-    --border-radius: 22px;
-    --thumb-width: 600px;
-    --thumb-height: 450px;
-    --modal-width: 60%;
-    --img-height: 300px;
+    --font-size-xs: 1.5rem;
+    --font-size-s: 1.7rem;
+    --font-size-m: 2rem;
+    --font-size-l: 2.6rem;
   }
 }
 
-p {
-  margin: calc(var(--font-size-s) / 3) 0;
+/* 24.5 x 16px = 392px */
+@media screen and (min-width: 24.5rem) {
+  :root {  
+    --modal-img-height: 100px;
+  }
 }
+
+/* 512px */
+@media screen and (min-width: 32rem) {
+  :root {
+    --modal-img-height: 150px;
+  }
+}
+
+/* 640px */
+@media screen and (min-width: 40rem) {
+  :root {
+    --border-radius: 12px;
+    --thumb-width: 232px;
+    --thumb-height: 87px;
+    --modal-width: 80%;
+    --superModal-width: 80%;
+    --modal-img-height: 200px;
+    --info-margin: 15px;
+  }
+}
+
+/* 1160px */
+@media screen and (min-width: 72.5rem) {
+  :root {
+    --pages-margin-right: 0;
+    --thumb-width: 304px;
+    --thumb-height: 114px;
+    --modal-img-height: 200px;
+    --info-margin: 20px;
+  }
+}
+
+/* 1600px */
+@media screen and (min-width: 90.5rem) {
+  :root {
+    --border-radius: 14px;
+    --thumb-width: 400px;
+    --thumb-height: 150px;
+    --modal-img-height: 225px;
+    --info-margin: 25px;
+  }
+}
+
+@media screen and (min-width: 111.5rem) {
+  :root {
+    --border-radius: 14px;
+    --thumb-width: 504px;
+    --thumb-height: 189px;
+    --modal-img-height: 225px;
+    --photo-diameter: 250px;
+    --photo-border: 8px;
+    --info-margin: 30px;
+  }
+}
+
+/* 2400px */
+@media screen and (min-width: 150rem) {
+  :root {
+    --border-radius: 18px;
+    --thumb-width: 600px;
+    --thumb-height: 225px;
+    --modal-width: 60%;
+    --modal-img-height: 300px;
+    --photo-diameter: 300px;
+    --info-margin: 40px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+  background-color: var(--accent2-color);
+  width: 100%;
+  height: 100%;
+}
+
+/* NAVBAR */
+
+nav {
+  top: 0;
+  height: calc(var(--font-size-l) * 2);
+  display: flex;
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  background-color: var(--base-color);
+}
+
+ul {
+	list-style: none;
+}
+
+#pages{
+  height: 100%;
+  display: flex;
+  margin-left: auto;
+  margin-right: var(--pages-margin-right);
+  position: var(--pages-position);
+  top: var(--pages-top);
+  transition: var(--pages-transition) .5s;
+  z-index: var(--pages-z-index);
+}
+
+#pages li a {
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent1-color);
+  font-size: var(--font-size-m);
+}
+
+#pages span{
+  padding: 0 var(--font-size-m);
+}
+
+.currentPage {
+  border-top: 5px solid var(--base-color);
+  border-bottom: 5px solid var(--accent3-color);
+}
+
+#pages li a:hover {
+  color: #fff;
+}
+
+/* ABOUT */
 
 #content {
   margin-top: calc(var(--font-size-l) * 2);
@@ -75,40 +216,46 @@ p {
   align-content: center;
   justify-content: center;
   text-align: center;
-  background-color: #D5F1F7;
+  background-color: var(--accent1-color);
   min-height: calc(50vh - var(--font-size-l));
 }
 
 #photoContainer {
   background: url(../jpg/steveDay.jpg) no-repeat center;
   background-size: 100% 100%;
-  height: 200px; 
-  width: 200px;
+  height: var(--photo-diameter); 
+  width: var(--photo-diameter);
   border-radius: 50%;
-  border: 5px solid #00A1BB;
-  margin: auto 25px auto auto;
+  border: var(--photo-border) solid var(--base-color);
+  margin: auto var(--info-margin) auto auto;
 }
 
 #info {
-  font-size: var(--font-size-l);
   height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  margin: auto auto auto 25px;
+  margin: auto auto auto var(--info-margin);
 }
 
 #info div:first-child {
   font-size: calc(var(--font-size-l) * 1.5);
-  color: #00A1BB;
+  color: var(--base-color);
   font-weight: 900;
+}
+
+#info div:nth-child(2){
+  font-size: var(--font-size-l);
+}
+
+p {
+  margin: calc(var(--font-size-s) / 3) 0;
 }
 
 #icons {
   display: flex;
   width: 100%;
-  height: var(--font-size-l);
   margin: var(--font-size-s) 0;
 }
 
@@ -151,7 +298,7 @@ p {
 
 #icons li div, #icons li div:hover {
   background-size: auto 100%;
-  height: 100%; 
+  height: var(--font-size-l);
   width: calc(var(--font-size-l) * 1.8);
   cursor: pointer;
 }
@@ -161,6 +308,7 @@ p {
   font-size: var(--font-size-m);
   min-height: calc(50vh - var(--font-size-l));
   display: flex;
+  padding: var(--font-size-l) 0;
 }
 
 #story p {
@@ -168,10 +316,10 @@ p {
   margin: auto;
 }
 
-/*PORTFOLIO*/
+/* PROJECTS */
 
 #projects {
-  background-color: #D5F1F7;
+  background-color: var(--accent1-color);
   min-height: calc(100vh - var(--font-size-l) * 2);
   display: flex;
 }
@@ -198,6 +346,7 @@ p {
   padding: var(--font-size-s);
   margin: var(--font-size-s);
   box-sizing: content-box;
+  text-align: center;
 }
 
 .exampleThumb:hover .thumbFilter {
@@ -207,8 +356,8 @@ p {
 /* filter for hovering thumbnails */
 .thumbFilter {
   position: absolute;
-  background-color: #006778;
-  border-radius: 12px;
+  background-color: var(--accent3-color);
+  border-radius: var(--border-radius);
   width: 100%;
   height: 100%;
   left: 0;
@@ -217,22 +366,19 @@ p {
   display: none;
 }
 
-/* can't target with .exampleThumb div:firstChild here, mayhaps due to varying img size */
-.imgContainer {
+.exampleThumb img {
   width: var(--thumb-width);
   height: var(--thumb-height); 
-  margin-bottom: calc(var(--font-size-s) / 5);
 }
 
-.imgContainer img {
-  width: 100%;
-  height: 100%;
+/* list of technologies used for each project */
+.technologies {
+  font-style: italic;
 }
 
 /* project title */
 .title {
   font-size: var(--font-size-m);
-  text-align: left;
 }
 
 /* bg shade for modal and super modal */
@@ -280,25 +426,22 @@ p {
 .modalHeader {
   display: flex;
   top: 0;
-  background: #00A1BB;
-  color: #D5F1F7;
+  background: var(--base-color);
+  color: var(--accent1-color);
   width: 100%;
   justify-content: space-between;
   flex: 1 1 calc(var(--font-size-l) * 1.5);
-  border-radius: calc(var(--border-radius) / 1.7) 
-                  calc(var(--border-radius) / 1.7) 
-                  0 0;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
   font-size: var(--font-size-l);
 }
 
 .modalHeader div:first-child {
-  margin-left: 1%;
-  width: var(--font-size-s);
-  height: 100%;
+  width: var(--font-size-xs);
+  height: var(--font-size-xs);
 }
 
 .modalHeader div {
-  margin: auto calc(var(--font-size-l) / 3) auto 0;
+  margin: auto 1%;
 }
 
 /* we want the modal body to scroll, but not the title */
@@ -308,16 +451,11 @@ p {
   height: 100%;
 }
 
-/* list of technologies used for each project */
-.technologies {
-  text-align: left;
-  font-style: italic;
-}
-
 /* first paragraph under technologies */
 .summary {
   text-align: center;
-  margin: var(--font-size-s) 10% var(--font-size-s) 10%;
+  margin: 0 auto;
+  width: var(--modal-width);
 }
 
 /*energizer images will be 4 in a row or 2x2 depending space available*/
@@ -338,13 +476,13 @@ p {
 }
 
 #energizers > div > div > img, .exampleImg img{
-  height: var(--img-height);
+  height: var(--modal-img-height);
 }
 
 /* sentence above each thumbnail inside project modal */
 .biggerMargin {
-  margin-top: var(--font-size-l);
-  margin-bottom: calc(var(--font-size-l) / 2);
+  margin-top: var(--font-size-s);
+  margin-bottom: calc(var(--font-size-s) / 3);
 }
 
 .thumbnail {
@@ -355,10 +493,6 @@ p {
 .close, #superClose {
   background: url(../svg/close.svg) no-repeat center;
   cursor: pointer;
-}
-
-.close {
-  margin-right: 1%;
 }
 
 .close:hover, #superClose:hover, #superCloseWrap:hover > #superClose {
@@ -396,3 +530,4 @@ p {
   width: 100%;
   height: 100%;
 }
+

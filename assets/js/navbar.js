@@ -39,7 +39,7 @@ $(document).ready(function () {
  }
 
  function addCurrent() {
-  var scrollPos = $(document).scrollTop() + $("nav").height();
+  var scrollPos = $(document).scrollTop() + $("nav").height() + 1;
   var projectsPos = $projects.offset().top;
 
   if(scrollPos < projectsPos) {
