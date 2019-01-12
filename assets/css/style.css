@@ -18,7 +18,7 @@
   --thumb-height: 75px;
   --modal-width: 85%;
   --superModal-width: 85%;
-  --modal-modal-img-height: 75px;
+  --modal-img-height: 75px;
   --photo-diameter: 200px;
   --photo-border: 5px;
   --info-margin: 10px;
@@ -64,25 +64,20 @@
 }
 
 /* 24.5 x 16px = 392px */
-@media screen and (min-width: 24.5rem) {
+@media screen and (min-width: 24rem) {
   :root {  
-    --modal-img-height: 100px;
-  }
-}
-
-/* 512px */
-@media screen and (min-width: 32rem) {
-  :root {
-    --modal-img-height: 150px;
+    /* --modal-img-height: 100px; */
+    --thumb-width: 304px;
+    --thumb-height: 114px;
   }
 }
 
 /* 640px */
-@media screen and (min-width: 40rem) {
+@media screen and (min-width: 34rem) {
   :root {
     --border-radius: 12px;
-    --thumb-width: 232px;
-    --thumb-height: 87px;
+    --thumb-width: 352px;
+    --thumb-height: 132px;
     --modal-width: 80%;
     --superModal-width: 80%;
     --modal-img-height: 200px;
@@ -94,18 +89,16 @@
 @media screen and (min-width: 72.5rem) {
   :root {
     --pages-margin-right: 0;
-    --thumb-width: 304px;
-    --thumb-height: 114px;
     --modal-img-height: 200px;
     --info-margin: 20px;
   }
 }
 
 /* 1600px */
-@media screen and (min-width: 90.5rem) {
+@media screen and (min-width: 100rem) {
   :root {
     --border-radius: 14px;
-    --thumb-width: 400px;
+    --thumb-width: 424px;
     --thumb-height: 150px;
     --modal-img-height: 225px;
     --info-margin: 25px;
