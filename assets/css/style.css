@@ -1,8 +1,8 @@
 :root {
   --font-size-xs: 1rem;
   --font-size-s: 1rem;
-  --font-size-m: 1.2rem;
-  --font-size-l: 1.4rem;
+  --font-size-m: 1.15rem;
+  --font-size-l: 1.3rem;
 
   /* page colors */
   --base-color: #00A1BB;
@@ -18,10 +18,10 @@
   --thumb-height: 75px;
   --modal-width: 85%;
   --superModal-width: 85%;
-  --modal-img-height: 75px;
-  --photo-diameter: 200px;
+  --modal-img-height: 100px;
+  --photo-diameter: 110px;
   --photo-border: 5px;
-  --info-margin: 10px;
+  --info-margin: 2px;
 }
 
 /* 640px */
@@ -64,23 +64,36 @@
 }
 
 /* 24.5 x 16px = 392px */
-@media screen and (min-width: 24rem) {
+@media screen and (min-width: 23.5rem) {
   :root {  
     /* --modal-img-height: 100px; */
+    --photo-diameter: 150px;
+    --info-margin: 10px;
+    --modal-img-height: 120px;
+    --thumb-width: 304px;
+    --thumb-height: 114px;
+  }
+}
+
+@media screen and (min-width: 26rem) {
+  :root {  
+    /* --modal-img-height: 100px; */
+    --photo-diameter: 200px;
+    --modal-img-height: 140px;
     --thumb-width: 304px;
     --thumb-height: 114px;
   }
 }
 
 /* 640px */
-@media screen and (min-width: 34rem) {
+@media screen and (min-width: 35rem) {
   :root {
     --border-radius: 12px;
     --thumb-width: 352px;
     --thumb-height: 132px;
     --modal-width: 80%;
     --superModal-width: 80%;
-    --modal-img-height: 200px;
+    --modal-img-height: 180px;
     --info-margin: 15px;
   }
 }
@@ -89,18 +102,19 @@
 @media screen and (min-width: 72.5rem) {
   :root {
     --pages-margin-right: 0;
-    --modal-img-height: 200px;
+    --info-margin: 20px;
+    --modal-img-height: 220px;
     --info-margin: 20px;
   }
 }
 
 /* 1600px */
-@media screen and (min-width: 100rem) {
+@media screen and (min-width: 101rem) {
   :root {
     --border-radius: 14px;
     --thumb-width: 424px;
     --thumb-height: 150px;
-    --modal-img-height: 225px;
+    --modal-img-height: 275px;
     --info-margin: 25px;
   }
 }
@@ -110,8 +124,8 @@
     --border-radius: 14px;
     --thumb-width: 504px;
     --thumb-height: 189px;
-    --modal-img-height: 225px;
-    --photo-diameter: 250px;
+    --modal-img-height: 300px;
+    --photo-diameter: 275px;
     --photo-border: 8px;
     --info-margin: 30px;
   }
@@ -124,7 +138,7 @@
     --thumb-width: 600px;
     --thumb-height: 225px;
     --modal-width: 60%;
-    --modal-img-height: 300px;
+    --modal-img-height: 350px;
     --photo-diameter: 300px;
     --info-margin: 40px;
   }
