@@ -22,6 +22,7 @@
   --photo-diameter: 110px;
   --photo-border: 5px;
   --info-margin: 2px;
+  --story-width: 80%;
 }
 
 /* 640px */
@@ -105,6 +106,7 @@
     --info-margin: 20px;
     --modal-img-height: 220px;
     --info-margin: 20px;
+    --story-width: 50%;
   }
 }
 
@@ -319,7 +321,7 @@ p {
 }
 
 #story p {
-  width: 50%;
+  width: var(--story-width);
   margin: auto;
 }
 
