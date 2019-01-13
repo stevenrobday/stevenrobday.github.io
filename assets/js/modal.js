@@ -119,17 +119,4 @@ $(document).ready(function() {
       } 
     }
   });
-
-  // resize the modals on any size change
-  // return scroll to top first, otherwise modal will get misplaced when scrolled down on small window then maximized
-  $(window).resize(function () {
-    if (isModal) {
-      $(document).scrollTop(0);
-      showModal();
-    }
-    if (isSuper) {
-      $(document).scrollTop(0);
-      showSuper();
-    }
-  });
 });
