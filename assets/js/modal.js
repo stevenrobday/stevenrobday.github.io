@@ -119,4 +119,14 @@ $(document).ready(function() {
       } 
     }
   });
+
+  // resize the modals on any size change
+  $(window).resize(function () {
+    if (isModal) {
+      showModal();
+    }
+    if (isSuper) {
+      showSuper();
+    }
+  });
 });

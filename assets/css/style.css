@@ -73,6 +73,8 @@
     --modal-img-height: 120px;
     --thumb-width: 304px;
     --thumb-height: 114px;
+    --modal-width: 88%;
+    --superModal-width: 88%;
   }
 }
 
@@ -92,8 +94,6 @@
     --border-radius: 12px;
     --thumb-width: 352px;
     --thumb-height: 132px;
-    --modal-width: 80%;
-    --superModal-width: 80%;
     --modal-img-height: 180px;
     --info-margin: 15px;
   }
@@ -104,6 +104,8 @@
   :root {
     --pages-margin-right: 0;
     --info-margin: 20px;
+    --modal-width: 75%;
+    --superModal-width: 80%;
     --modal-img-height: 220px;
     --info-margin: 20px;
     --story-width: 50%;
@@ -139,7 +141,6 @@
     --border-radius: 18px;
     --thumb-width: 600px;
     --thumb-height: 225px;
-    --modal-width: 60%;
     --modal-img-height: 350px;
     --photo-diameter: 300px;
     --info-margin: 40px;
