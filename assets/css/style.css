@@ -175,6 +175,7 @@ nav {
   width: 100%;
   position: fixed;
   background-color: var(--base-color);
+  z-index: 1;
 }
 
 ul {
@@ -403,6 +404,7 @@ p {
   width: 100%; 
   height: 100%;
   opacity: .3;
+  z-index: 2;
 }
 
 .modal, #superModal {
@@ -414,6 +416,7 @@ p {
   left: 0;
   margin: auto;
   height: calc(100vh - var(--font-size-l) * 4);
+  z-index: 2;
 }
 
 .modal {
