@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function() {
   // globals for hamburger nav
 
   var $navItems = $("nav li a");
@@ -6,8 +6,8 @@ $(document).ready(function () {
   var $navProjects = $("#navProjects");
   var $navContact = $("#navContact");
 
-  var $steveDay = $("#steveDay");
   var $projects = $("#projects");
+  var $contact = $("#contact");
   //var $cntact = $("#cntact");
 
   var animating = false;
@@ -41,12 +41,16 @@ $(document).ready(function () {
  function addCurrent() {
   var scrollPos = $(document).scrollTop() + $("nav").height() + 1;
   var projectsPos = $projects.offset().top;
+  var contactPos = $contact.offset().top;
 
   if(scrollPos < projectsPos) {
     $navAbout.addClass("currentPage");
   }
-  else {
+  else if(scrollPos < contactPos) {
     $navProjects.addClass("currentPage");
+  }
+  else {
+    $navContact.addClass("currentPage");
   }
  }
 

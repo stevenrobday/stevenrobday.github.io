@@ -27,6 +27,9 @@
   --modal-width: 85%;
   --modal-img-height: 100px;
   --superModal-width: 85%;
+
+  /* FORM dynamic var */
+  --form-width: 250px;
 }
 
 /* 23.5 x 16px = 376px */
@@ -40,6 +43,8 @@
     --modal-width: 88%;
     --modal-img-height: 120px;
     --superModal-width: 88%;
+
+    --form-width: 326px;
   }
 }
 
@@ -51,6 +56,8 @@
     --thumb-width: 304px;
     --thumb-height: 114px;
     --modal-img-height: 140px;
+
+    --form-width: 366px;
   }
 }
 
@@ -68,6 +75,8 @@
     --thumb-width: 352px;
     --thumb-height: 132px;
     --modal-img-height: 180px;
+
+    --form-width: 400px;
   }
 }
 
@@ -154,10 +163,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-html {
-	font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 body {
@@ -199,7 +205,6 @@ ul {
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
   color: var(--accent1-color);
   font-size: var(--font-size-m);
 }
@@ -225,9 +230,6 @@ ul {
 
 #steveDay {
   display: flex;
-  align-content: center;
-  justify-content: center;
-  text-align: center;
   background-color: var(--accent1-color);
   min-height: calc(50vh - var(--font-size-l));
   padding: var(--font-size-l) 0;
@@ -331,10 +333,13 @@ p {
 
 /* PROJECTS */
 
-#projects {
-  background-color: var(--accent1-color);
+#projects, #contact {
   min-height: calc(100vh - var(--font-size-l) * 2);
   display: flex;
+}
+
+#projects {
+  background-color: var(--accent1-color);
 }
 
 /* container that contains category and projects */
@@ -542,4 +547,60 @@ p {
 #superModalImg img {
   width: 100%;
   height: 100%;
+}
+
+#contactForm {
+  margin: auto;
+  width: var(--form-width);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin: calc(var(--font-size-xs)/2) 0;
+}
+
+label {
+  font-weight: 700;
+  margin: calc(var(--font-size-xs)/5) 0;
+}
+
+label, input, textarea {
+  font-size: var(--font-size-xs);
+}
+
+input, textarea {
+  padding: calc(var(--font-size-xs) / 2);
+}
+
+input, button {
+  height: calc(var(--font-size-l) * 1.25);
+}
+
+input, textarea, button {
+  border-radius: 6px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: var(--base-color);
+  color: var(--accent1-color);
+  border: none;
+  font-size: var(--font-size-s);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--accent3-color);
+}
+
+:required:valid {
+  border-color: var(--accent1-color);
+}
+
+:required:invalid {
+  border-color: #c61468;
 }

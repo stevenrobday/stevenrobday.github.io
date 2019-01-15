@@ -11,6 +11,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="assets/js/navbar.js"></script>
   <script src="assets/js/modal.js"></script>
+  <script src="assets/js/email.js"></script>
 </head>
 <body>
   <header>
@@ -27,7 +28,7 @@
           </a>
         </li>
         <li>
-          <a id="navContact">
+          <a id="navContact" data-id="#contact">
             <span>Contact</span>
           </a>
         </li>
@@ -185,6 +186,27 @@
           </div>
         </div>
       </div>
+    </div>
+    <div id="contact">
+      <form id="contactForm" method="post" action="https://www.thestevester.com/assets/email.php">
+        <div class="field">
+          <label for="name">Name:</label>
+          <input type="text" id="formName" name="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email:</label>
+          <input type="email" id="formEmail" name="email" required>
+        </div> 
+        <div class="field">
+          <label for="message">Message:</label>
+          <textarea id="formMessage" name="message" required></textarea>
+        </div>
+        <div class="field" id="status">     
+        </div>
+        <div class="field">
+          <button type="submit">Send</button>
+        </div>
+    </form>
     </div>
     <div id="modalShade"></div>
     <div class="modal" id="pacmentalModal">

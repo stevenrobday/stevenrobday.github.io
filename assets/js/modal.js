@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
   // globals
   var isModal = false;
   var isSuper = false;
