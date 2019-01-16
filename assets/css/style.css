@@ -551,8 +551,22 @@ p {
   height: 100%;
 }
 
+/* CONTACT */
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#requestMessage {
+  font-size: var(--font-size-l);
+  font-weight: 700;
+  margin-bottom: var(--font-size-l);
+}
+
 #contactForm {
-  margin: auto;
   width: var(--form-width);
 }
 
@@ -610,9 +624,22 @@ button:hover {
 }
 
 .success {
+  font-weight: 700;
   color: var(--success-color);
 }
 
 .error {
+  font-weight: 700;
   color: var(--error-color);
+}
+
+footer {
+  height: calc(var(--font-size-l) * 2);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--base-color);
+  color: var(--accent1-color);
+  font-size: var(--font-size-s);
 }

@@ -13,6 +13,7 @@
   <script src="assets/js/modal.js"></script>
   <script src="assets/js/email.js"></script>
 </head>
+
 <body>
   <header>
     <nav>
@@ -188,6 +189,9 @@
       </div>
     </div>
     <div id="contact">
+      <div id="requestMessage">
+        Send me a message!
+      </div>
       <form id="contactForm" method="post" action="https://www.thestevester.com/assets/email.php">
         <div class="field">
           <label for="name">Name:</label>
@@ -196,18 +200,23 @@
         <div class="field">
           <label for="email">Email:</label>
           <input type="email" id="formEmail" name="email" required>
-        </div> 
+        </div>
         <div class="field">
           <label for="message">Message:</label>
           <textarea id="formMessage" name="message" required></textarea>
         </div>
-        <div class="field" id="status">     
+        <div class="field" id="status">
         </div>
         <div class="field">
           <button type="submit">Send</button>
         </div>
-    </form>
+      </form>
     </div>
+    <footer>
+      <div>
+        © 2019
+      </div>
+    </footer>
     <div id="modalShade"></div>
     <div class="modal" id="pacmentalModal">
       <div class="modalWrapper">
@@ -223,7 +232,8 @@
               <i>Pac-Mental</i> is a twist on the original <i>Pac-Man</i> and <i>Ms. Pac-Man</i> arcade games. I made it
               with the help of
               <a href="http://www.gamasutra.com/view/feature/3938/the_pacman_dossier.php?print=1" target="_blank">The Pac-Man
-                Dossier</a>
+                Dossier
+              </a>
               by Jamey Pittman, and Shaun Williams's
               <a href="https://bitbucket.org/shaunew/pac-man" target="_blank">JavaScript rewrite</a>
               of the originals, both invaluable resources.
@@ -570,4 +580,5 @@
     </div>
   </main>
 </body>
+
 </html>
