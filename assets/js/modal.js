@@ -1,5 +1,5 @@
 $(function() {
-  // globals
+  
   var isModal = false;
   var isSuper = false;
   var imgRatio;

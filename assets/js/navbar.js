@@ -1,6 +1,6 @@
 $(function() {
-  // globals for hamburger nav
 
+  var $navbar = $("nav");
   var $navItems = $("nav li a");
   var $navAbout = $("#navAbout");
   var $navProjects = $("#navProjects");
@@ -8,25 +8,31 @@ $(function() {
 
   var $projects = $("#projects");
   var $contact = $("#contact");
-  //var $cntact = $("#cntact");
 
   var animating = false;
 
+  // when user clicks on a navbar section, scroll doc to anchor then underline selection
   $navItems.on("click", function () {
     var $this = $(this);
+
+    // anchor to scroll to
     var $anchor = $this.attr("data-id");
 
+    // set to true to override user scroll function
     animating = true;
 
     $('html, body').animate({
-      scrollTop: $($anchor).offset().top - $("nav").height() + 1
+      // make sure section begins below navbar. offset by a pixel for accuracy
+      scrollTop: $($anchor).offset().top - $navbar.height() + 1
     }, 400, function() {
+        // on complete, underline in navbar
         animating = false;
         removeCurrent();
         $this.addClass("currentPage");
       });
   });
 
+  // user scroll function
   $(document).on( 'scroll', function(){
     if(!animating) {
       removeCurrent();
@@ -34,6 +40,7 @@ $(function() {
     }
  });
 
+ // removes underline from selection
  function removeCurrent() {
   $navItems.removeClass("currentPage");
  }

@@ -1,48 +1,44 @@
 $(function () {
-  // Get the form.
-  var form = $("#contactForm");
 
-  // Get the messages div.
-  //var formMessages = $('#form-messages');
+  var $form = $("#contactForm");
+  var $status = $("#status");
+  var $name = $("#formName");
+  var $email = $("#formEmail");
+  var $message = $("#formMessage");
 
-  // TODO: The rest of the code will go here...
-  // Set up an event listener for the contact form.
-  $(form).submit(function (e) {
-    // Stop the browser from submitting the form.
+  $form.submit(function (e) {
     e.preventDefault();
 
-    // Serialize the form data.
-    var formData = $(form).serialize();
+    // turns form data into key value pairs
+    var formData = $form.serialize();
 
-    // Submit the form using AJAX.
     $.ajax({
       type: 'POST',
-      url: $(form).attr('action'),
+      url: $form.attr('action'),
       data: formData
     })
       .done(function (response) {
-        // Make sure that the formMessages div has the 'success' class.
-        //$(formMessages).removeClass('error');
-        //$(formMessages).addClass('success');
+        // display response
+        $status.removeClass("error");
+        $status.addClass("success");
+        $status.text(response);
 
-        // Set the message text.
-       // $(formMessages).text(response);
-
-        // Clear the form.
-        $('#formName').val('');
-        $('#formEmail').val('');
-        $('#formMessage').val('');
+        // clear form
+        $name.val('');
+        $email.val('');
+        $message.val('');
       })
       .fail(function (data) {
-        // Make sure that the formMessages div has the 'error' class.
-        //$(formMessages).removeClass('success');
-        //$(formMessages).addClass('error');
+        var response = data.responseText;
 
-        // Set the message text.
-        if (data.responseText !== '') {
-          $("#status").text(data.responseText);
+        // display response
+        $status.removeClass("success");
+        $status.addClass("error");
+
+        if (response !== '') {
+          $status.text(response);
         } else {
-          $("#status").text('Oops! An error occured and your message could not be sent.');
+          $status.text("An error occurred and your message could not be sent.");
         }
       });
   });

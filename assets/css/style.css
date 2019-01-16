@@ -10,6 +10,8 @@
   --accent1-color: #D5F1F7;
   --accent2-color: #A1CCCB;
   --accent3-color: #006778;
+  --success-color: #08965B;
+  --error-color: #c61468;
 
   /* NAVBAR dynamic var */
   --pages-margin-right: auto;
@@ -571,6 +573,7 @@ label, input, textarea {
 
 input, textarea {
   padding: calc(var(--font-size-xs) / 2);
+  border: 2px solid var(--accent1-color);
 }
 
 input, button {
@@ -598,9 +601,18 @@ button:hover {
 }
 
 :required:valid {
-  border-color: var(--accent1-color);
+  border: 2px solid var(--success-color);
 }
 
 :required:invalid {
-  border-color: #c61468;
+  border: 2px solid var(--error-color);
+  box-shadow: none;
+}
+
+.success {
+  color: var(--success-color);
+}
+
+.error {
+  color: var(--error-color);
 }
