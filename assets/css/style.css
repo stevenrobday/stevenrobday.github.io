@@ -623,6 +623,10 @@ button:hover {
   box-shadow: none;
 }
 
+#status {
+  text-align: center;
+}
+
 .success {
   font-weight: 700;
   color: var(--success-color);
