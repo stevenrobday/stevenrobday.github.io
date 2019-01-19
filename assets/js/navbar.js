@@ -22,8 +22,8 @@ $(function() {
     animating = true;
 
     $('html, body').animate({
-      // make sure section begins below navbar. offset by a pixel for accuracy
-      scrollTop: $($anchor).offset().top - $navbar.height() + 1
+      // make sure section begins below navbar
+      scrollTop: $($anchor).offset().top - $navbar.height()
     }, 400, function() {
         // on complete, underline in navbar
         animating = false;

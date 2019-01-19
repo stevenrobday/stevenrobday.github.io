@@ -6,11 +6,12 @@
   --font-size-l: 1.3rem;
 
   /* page colors */
-  --base-color: #00A1BB;
-  --accent1-color: #D5F1F7;
-  --accent2-color: #A1CCCB;
-  --accent3-color: #006778;
-  --success-color: #08965B;
+  --base-color: #f8f8f8;
+  --accent1-color: #f0f0f0;
+  --accent2-color: #fffdfa;
+  --accent3-color: #f74356;
+  --accent4-color: #464646;
+  --success-color: #64c2ec;
   --error-color: #c61468;
 
   /* NAVBAR dynamic var */
@@ -96,7 +97,9 @@
 
     --info-margin: 20px;
     --story-width: 50%;
-    
+
+    --thumb-width: 424px;
+    --thumb-height: 150px;
     --modal-width: 75%;
     --modal-img-height: 220px;
     --superModal-width: 80%;
@@ -114,8 +117,8 @@
     --info-margin: 25px;
 
     --border-radius: 14px;
-    --thumb-width: 424px;
-    --thumb-height: 150px;
+    --thumb-width: 504px;
+    --thumb-height: 189px;
     --modal-img-height: 275px;
   }
 }
@@ -126,8 +129,8 @@
     --photo-diameter: 275px;
     --info-margin: 30px;
 
-    --thumb-width: 504px;
-    --thumb-height: 189px;
+    --thumb-width: 600px;
+    --thumb-height: 225px;
     --modal-img-height: 300px;
   }
 }
@@ -155,8 +158,8 @@
     --info-margin: 40px;
 
     --border-radius: 18px;
-    --thumb-width: 600px;
-    --thumb-height: 225px;
+    --thumb-width: 808px;
+    --thumb-height: 303px;
     --modal-img-height: 350px; 
   }
 }
@@ -184,6 +187,7 @@ nav {
   position: fixed;
   background-color: var(--base-color);
   z-index: 1;
+  border-bottom: 1px solid var(--accent4-color);
 }
 
 ul {
@@ -207,7 +211,7 @@ ul {
   cursor: pointer;
   display: flex;
   align-items: center;
-  color: var(--accent1-color);
+  color: #767575;
   font-size: var(--font-size-m);
 }
 
@@ -221,7 +225,7 @@ ul {
 }
 
 #pages li a:hover {
-  color: #fff;
+  color: #000;
 }
 
 /* ABOUT */
@@ -235,6 +239,7 @@ ul {
   background-color: var(--accent1-color);
   min-height: calc(50vh - var(--font-size-l));
   padding: var(--font-size-l) 0;
+  color: var(--accent4-color);
 }
 
 #photoContainer {
@@ -243,7 +248,7 @@ ul {
   height: var(--photo-diameter); 
   width: var(--photo-diameter);
   border-radius: 50%;
-  border: var(--photo-border) solid var(--base-color);
+  border: var(--photo-border) solid var(--accent4-color);
   margin: auto var(--info-margin) auto auto;
 }
 
@@ -258,7 +263,6 @@ ul {
 
 #info div:first-child {
   font-size: calc(var(--font-size-l) * 1.5);
-  color: var(--base-color);
   font-weight: 900;
 }
 
@@ -344,7 +348,7 @@ p {
   background-color: var(--accent1-color);
 }
 
-/* container that contains category and projects */
+/* container for each project */
 .examples {
   display: flex;
   align-content: center;
@@ -366,7 +370,10 @@ p {
   padding: var(--font-size-s);
   margin: var(--font-size-s);
   box-sizing: content-box;
-  text-align: center;
+  text-align: left;
+  background-color: var(--accent2-color);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-xs);
 }
 
 .exampleThumb:hover .thumbFilter {
@@ -376,7 +383,7 @@ p {
 /* filter for hovering thumbnails */
 .thumbFilter {
   position: absolute;
-  background-color: var(--accent3-color);
+  background-color: #faf682;
   border-radius: var(--border-radius);
   width: 100%;
   height: 100%;
@@ -404,7 +411,7 @@ p {
 /* bg shade for modal and super modal */
 #modalShade, #superShade {
 	display: none;
-	background: #000;
+	background: var(--accent4-color);
   position: fixed; 
   left: 0; 
   top: 0;
@@ -447,7 +454,7 @@ p {
   display: flex;
   top: 0;
   background: var(--base-color);
-  color: var(--accent1-color);
+  color: #000;
   width: 100%;
   justify-content: space-between;
   flex: 1 1 calc(var(--font-size-l) * 1.5);
@@ -473,9 +480,24 @@ p {
 
 /* first paragraph under technologies */
 .summary {
-  text-align: center;
+  text-align: left;
   margin: 0 auto;
   width: var(--modal-width);
+}
+
+/* text and photo wrapper inside modal */
+.exampleWrap {
+  display: flex;
+  padding: 20px 15%;
+}
+
+.exampleText {
+  margin: auto 50px auto 0;
+  text-align: left;
+}
+
+.accent2 {
+  background-color: var(--accent2-color);
 }
 
 /*energizer images will be 4 in a row or 2x2 depending space available*/
@@ -497,12 +519,6 @@ p {
 
 #energizers > div > div > img, .exampleImg img{
   height: var(--modal-img-height);
-}
-
-/* sentence above each thumbnail inside project modal */
-.biggerMargin {
-  margin-top: var(--font-size-s);
-  margin-bottom: calc(var(--font-size-s) / 3);
 }
 
 .thumbnail {
