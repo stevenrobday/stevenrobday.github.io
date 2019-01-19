@@ -434,7 +434,7 @@ p {
 }
 
 .modal {
-  background: var(--accent1-color);
+  background-color: var(--accent1-color);
   width: var(--modal-width); 
 }
 
@@ -453,7 +453,7 @@ p {
 .modalHeader {
   display: flex;
   top: 0;
-  background: var(--base-color);
+  background-color: var(--base-color);
   color: #000;
   width: 100%;
   justify-content: space-between;
@@ -493,6 +493,7 @@ p {
 .exampleWrap {
   display: flex;
   padding: 20px 15%;
+  justify-content: space-between;
 }
 
 .exampleText {
@@ -505,6 +506,12 @@ p {
 }
 
 /*energizer images will be 4 in a row or 2x2 depending space available*/
+
+#energizersWrap {
+  text-align: center;
+  padding: 20px 0;
+}
+
 #energizers {
   display: flex;
   flex-wrap: wrap;
