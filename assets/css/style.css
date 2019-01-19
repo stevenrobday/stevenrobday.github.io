@@ -9,10 +9,9 @@
   --base-color: #f8f8f8;
   --accent1-color: #f0f0f0;
   --accent2-color: #fffdfa;
-  --accent3-color: #f74356;
-  --accent4-color: #464646;
-  --success-color: #64c2ec;
-  --error-color: #c61468;
+  --accent3-color: #464646;
+  --success-color: #0CAA30;
+  --error-color: #f74356;
 
   /* NAVBAR dynamic var */
   --pages-margin-right: auto;
@@ -187,7 +186,7 @@ nav {
   position: fixed;
   background-color: var(--base-color);
   z-index: 1;
-  border-bottom: 1px solid var(--accent4-color);
+  border-bottom: 1px solid var(--accent3-color);
 }
 
 ul {
@@ -221,11 +220,11 @@ ul {
 
 .currentPage {
   border-top: 5px solid var(--base-color);
-  border-bottom: 5px solid var(--accent3-color);
+  border-bottom: 5px solid var(--error-color);
 }
 
 #pages li a:hover {
-  color: #000;
+  color: var(--accent3-color);
 }
 
 /* ABOUT */
@@ -239,7 +238,7 @@ ul {
   background-color: var(--accent1-color);
   min-height: calc(50vh - var(--font-size-l));
   padding: var(--font-size-l) 0;
-  color: var(--accent4-color);
+  color: var(--accent3-color);
 }
 
 #photoContainer {
@@ -248,7 +247,7 @@ ul {
   height: var(--photo-diameter); 
   width: var(--photo-diameter);
   border-radius: 50%;
-  border: var(--photo-border) solid var(--accent4-color);
+  border: var(--photo-border) solid var(--accent3-color);
   margin: auto var(--info-margin) auto auto;
 }
 
@@ -256,32 +255,28 @@ ul {
   height: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: center;
   margin: auto auto auto var(--info-margin);
 }
 
-#info div:first-child {
+#info > div:first-child {
   font-size: calc(var(--font-size-l) * 1.5);
   font-weight: 900;
+  line-height: 1;
 }
 
-#info div:nth-child(2){
+#info > div:nth-child(2){
   font-size: var(--font-size-l);
-}
-
-p {
-  margin: calc(var(--font-size-s) / 3) 0;
+  line-height: 1;
 }
 
 #icons {
   display: flex;
   width: 100%;
-  margin: var(--font-size-s) 0;
 }
 
 #icons li {
-  height: 100%;
   margin: auto;
 }
 
@@ -342,6 +337,7 @@ p {
 #projects, #contact {
   min-height: calc(100vh - var(--font-size-l) * 2);
   display: flex;
+  padding: var(--font-size-l) 0;
 }
 
 #projects {
@@ -411,7 +407,7 @@ p {
 /* bg shade for modal and super modal */
 #modalShade, #superShade {
 	display: none;
-	background: var(--accent4-color);
+	background: var(--accent3-color);
   position: fixed; 
   left: 0; 
   top: 0;
@@ -483,16 +479,21 @@ p {
   text-align: left;
   margin: 0 auto;
   width: var(--modal-width);
+  padding: var(--font-size-xs);
 }
 
 .projectLinks {
   text-align: center;
 }
 
+.marginBottom {
+  margin-bottom: var(--font-size-xs);
+}
+
 /* text and photo wrapper inside modal */
 .exampleWrap {
   display: flex;
-  padding: 20px 15%;
+  padding: var(--font-size-xs) 15%;
   justify-content: space-between;
 }
 
@@ -509,7 +510,7 @@ p {
 
 #energizersWrap {
   text-align: center;
-  padding: 20px 0;
+  padding: var(--font-size-xs) 0;
 }
 
 #energizers {
@@ -630,7 +631,7 @@ textarea {
 }
 
 button {
-  background-color: var(--base-color);
+  background-color: var(--error-color);
   color: var(--accent1-color);
   border: none;
   font-size: var(--font-size-s);
@@ -638,7 +639,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--accent3-color);
+  background-color: var(--success-color);
 }
 
 :required:valid {
@@ -671,6 +672,6 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: var(--base-color);
-  color: var(--accent1-color);
+  color: var(--accent3-color);
   font-size: var(--font-size-s);
 }
