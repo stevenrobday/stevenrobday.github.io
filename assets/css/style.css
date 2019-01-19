@@ -485,6 +485,10 @@ p {
   width: var(--modal-width);
 }
 
+.projectLinks {
+  text-align: center;
+}
+
 /* text and photo wrapper inside modal */
 .exampleWrap {
   display: flex;
