@@ -272,10 +272,10 @@ ul {
 }
 
 #info {
-  height: 200px;
+  height: var(--photo-diameter);
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   text-align: center;
   margin: auto auto auto var(--info-margin);
 }
@@ -294,6 +294,7 @@ ul {
 #icons {
   display: flex;
   width: 100%;
+  height: calc(var(--font-size-l) * 1.5);
 }
 
 #icons li {
