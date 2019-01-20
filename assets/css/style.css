@@ -27,6 +27,12 @@
   --thumb-width: 200px;
   --thumb-height: 75px;
   --modal-width: 85%;
+  --modal-example-direction: column;
+  --modal-example-justify: center;
+  --modal-example-padding: 0;
+  --modal-example-text-margin-right: auto;
+  --modal-example-text-margin-left: auto;
+  --modal-example-text-align: center;
   --modal-img-height: 100px;
   --superModal-width: 85%;
 
@@ -58,12 +64,12 @@
     --thumb-width: 304px;
     --thumb-height: 114px;
     --modal-img-height: 140px;
-
+    
     --form-width: 366px;
   }
 }
 
-/* 640px */
+/* 560px */
 @media screen and (min-width: 35rem) {
   :root {
     --font-size-s: 1.2rem;
@@ -82,10 +88,24 @@
   }
 }
 
+/* 720px */
+@media screen and (min-width: 45rem) {
+  :root {
+    --modal-example-direction: row;
+    --modal-example-justify: space-between;
+    --modal-example-padding: 5%;
+    --modal-example-text-margin-right: 50px;
+    --modal-example-text-margin-left: 0;
+    --modal-example-text-align: left;
+  }
+}
+
 /* 1024px */
 @media screen and (min-width: 64rem) {
   :root {
     --pages-margin-right: 0;
+
+    --modal-example-padding: 15%;
   }
 }
 
@@ -482,24 +502,27 @@ ul {
   padding: var(--font-size-xs);
 }
 
-.projectLinks {
+.projectLinks, #energizersWrap {
   text-align: center;
 }
 
-.marginBottom {
+.marginBottom, .exampleText {
   margin-bottom: var(--font-size-xs);
 }
 
 /* text and photo wrapper inside modal */
 .exampleWrap {
   display: flex;
-  padding: var(--font-size-xs) 15%;
-  justify-content: space-between;
+  flex-direction: var(--modal-example-direction);
+  justify-content: var(--modal-example-justify);
+  align-items: center;
+  width: 100%;
+  padding: var(--font-size-xs) var(--modal-example-padding);
 }
 
 .exampleText {
-  margin: auto 50px auto 0;
-  text-align: left;
+  margin: auto var(--modal-example-text-margin-right) auto var(--modal-example-text-margin-left);
+  text-align: var(--modal-example-text-align);
 }
 
 .accent2 {
@@ -509,7 +532,6 @@ ul {
 /*energizer images will be 4 in a row or 2x2 depending space available*/
 
 #energizersWrap {
-  text-align: center;
   padding: var(--font-size-xs) 0;
 }
 
