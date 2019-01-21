@@ -58,7 +58,7 @@ $(function() {
   }
 
   // display project modal
-  $(".exampleThumb").on("click", function () {
+  $(".moreInfo").on("click", function () {
     isModal = true;
     $modalShade.fadeIn("fast");
     $dataId = $($(this).attr("data-id"));

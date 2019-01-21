@@ -203,7 +203,7 @@ nav {
   width: 100%;
   position: fixed;
   background-color: var(--base-color);
-  z-index: 1;
+  z-index: 2;
   border-bottom: 1px solid var(--accent3-color);
 }
 
@@ -373,9 +373,9 @@ ul {
 }
 
 .exampleThumb {
-  cursor: pointer;
   display: flex; 
   flex-direction: column;
+  justify-content: space-between;
   position: relative;
   width: var(--thumb-width);
   padding: var(--font-size-s);
@@ -384,14 +384,6 @@ ul {
   text-align: left;
   background-color: var(--accent2-color);
   font-size: var(--font-size-xs);
-}
-
-.title {
-  margin: var(--font-size-xs) 0 0 0;
-}
-
-.technologies {
-  margin: var(--font-size-xs) 0;
 }
 
 .exampleThumb:hover .thumbFilter {
@@ -415,6 +407,10 @@ ul {
   height: var(--thumb-height); 
 }
 
+.exampleThumb > div:not(.thumbFilter):not(.projectLinks) {
+  margin: calc(var(--font-size-s) / 3) 0;
+}
+
 /* list of technologies used for each project */
 .technologies {
   font-size: var(--font-size-xxs);
@@ -424,6 +420,52 @@ ul {
 /* project title */
 .title {
   font-size: var(--font-size-m);
+}
+
+/* buttons inside project thumbs and contact form */
+.projectLinks a, .moreInfo, button {
+  background-color: var(--error-color);
+  color: var(--accent1-color);
+  border: none;
+  font-size: var(--font-size-s);
+  cursor: pointer;
+}
+
+.projectLinks a:hover, .moreInfo:hover, button:hover {
+  background-color: var(--success-color);
+}
+
+.projectLinks a, .moreInfo {
+  color: var(--accent2-color);
+}
+
+.projectLinks a, .moreInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectLinks {
+  z-index: 1;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.projectLinks a, .moreInfo {
+  color: var(--accent1-color);
+  text-decoration: none;
+  width: 150px;
+  margin-top: var(--font-size-l);
+}
+
+.projectLinks a, .moreInfo, input, button {
+  height: calc(var(--font-size-l) * 1.25);
+}
+
+.projectLinks a, .moreInfo, input, textarea, button {
+  border-radius: 6px;
 }
 
 /* bg shade for modal and super modal */
@@ -472,7 +514,6 @@ ul {
   display: flex;
   top: 0;
   background-color: var(--base-color);
-  color: #000;
   width: 100%;
   justify-content: space-between;
   flex: 1 1 calc(var(--font-size-l) * 1.5);
@@ -504,7 +545,7 @@ ul {
   font-size: var(--font-size-s);
 }
 
-.projectLinks, #energizersWrap {
+#energizersWrap {
   text-align: center;
 }
 
@@ -593,7 +634,7 @@ ul {
   top: calc(var(--font-size-s) * -1.5);
   right: calc(var(--font-size-s) * -1.5);
   padding: calc(var(--font-size-s) / 4);
-  background-color: #000000;
+  background-color: var(--accent3-color);
   cursor: pointer;
 }
 
@@ -642,28 +683,8 @@ input, textarea {
   border: 2px solid var(--accent1-color);
 }
 
-input, button {
-  height: calc(var(--font-size-l) * 1.25);
-}
-
-input, textarea, button {
-  border-radius: 6px;
-}
-
 textarea {
   resize: vertical;
-}
-
-button {
-  background-color: var(--error-color);
-  color: var(--accent1-color);
-  border: none;
-  font-size: var(--font-size-s);
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: var(--success-color);
 }
 
 :required:valid {
