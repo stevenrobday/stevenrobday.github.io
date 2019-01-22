@@ -443,7 +443,6 @@ ul {
   border: none;
   font-size: var(--font-size-s);
   cursor: pointer;
-  box-shadow: 2px 4px 10px var(--accent3-color);
   transition: all 150ms linear;
 }
 
@@ -468,13 +467,11 @@ ul {
 }
 
 .button:hover, button:hover {
-  box-shadow: 0px 2px 10px var(--accent3-color);
   transform: translate(2px, 2px);
   opacity: .8;
 }
 
 .button:active, button:active {
-  box-shadow: 0px 0px 10px var(--accent3-color);
   transform: translate(2px, 4px);
 }
 
