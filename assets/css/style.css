@@ -407,8 +407,13 @@ ul {
   height: var(--thumb-height); 
 }
 
-.exampleThumb > div:not(.thumbFilter):not(.projectLinks) {
+.title, .technologies {
   margin: calc(var(--font-size-s) / 3) 0;
+}
+
+/* project title */
+.title {
+  font-size: var(--font-size-m);
 }
 
 /* list of technologies used for each project */
@@ -417,33 +422,9 @@ ul {
   font-style: italic;
 }
 
-/* project title */
-.title {
-  font-size: var(--font-size-m);
-}
-
-/* buttons inside project thumbs and contact form */
-.projectLinks a, .moreInfo, button {
-  background-color: var(--error-color);
-  color: var(--accent1-color);
-  border: none;
-  font-size: var(--font-size-s);
-  cursor: pointer;
-}
-
-.projectLinks a:hover, .moreInfo:hover, button:hover {
-  background-color: var(--success-color);
-}
-
-.projectLinks a, .moreInfo {
-  color: var(--accent2-color);
-}
-
-.projectLinks a, .moreInfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* project description */
+.exampleThumb > div:nth-child(5) {
+  margin: calc(var(--font-size-s) / 3) 0 var(--font-size-l);
 }
 
 .projectLinks {
@@ -453,19 +434,46 @@ ul {
   flex-wrap: wrap;
 }
 
-.projectLinks a, .moreInfo {
+/* buttons inside project thumbs and contact form */
+.button, button {
+  background-color: #3784AA;
+  color: var(--accent1-color);
+  border: none;
+  font-size: var(--font-size-s);
+  cursor: pointer;
+  box-shadow: 2px 4px 10px var(--accent3-color);
+  transition: all 150ms linear;
+}
+
+.button {
+  color: var(--accent2-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: var(--accent1-color);
   text-decoration: none;
   width: 150px;
-  margin-top: var(--font-size-l);
+  
 }
 
-.projectLinks a, .moreInfo, input, button {
+.button, input, button {
   height: calc(var(--font-size-l) * 1.25);
 }
 
-.projectLinks a, .moreInfo, input, textarea, button {
+.button, input, textarea, button {
   border-radius: 6px;
+}
+
+.button:hover, button:hover {
+  box-shadow: 0px 2px 10px var(--accent3-color);
+  transform: translate(2px, 2px);
+  opacity: .8;
+}
+
+.button:active, button:active {
+  box-shadow: 0px 0px 10px var(--accent3-color);
+  transform: translate(2px, 4px);
 }
 
 /* bg shade for modal and super modal */
@@ -634,7 +642,7 @@ ul {
   top: calc(var(--font-size-s) * -1.5);
   right: calc(var(--font-size-s) * -1.5);
   padding: calc(var(--font-size-s) / 4);
-  background-color: var(--accent3-color);
+  background-color: #000;
   cursor: pointer;
 }
 
