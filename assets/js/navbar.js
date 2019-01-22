@@ -45,6 +45,7 @@ $(function() {
   $navItems.removeClass("currentPage");
  }
 
+ // adds underline to current section
  function addCurrent() {
   var scrollPos = $(document).scrollTop() + $("nav").height() + 1;
   var projectsPos = $projects.offset().top;

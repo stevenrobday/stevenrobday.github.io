@@ -11,6 +11,8 @@
   --accent1-color: #f0f0f0;
   --accent2-color: #fffdfa;
   --accent3-color: #464646;
+  --navbar-text-color: #767575;
+  --button-color: #3784AA;
   --success-color: #0CAA30;
   --error-color: #f74356;
 
@@ -228,7 +230,7 @@ ul {
   cursor: pointer;
   display: flex;
   align-items: center;
-  color: #767575;
+  color: var(--navbar-text-color);
   font-size: var(--font-size-m);
 }
 
@@ -436,7 +438,7 @@ ul {
 
 /* buttons inside project thumbs and contact form */
 .button, button {
-  background-color: #3784AA;
+  background-color: var(--button-color);
   color: var(--accent1-color);
   border: none;
   font-size: var(--font-size-s);
@@ -580,7 +582,7 @@ ul {
   background-color: var(--accent2-color);
 }
 
-/*energizer images will be 4 in a row or 2x2 depending space available*/
+/* energizer images will be 4 in a row or 2 x 2 depending space on available */
 
 #energizersWrap {
   padding: var(--font-size-xs) 0;
@@ -718,13 +720,15 @@ textarea {
   color: var(--error-color);
 }
 
+/* FOOTER */
+
 footer {
   height: calc(var(--font-size-l) * 2);
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
-  background-color: var(--base-color);
-  color: var(--accent3-color);
+  background-color: var(--accent3-color);
+  color: var(--accent2-color);
   font-size: var(--font-size-s);
 }

@@ -21,7 +21,7 @@ $(function() {
     // disable background scrolling
     $body.css('overflow', 'hidden');
 
-    // place modal relative to scroll position
+    // place modal relative to scroll position, adjust for navbar height
     $dataId.css('margin-top', 'calc(' + $(document).scrollTop() + 'px + var(--font-size-l) * 2)');
     
     $dataId.show("fast");
