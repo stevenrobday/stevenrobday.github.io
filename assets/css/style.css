@@ -454,7 +454,7 @@ ul {
   color: var(--accent1-color);
   text-decoration: none;
   width: 150px;
-  
+  margin: 8px;
 }
 
 .button, input, button {
