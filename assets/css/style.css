@@ -386,10 +386,6 @@ ul {
   font-size: var(--font-size-xs);
 }
 
-.exampleThumb:hover .thumbFilter {
-  display: block;
-}
-
 /* filter for hovering thumbnails */
 .thumbFilter {
   position: absolute;
@@ -398,8 +394,12 @@ ul {
   height: 100%;
   left: 0;
   top: 0;
+  opacity: 0;
+  transition: all 150ms linear;
+}
+
+.exampleThumb:hover .thumbFilter {
   opacity: .1;
-  display: none;
 }
 
 .exampleThumb img {
