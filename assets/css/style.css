@@ -110,18 +110,17 @@
   }
 }
 
-/* 1160px */
-@media screen and (min-width: 72.5rem) {
+/* 1280px */
+@media screen and (min-width: 80rem) {
   :root {
     --info-margin: 20px;
 
     --info-margin: 20px;
     --story-width: 50%;
 
-    --thumb-width: 424px;
-    --thumb-height: 150px;
+    --thumb-width: 464px;
+    --thumb-height: 174px;
     --modal-width: 75%;
-    --modal-img-height: 220px;
     --superModal-width: 80%;
   }
 }
@@ -161,6 +160,9 @@
     --font-size-s: 1.4rem;
     --font-size-m: 1.6rem;
     --font-size-l: 2rem;
+
+    --thumb-width: 704px;
+    --thumb-height: 264px;
   }
 }
 
