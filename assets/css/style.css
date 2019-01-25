@@ -616,7 +616,7 @@ so it will only break in the middle of the row */
 #energizers > div > div {
   display: flex;
   flex-direction: column;
-  margin: 0 10px 10px 10px;
+  margin: 8px 8px 0 8px;
 }
 
 /* all gifs and images inside the project modals */
