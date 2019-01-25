@@ -583,6 +583,15 @@ that way the second (the title) gets centered and the third
   text-align: var(--modal-example-text-align);
 }
 
+/* vertically center img inside container */
+.exampleImg {
+  display: flex;
+}
+
+.exampleImg img {
+  margin: auto;
+}
+
 /* every other section has the accent2 color */
 .accent2 {
   background-color: var(--accent2-color);
