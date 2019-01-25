@@ -32,8 +32,9 @@
   --modal-example-direction: column;
   --modal-example-justify: center;
   --modal-example-padding: 0;
-  --modal-example-text-margin-right: 10px;
-  --modal-example-text-margin-left: 10px;
+  --modal-example-text-margin-right: 16px;
+  --modal-example-text-margin-bottom: 8px;
+  --modal-example-text-margin-left: 16px;
   --modal-example-text-align: center;
   --modal-img-height: 100px;
   --superModal-width: 85%;
@@ -96,6 +97,7 @@
     --modal-example-justify: space-between;
     --modal-example-padding: 5%;
     --modal-example-text-margin-right: 50px;
+    --modal-example-text-margin-bottom: auto;
     --modal-example-text-margin-left: 0;
     --modal-example-text-align: left;
   }
@@ -577,7 +579,7 @@ that way the second (the title) gets centered and the third
 
 /* text for these sections */
 .exampleText {
-  margin: auto var(--modal-example-text-margin-right) auto var(--modal-example-text-margin-left);
+  margin: auto var(--modal-example-text-margin-right) var(--modal-example-text-margin-bottom) var(--modal-example-text-margin-left);
   text-align: var(--modal-example-text-align);
 }
 
@@ -593,7 +595,7 @@ that way the second (the title) gets centered and the third
 }
 
 #energizersText {
-  margin: auto var(--modal-example-text-margin-right) calc(var(--font-size-xs) / 2) var(--modal-example-text-margin-right);
+  margin: auto var(--modal-example-text-margin-right) 8px var(--modal-example-text-margin-right);
 }
 
 /* wrap for energizer gifs */
