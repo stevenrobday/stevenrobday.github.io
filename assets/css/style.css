@@ -604,7 +604,7 @@ that way the second (the title) gets centered and the third
 }
 
 #energizersText {
-  margin: auto var(--modal-example-text-margin-right) 8px var(--modal-example-text-margin-right);
+  margin: auto var(--modal-example-text-margin-right) auto var(--modal-example-text-margin-right);
 }
 
 /* wrap for energizer gifs */
