@@ -32,13 +32,13 @@
   --modal-example-direction: column;
   --modal-example-justify: center;
   --modal-example-padding: 0;
-  --modal-example-text-margin-right: auto;
-  --modal-example-text-margin-left: auto;
+  --modal-example-text-margin-right: 10px;
+  --modal-example-text-margin-left: 10px;
   --modal-example-text-align: center;
   --modal-img-height: 100px;
   --superModal-width: 85%;
 
-  /* FORM dynamic var */
+  /* CONTACT dynamic var */
   --form-width: 250px;
 }
 
@@ -211,11 +211,12 @@ nav {
   border-bottom: 1px solid var(--accent3-color);
 }
 
+/* nav links */
 ul {
 	list-style: none;
 }
 
-#pages{
+#pages {
   height: 100%;
   display: flex;
   margin-left: auto;
@@ -249,12 +250,14 @@ ul {
   color: var(--accent3-color);
 }
 
-/* ABOUT */
-
-#content {
+/* content */
+main {
   margin-top: calc(var(--font-size-l) * 2);
 }
 
+/* ABOUT */
+
+/* top section */
 #steveDay {
   display: flex;
   background-color: var(--accent1-color);
@@ -342,6 +345,7 @@ ul {
   cursor: pointer;
 }
 
+/* bottom section */
 #story {
   text-align: center;
   font-size: var(--font-size-m);
@@ -357,6 +361,7 @@ ul {
 
 /* PROJECTS */
 
+/* projects and contact sections */
 #projects, #contact {
   min-height: calc(100vh - var(--font-size-l) * 2);
   display: flex;
@@ -367,7 +372,7 @@ ul {
   background-color: var(--accent1-color);
 }
 
-/* container for each project */
+/* container for all projects */
 .examples {
   display: flex;
   align-content: center;
@@ -376,6 +381,7 @@ ul {
   margin: auto;
 }
 
+/* container for each project */
 .exampleThumb {
   display: flex; 
   flex-direction: column;
@@ -390,7 +396,7 @@ ul {
   font-size: var(--font-size-xs);
 }
 
-/* filter for hovering thumbnails */
+/* filter displayed when hovering over projects */
 .thumbFilter {
   position: absolute;
   background-color: #faf682;
@@ -406,21 +412,21 @@ ul {
   opacity: .1;
 }
 
+/* image at top of each project container */
 .exampleThumb img {
   width: var(--thumb-width);
   height: var(--thumb-height); 
 }
 
+/* project title, technologies used */
 .title, .technologies {
   margin: calc(var(--font-size-s) / 3) 0;
 }
 
-/* project title */
 .title {
   font-size: var(--font-size-m);
 }
 
-/* list of technologies used for each project */
 .technologies {
   font-size: var(--font-size-xxs);
   font-style: italic;
@@ -431,6 +437,7 @@ ul {
   margin: calc(var(--font-size-s) / 3) 0 var(--font-size-l);
 }
 
+/* container for project buttons */
 .projectLinks {
   z-index: 1;
   display: flex;
@@ -438,7 +445,7 @@ ul {
   flex-wrap: wrap;
 }
 
-/* buttons inside project thumbs and contact form */
+/* buttons inside project containers and contact form */
 .button, button {
   background-color: var(--button-color);
   color: var(--accent1-color);
@@ -449,25 +456,26 @@ ul {
 }
 
 .button {
-  color: var(--accent2-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--accent1-color);
   text-decoration: none;
   width: 150px;
   margin: 8px;
 }
 
+/* input from contact form joins in... */
 .button, input, button {
   height: calc(var(--font-size-l) * 1.25);
 }
 
+/* and now with the textarea */
 .button, input, textarea, button {
   border-radius: 6px;
 }
 
+/* button transitions */
 .button:hover, button:hover {
   transform: translate(2px, 2px);
   opacity: .8;
@@ -490,6 +498,7 @@ ul {
   z-index: 2;
 }
 
+/* project modals, and the modals that display over them */
 .modal, #superModal {
   display: none;
 	position: absolute;
@@ -511,14 +520,16 @@ ul {
   width: var(--superModal-width);
 }
 
-/* wrapper for all modal content */
+/* wrapper for all project modal content */
 .modalWrapper {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-/* modal title header. first child is an empty div, that way the second gets centered */
+/* project modal title bar. first child inside is an empty div, 
+that way the second (the title) gets centered and the third 
+(the close 'X') gets pushed to the end */
 .modalHeader {
   display: flex;
   top: 0;
@@ -538,14 +549,14 @@ ul {
   margin: auto 1%;
 }
 
-/* we want the modal body to scroll, but not the title */
+/* we want the modal content to scroll, but not the title bar */
 .modalBody {
   font-size: var(--font-size-xs);
   overflow: auto;
   height: 100%;
 }
 
-/* first paragraph under technologies */
+/* top paragraph of each project modal */
 .summary {
   text-align: left;
   margin: 0 auto;
@@ -554,15 +565,7 @@ ul {
   font-size: var(--font-size-s);
 }
 
-#energizersWrap {
-  text-align: center;
-}
-
-.marginBottom, .exampleText {
-  margin-bottom: var(--font-size-xs);
-}
-
-/* text and photo wrapper inside modal */
+/* wrapper for each text and photo section inside project modal */
 .exampleWrap {
   display: flex;
   flex-direction: var(--modal-example-direction);
@@ -572,46 +575,55 @@ ul {
   padding: var(--font-size-xs) var(--modal-example-padding);
 }
 
+/* text for these sections */
 .exampleText {
   margin: auto var(--modal-example-text-margin-right) auto var(--modal-example-text-margin-left);
   text-align: var(--modal-example-text-align);
 }
 
+/* every other section has the accent2 color */
 .accent2 {
   background-color: var(--accent2-color);
 }
 
-/* energizer images will be 4 in a row or 2 x 2 depending space on available */
-
+/* section for pac-mental energizers */
 #energizersWrap {
+  text-align: center;
   padding: var(--font-size-xs) 0;
 }
 
+#energizersText {
+  margin: auto var(--modal-example-text-margin-right) calc(var(--font-size-xs) / 2) var(--modal-example-text-margin-right);
+}
+
+/* wrap for energizer gifs */
 #energizers {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
+/* energizer images will be 4 in a row or 2 x 2 depending space on available.
+an unnamed div is wrapped around the first two energizers, and another around the last two,
+so it will only break in the middle of the row */
 #energizers > div {
   display: flex;
 }
 
+/* second nested unnamed div contains the energizer gif and name */
 #energizers > div > div {
   display: flex;
   flex-direction: column;
   margin: 0 10px 10px 10px;
 }
 
-#energizers > div > div > img, .exampleImg img{
-  height: var(--modal-img-height);
-}
-
+/* all gifs and images inside the project modals */
 .thumbnail {
+  height: var(--modal-img-height);
   cursor: pointer;
 }
 
-/* x for modal and super modal */
+/* close 'X' for modal and super modal */
 .close, #superClose {
   background: url(../svg/close.svg) no-repeat center;
   cursor: pointer;
@@ -627,7 +639,7 @@ ul {
   width: var(--font-size-xs);
 }
 
-/* will be sized with js. */
+/* wrap for gif/img modal. sized with js */
 #superModalImgWrap {
   position: absolute;
   top: 0;
@@ -637,7 +649,7 @@ ul {
   margin: auto;
 }
 
-/* super modal x wrapper, to give it padding. position to the upper right of image */
+/* super modal close 'X' wrapper, to give it padding. position to the upper right of image */
 #superCloseWrap {
   position: absolute;
   top: calc(var(--font-size-s) * -1.5);
@@ -655,6 +667,7 @@ ul {
 
 /* CONTACT */
 
+/* section container */
 #contact {
   display: flex;
   flex-direction: column;
@@ -662,6 +675,7 @@ ul {
   align-items: center;
 }
 
+/* send me a message! */
 #requestMessage {
   font-size: var(--font-size-l);
   font-weight: 700;
@@ -705,6 +719,7 @@ textarea {
   box-shadow: none;
 }
 
+/* container for success/error text */
 #status {
   text-align: center;
 }

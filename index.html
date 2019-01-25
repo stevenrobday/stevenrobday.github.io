@@ -37,8 +37,9 @@
       </ul>
     </nav>
   </header>
-  <main id="content">
+  <main>
     <!-- ABOUT -->
+    <!-- top section -->
     <section id="steveDay">
       <div id="photoContainer"></div>
       <div id="info">
@@ -78,6 +79,7 @@
         </ul>
       </div>
     </section>
+    <!-- bottom section -->
     <section id="story">
       <p>
         I like making things with code, from user-friendly database applications, to novelty games. I started in 2014 to bring an
@@ -90,8 +92,9 @@
     </section>
     <!-- PROJECTS -->
     <section id="projects">
-      <!-- PROJECT THUMBS -->
+      <!-- container for all project containers -->
       <div class="examples">
+        <!-- pacmental container -->
         <div class="exampleThumb">
           <div class="thumbFilter"></div>
           <img src="assets/png/pacmental/pacmental.png">
@@ -117,6 +120,7 @@
             </a>
           </div>
         </div>
+        <!-- write-ups container -->
         <div class="exampleThumb">
           <div class="thumbFilter"></div>
           <img src="assets/png/writeUps/writeUps.png">
@@ -139,6 +143,7 @@
             </div>
           </div>
         </div>
+        <!-- fruity pebbles container -->
         <div class="exampleThumb">
           <div class="thumbFilter"></div>
           <img src="assets/png/pebbles/pebbles.png">
@@ -164,6 +169,7 @@
             </a>
           </div>
         </div>
+        <!-- employee db container -->
         <div class="exampleThumb">
           <div class="thumbFilter"></div>
           <img src="assets/png/employee/employee.png">
@@ -186,6 +192,7 @@
             </div>
           </div>
         </div>
+        <!-- trivia game container -->
         <div class="exampleThumb">
           <div class="thumbFilter"></div>
           <img src="assets/png/triviaGame/startPage.png">
@@ -211,6 +218,7 @@
             </a>
           </div>
         </div>
+        <!-- hangman container -->
         <div class="exampleThumb">
           <div class="thumbFilter"></div>
           <img src="assets/png/hangman/reagan.png">
@@ -240,7 +248,7 @@
     </section>
     <!-- PROJECT MODALS -->
     <div id="modalShade"></div>
-    <!-- PAC-MENTAL MODAL -->
+    <!-- pac-mental modal -->
     <div class="modal" id="pacmentalModal">
       <div class="modalWrapper">
         <div class="modalHeader">
@@ -261,7 +269,7 @@
             </p>
           </div>
           <div id="energizersWrap" class="accent2">
-            <div class="marginBottom">
+            <div id="energizersText">
               <p>The energizers in <i>Pac-Mental</i> are elemental-powered.</p>
             </div>
             <div id="energizers">
@@ -338,7 +346,7 @@
         </div>
       </div>
     </div>
-    <!-- WRITE-UPS DB MODAL -->
+    <!-- write-ups modal -->
     <div class="modal" id="writeUpsModal">
       <div class="modalWrapper">
         <div class="modalHeader">
@@ -351,7 +359,7 @@
         <div class="modalBody">
           <div class="summary">
             <p>
-              This application is a database for a retail chain that initially stored all write-ups on paper in filing cabinets. It allows
+              This application is a database for a retail chain that initially stored all write-ups on paper inside filing cabinets. It allows
               for easier tracking of who has been written up for that year, and how many write-ups they have received. I wrote 
               this in 2017.
             </p>
@@ -426,7 +434,7 @@
         </div>
       </div>
     </div>
-    <!-- FRUITY PEBBLES MODAL -->
+    <!-- fruity pebbles modal -->
     <div class="modal" id="pebblesModal">
       <div class="modalWrapper">
         <div class="modalHeader">
@@ -497,7 +505,7 @@
         </div>
       </div>
     </div>
-    <!-- EMPLOYEE DB MODAL -->
+    <!-- employee db modal -->
     <div class="modal" id="employeeModal">
       <div class="modalWrapper">
         <div class="modalHeader">
@@ -557,7 +565,7 @@
         </div>
       </div>
     </div>
-    <!-- TRIVIA GAME MODAL -->
+    <!-- trivia game modal -->
     <div class="modal" id="triviaGameModal">
       <div class="modalWrapper">
         <div class="modalHeader">
@@ -600,7 +608,7 @@
         </div>
       </div>
     </div>
-    <!-- HANGMAN MODAL -->
+    <!-- hangman modal -->
     <div class="modal" id="hangmanModal">
       <div class="modalWrapper">
         <div class="modalHeader">
@@ -644,7 +652,7 @@
         </div>
       </div>
     </div>
-    <!-- IMG/GIF MODAL FOR PROJECT MODALS -->
+    <!-- img/gif modal for project modal -->
     <div id="superShade"></div>
     <div id="superModal">
       <div id="superModalImgWrap">
