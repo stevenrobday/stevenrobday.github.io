@@ -34,13 +34,13 @@ $(function() {
     var modalRatio = superModalWidth / superModalHeight;
 
     // for smaller super modal ratio, stretch image container to the width of the super modal and calculate height based on ratio
-    if(modalRatio < imgRatio){
+    if(modalRatio < imgRatio) {
       var tmpWidth = superModalWidth; 
       var tmpHeight = superModalWidth / imgWidth * imgHeight; 
     }
 
     // for equal or larger modal ratio, stretch image container to the height of the super modal and calculate width
-    else{
+    else {
       var tmpWidth = superModalHeight / imgHeight * imgWidth; 
       var tmpHeight = superModalHeight; 
     }
@@ -120,7 +120,7 @@ $(function() {
     }
   });
 
-  // resize the modals on any size change
+  // resize the modals on any window size change
   $(window).resize(function () {
     if (isModal) {
       showModal();
