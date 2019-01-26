@@ -506,8 +506,7 @@ main {
 
 /* project modals, and the modals that display over them.
 positioned to top negative navbar height. because the body is relative, it's positioned
-under the navbar. which then causes the #main margin-top to push the modal an additional
-navbar height down. height of both elements adjusted with js for mobile browsers */
+under the navbar. height of both elements adjusted with js for mobile browsers */
 .modal, #superModal {
   display: none;
   position: absolute;
