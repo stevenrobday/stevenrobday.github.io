@@ -55,7 +55,7 @@ $(function() {
     $superModalImgWrap.height(tmpHeight);
     $superModalImgWrap.width(tmpWidth);
 
-    $superModal.css('margin-top', 'calc(' + $(document).scrollTop() + 'px + var(--font-size-l) * 2)');
+    $superModal.css('margin-top', `calc(${$(document).scrollTop()}px + var(--font-size-l) * 2)`);
 
     // now place the image inside the super modal image container
     $superModalImg.html($imgTag);
