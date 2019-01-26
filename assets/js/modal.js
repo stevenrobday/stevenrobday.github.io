@@ -14,6 +14,12 @@ $(function() {
   var $superModalImg = $("#superModalImg");
   var $dataId;
   var $imgTag;
+
+  // function so modal doesn't get cut off on bottom on mobile
+  function setBodyHeight() {
+    var viewportHeight = window.innerHeight;
+    $body.height(`calc(${viewportHeight} - var(--font-size-l) * 2}`);
+  }
   
   // show the project modal
   function showModal() {
@@ -22,7 +28,7 @@ $(function() {
     $body.css('overflow', 'hidden');
 
     // place modal relative to scroll position, adjust for navbar height
-    $dataId.css('margin-top', 'calc(' + $(document).scrollTop() + 'px + var(--font-size-l) * 2)');
+    $dataId.css('margin-top', `calc( ${$(document).scrollTop()}px + var(--font-size-l) * 2)`);
     
     $dataId.show("fast");
   }
@@ -120,8 +126,10 @@ $(function() {
     }
   });
 
-  // resize the modals on any window size change
+  // resize the modals and body on any window size change
   $(window).resize(function () {
+    setBodyHeight();
+
     if (isModal) {
       showModal();
     }
@@ -129,4 +137,6 @@ $(function() {
       showSuper();
     }
   });
+
+  setBodyHeight();
 });

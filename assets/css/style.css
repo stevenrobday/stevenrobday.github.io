@@ -196,7 +196,7 @@
 
 /* had to set body position to relative to disable background scrolling 
 with pop-up modals on mobile. now positioned under navbar, so set height
-accordingly */
+accordingly (will be resized with js anyway) */
 body {
   background-color: var(--accent2-color);
   width: 100%;
