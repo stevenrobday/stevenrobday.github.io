@@ -15,10 +15,9 @@ $(function() {
   var $dataId;
   var $imgTag;
 
-  // function so modal doesn't get cut off on bottom on mobile. window.visualViewport.height includes
-  // address bar in mobile chrome. haven't tested safari
+  // function so modal doesn't get cut off on bottom on mobile.
   function setModalHeights() {
-    var viewportHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+    var viewportHeight = Math.min(document.documentElement.clientHeight, window.screen.height, window.innerHeight);
     $dataId.height(`calc(${viewportHeight} - var(--font-size-l) * 4}`);
     $superModal.height(`calc(${viewportHeight} - var(--font-size-l) * 4}`);
   }
