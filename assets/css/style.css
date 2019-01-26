@@ -199,7 +199,7 @@ with pop-up modals on mobile */
 body {
   background-color: var(--accent2-color);
   width: 100%;
-  height: 100%;
+  height: calc(100vh - var(--font-size-l) * 2);
   position: relative;
 }
 
