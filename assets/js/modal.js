@@ -16,9 +16,10 @@ $(function() {
   var $imgTag;
 
   // function so modal doesn't get cut off on bottom on mobile
-  function setBodyHeight() {
+  function setModalHeights() {
     var viewportHeight = window.innerHeight;
-    $body.height(`calc(${viewportHeight} - var(--font-size-l) * 2}`);
+    $dataId.height(`calc(${viewportHeight} - var(--font-size-l) * 4}`);
+    $superModal.height(`calc(${viewportHeight} - var(--font-size-l) * 4}`);
   }
   
   // show the project modal
@@ -68,6 +69,7 @@ $(function() {
     isModal = true;
     $modalShade.fadeIn("fast");
     $dataId = $($(this).attr("data-id"));
+    setModalHeights();
     showModal();
   });
 
@@ -128,15 +130,12 @@ $(function() {
 
   // resize the modals and body on any window size change
   $(window).resize(function () {
-    setBodyHeight();
-
     if (isModal) {
       showModal();
+      setModalHeights();
     }
     if (isSuper) {
       showSuper();
     }
   });
-
-  setBodyHeight();
 });

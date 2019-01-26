@@ -196,7 +196,7 @@
 
 /* had to set body position to relative to disable background scrolling 
 with pop-up modals on mobile. now positioned under navbar, so set height
-accordingly (will be resized with js anyway) */
+accordingly */
 body {
   background-color: var(--accent2-color);
   width: 100%;
@@ -507,7 +507,7 @@ main {
 /* project modals, and the modals that display over them.
 positioned to top negative navbar height. because the body is relative, it's positioned
 under the navbar. which then causes the #main margin-top to push the modal an additional
-navbar height down */
+navbar height down. height of both elements adjusted with js for mobile browsers */
 .modal, #superModal {
   display: none;
   position: absolute;
@@ -515,7 +515,7 @@ navbar height down */
   left: 0;
   right: 0;
   margin: 0 auto auto auto;
-  height: calc(100% - var(--font-size-l) * 2);
+  height: calc(100vh - var(--font-size-l) * 4);
   z-index: 2;
 }
 
