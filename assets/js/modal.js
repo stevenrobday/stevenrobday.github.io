@@ -6,6 +6,7 @@ $(function() {
   var imgWidth;
   var imgHeight;
 
+  var $html = $("html");
   var $body = $("body");
   var $modalShade = $("#modalShade");
   var $superShade = $("#superShade");
@@ -26,6 +27,7 @@ $(function() {
   function showModal() {
 
     // disable background scrolling
+    $html.css('overflow', 'hidden');
     $body.css('overflow', 'hidden');
 
     // place modal relative to scroll position, adjust for navbar height
@@ -78,6 +80,7 @@ $(function() {
     isModal = false;
     $modalShade.fadeOut("fast");
     $dataId.hide("fast");
+    $html.css('overflow', 'auto');
     $body.css('overflow', 'auto');
   });
 
@@ -123,6 +126,7 @@ $(function() {
         isModal = false;
         $modalShade.fadeOut("fast");
         $dataId.hide("fast");
+        $html.css('overflow', 'auto');
         $body.css('overflow', 'auto');
       } 
     }

@@ -200,7 +200,7 @@ accordingly */
 body {
   background-color: var(--accent2-color);
   width: 100%;
-  height: calc(100vh - var(--font-size-l) * 2);
+  height: 100%;
   position: relative;
 }
 
@@ -511,7 +511,7 @@ navbar height down. height of both elements adjusted with js for mobile browsers
 .modal, #superModal {
   display: none;
   position: absolute;
-  top: calc(var(--font-size-l) * -2);
+  top: 0;
   left: 0;
   right: 0;
   margin: 0 auto auto auto;
