@@ -17,7 +17,7 @@ $(function() {
 
   // function so modal doesn't get cut off on bottom on mobile.
   function setModalHeights() {
-    var viewportHeight = Math.min(document.documentElement.clientHeight, window.screen.height, window.innerHeight);
+    var viewportHeight = $(window).height();
     $dataId.height(`calc(${viewportHeight} - var(--font-size-l) * 4}`);
     $superModal.height(`calc(${viewportHeight} - var(--font-size-l) * 4}`);
   }
