@@ -16,7 +16,7 @@ $(function() {
   var $dataId;
   var $imgTag;
 
-  // function so modal doesn't get cut off on bottom on mobile.
+  // function to adjust modal heights so they don't get cut off on bottom on mobile.
   function setModalHeights() {
     var viewportHeight = window.innerHeight;
     $dataId.height(`calc(${viewportHeight}px - var(--font-size-l) * 4)`);
@@ -31,7 +31,7 @@ $(function() {
     $body.css('overflow', 'hidden');
 
     // place modal relative to scroll position, adjust for navbar height
-    $dataId.css('margin-top', `calc( ${$(document).scrollTop()}px + var(--font-size-l) * 2)`);
+    $dataId.css('margin-top', `calc(${$(document).scrollTop()}px + var(--font-size-l) * 2)`);
     
     $dataId.show("fast");
   }

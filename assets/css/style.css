@@ -195,8 +195,8 @@
 }
 
 /* had to set body position to relative to disable background scrolling 
-with pop-up modals on mobile. now positioned under navbar, so set height
-accordingly */
+with pop-up modals on mobile. with it set to relative, it's positioned 
+under navbar */
 body {
   background-color: var(--accent2-color);
   width: 100%;
@@ -504,9 +504,10 @@ main {
   z-index: 2;
 }
 
-/* project modals, and the modals that display over them.
-positioned to top negative navbar height. because the body is relative, it's positioned
-under the navbar. height of both elements adjusted with js for mobile browsers */
+/* project modals, and the modals that display over them. positioned to top. 
+because the body is relative, it's positioned under the navbar. height of 
+both elements re-adjusted with js for mobile browsers (mobile chrome includes 
+address bar in vh measurement) */
 .modal, #superModal {
   display: none;
   position: absolute;
