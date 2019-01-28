@@ -42,13 +42,15 @@ var superModalWidth = $superModal.width();
 var superModalHeight = $superModal.height()
 var modalRatio = superModalWidth / superModalHeight;
 
-// for smaller super modal ratio, stretch image container to the width of the super modal and calculate height based on ratio
+// for smaller super modal ratio, stretch image container to the 
+// width of the super modal and calculate height based on ratio
 if(modalRatio < imgRatio) {
   var tmpWidth = superModalWidth; 
   var tmpHeight = superModalWidth / imgWidth * imgHeight; 
 }
 
-// for equal or larger modal ratio, stretch image container to the height of the super modal and calculate width
+// for equal or larger modal ratio, stretch image container to 
+// the height of the super modal and calculate width
 else {
   var tmpWidth = superModalHeight / imgHeight * imgWidth; 
   var tmpHeight = superModalHeight; 
