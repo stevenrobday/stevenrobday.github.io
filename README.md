@@ -38,8 +38,6 @@ git clone git@github.com:stevenrobday/stevenrobday.github.io.git
 
 ```javascript
 
-var superModalWidth = $superModal.width();
-var superModalHeight = $superModal.height()
 var modalRatio = superModalWidth / superModalHeight;
 
 // for smaller super modal ratio, stretch image container to the 

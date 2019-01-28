@@ -39,7 +39,7 @@ $(function() {
   // modal for thumbnails inside project modal (called "super modals" here)
   function showSuper() {
     var superModalWidth = $superModal.width();
-    var superModalHeight = $superModal.height()
+    var superModalHeight = $superModal.height();
     var modalRatio = superModalWidth / superModalHeight;
 
     // for smaller super modal ratio, stretch image container to the width of the super modal and calculate height based on ratio
