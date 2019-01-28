@@ -26,13 +26,13 @@ git clone git@github.com:stevenrobday/stevenrobday.github.io.git
 
 **Modals**
 
-![portfolio layout](/readMeGifs/portfolio2.gif)
+![portfolio modals](/readMeGifs/portfolio2.gif)
 
 **Responsive**
 
 > Achieved with CSS Variables 
 
-![portfolio layout](/readMeGifs/portfolio3.gif)
+![portfolio responsive](/readMeGifs/portfolio3.gif)
 
 > The following js makes the gifs and pngs "super modal" display correctly on any resolution.
 
@@ -64,7 +64,7 @@ $superModalImgWrap.width(tmpWidth);
 
 > Achieved with AJAX call to PHP file stored on my web hosting (included in repo)
 
-![portfolio layout](/readMeGifs/portfolio4.gif)
+![portfolio contact form](/readMeGifs/portfolio4.gif)
 
 ---
 
