@@ -34,7 +34,7 @@ git clone git@github.com:stevenrobday/stevenrobday.github.io.git
 
 ![portfolio layout](/readMeGifs/portfolio3.gif)
 
-The following js makes the gifs and pngs "super modal" display correctly on any resolution.
+> The following js makes the gifs and pngs "super modal" display correctly on any resolution.
 
 ```javascript
 
