@@ -40,24 +40,25 @@ git clone git@github.com:stevenrobday/stevenrobday.github.io.git
 
 var modalRatio = superModalWidth / superModalHeight;
 
-// for smaller super modal ratio, stretch image container to the 
-// width of the super modal and calculate height based on ratio
+// for smaller super modal ratio, size image container to 
+// the width of the super modal and proportionate height
 if(modalRatio < imgRatio) {
-  var tmpWidth = superModalWidth; 
-  var tmpHeight = superModalWidth / imgWidth * imgHeight; 
+  var imgWrapWidth = superModalWidth; 
+  var imgWrapHeight = imgHeight * superModalWidth / imgWidth; 
 }
 
-// for equal or larger modal ratio, stretch image container to 
-// the height of the super modal and calculate width
+// for smaller super modal ratio, size image container to 
+// the height of the super modal and proportionate width
 else {
-  var tmpWidth = superModalHeight / imgHeight * imgWidth; 
-  var tmpHeight = superModalHeight; 
+  var imgWrapHeight = superModalHeight; 
+  var imgWrapWidth = imgWidth * superModalHeight / imgHeight; 
 }
 
-$superModalImgWrap.height(tmpHeight);
-$superModalImgWrap.width(tmpWidth);
+$superModalImgWrap.height(imgWrapHeight);
+$superModalImgWrap.width(imgWrapWidth);
 
 ```
+
 **Contact Form**
 
 > Achieved with AJAX call to PHP file stored on my web hosting (included in repo)

@@ -23,7 +23,7 @@ $(function() {
 
     $('html, body').animate({
       // make sure section begins below navbar
-      scrollTop: $($anchor).offset().top - $navbar.height()
+      scrollTop: $($anchor).offset().top - $navbar.outerHeight() + 1
     }, 400, function() {
         // on complete, underline in navbar
         animating = false;
@@ -47,7 +47,7 @@ $(function() {
 
  // adds underline to current section
  function addCurrent() {
-  var scrollPos = $(document).scrollTop() + $("nav").height() + 1;
+  var scrollPos = $(document).scrollTop() + $("nav").outerHeight() + 1;
   var projectsPos = $projects.offset().top;
   var contactPos = $contact.offset().top;
 

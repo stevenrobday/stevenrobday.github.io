@@ -1,10 +1,10 @@
 :root {
   /* font size dynamic vars */
   --font-size-xxs: 1rem;
-  --font-size-xs: 1.07rem;
-  --font-size-s: 1.13rem;
-  --font-size-m: 1.25rem;
-  --font-size-l: 1.32rem;
+  --font-size-xs: 1.05rem;
+  --font-size-s: 1.1rem;
+  --font-size-m: 1.15rem;
+  --font-size-l: 1.2rem;
 
   /* page colors */
   --base-color: #f8f8f8;
@@ -37,7 +37,7 @@
   --modal-example-text-margin-left: 16px;
   --modal-example-text-align: center;
   --modal-img-height: 100px;
-  --superModal-width: 85%;
+  --superModal-width: 82%;
 
   /* CONTACT dynamic var */
   --form-width: 250px;
@@ -53,7 +53,7 @@
     --thumb-height: 114px;
     --modal-width: 88%;
     --modal-img-height: 120px;
-    --superModal-width: 88%;
+    --superModal-width: 85%;
 
     --form-width: 326px;
   }
