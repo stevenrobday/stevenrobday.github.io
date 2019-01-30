@@ -47,7 +47,7 @@ $(function() {
 
  // adds underline to current section
  function addCurrent() {
-  var scrollPos = $(document).scrollTop() + $("nav").outerHeight() + 1;
+  var scrollPos = $(document).scrollTop() + $navbar.outerHeight() + 1;
   var projectsPos = $projects.offset().top;
   var contactPos = $contact.offset().top;
 

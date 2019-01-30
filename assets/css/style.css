@@ -140,6 +140,7 @@
     --thumb-width: 504px;
     --thumb-height: 189px;
     --modal-img-height: 275px;
+
   }
 }
 
@@ -184,6 +185,8 @@
     --thumb-width: 808px;
     --thumb-height: 303px;
     --modal-img-height: 350px; 
+
+    --form-width: 500px;
   }
 }
 
@@ -227,9 +230,7 @@ ul {
   display: flex;
   margin-left: auto;
   margin-right: var(--pages-margin-right);
-  position: var(--pages-position);
   top: var(--pages-top);
-  transition: var(--pages-transition) .5s;
 }
 
 #pages li a {
@@ -384,7 +385,6 @@ main {
   align-content: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin: auto;
 }
 
 /* container for each project */
@@ -506,8 +506,8 @@ main {
 
 /* project modals, and the modals that display over them. positioned to top. 
 because the body is relative, it's positioned under the navbar. height of 
-both elements re-adjusted with js for mobile browsers (mobile chrome includes 
-address bar in vh measurement) */
+both elements re-adjusted with js for mobile browsers (mobile chrome/safari 
+includes address bar in vh measurement) */
 .modal, #superModal {
   display: none;
   position: absolute;
@@ -666,7 +666,7 @@ so it will only break in the middle of the row */
   margin: auto;
 }
 
-/* super modal close 'X' wrapper, to give it padding. position to the upper right of image */
+/* super modal close 'X' wrapper, to give it padding. positioned to the upper right of image */
 #superCloseWrap {
   position: absolute;
   top: calc(var(--font-size-s) * -1.5);
