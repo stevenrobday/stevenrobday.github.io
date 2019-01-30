@@ -47,7 +47,7 @@ if(modalRatio < imgRatio) {
   var imgWrapHeight = imgHeight * superModalWidth / imgWidth; 
 }
 
-// for smaller super modal ratio, size image container to 
+// for larger super modal ratio, size image container to 
 // the height of the super modal and proportionate width
 else {
   var imgWrapHeight = superModalHeight; 
