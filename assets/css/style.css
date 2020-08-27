@@ -366,6 +366,12 @@ main {
   margin: auto;
 }
 
+.newGames {
+  text-decoration-line: underline;
+  color: blue;
+  cursor: pointer;
+}
+
 #newGames {
   display: none;
 }
