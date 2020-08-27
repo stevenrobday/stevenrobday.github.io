@@ -86,18 +86,32 @@ $(function() {
 
   // display super modal
   $(".thumbnail").on("click", function () {
-    var src = $(this).attr("src");
+    getImg(this);
+  });
+
+  // display Beaver
+  $("#beaver").on("click", function () {
+    getImg('#beaverGif');
+  });
+
+  // display Pudding
+  $("#beaver").on("click", function () {
+    getImg('#puddingGif');
+  });
+
+  function getImg(img)
+  {
+    var src = $(img).attr("src");
     $imgTag = $('<img>');
     $imgTag.attr("src", src);
 
-    imgWidth = $(this).width();
-    imgHeight = $(this).height();
+    imgWidth = $(img).width();
+    imgHeight = $(img).height();
     imgRatio = imgWidth / imgHeight;
 
     isSuper = true;
     showSuper();
-  });
-
+  }
   // close super modal
   $("#superCloseWrap, #superClose, #superShade, #superModal").on("click", function (e) {
     // prevent closing if you click on the image
