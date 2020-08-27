@@ -16,6 +16,8 @@ $(function() {
   var $dataId;
   var $imgTag;
 
+  var newGames = false;
+
   // function to adjust modal heights so they don't get cut off on bottom on mobile.
   function setModalHeights() {
     var viewportHeight = window.innerHeight;
@@ -91,11 +93,19 @@ $(function() {
 
   // display Beaver
   $("#beaver").on("click", function () {
+    newGames = true;
+    setModalHeights();
+    $html.css('overflow', 'hidden');
+    $body.css('overflow', 'hidden');
     getImg('#beaverGif');
   });
 
   // display Pudding
   $("#rar").on("click", function () {
+    newGames = true;
+    setModalHeights();
+    $html.css('overflow', 'hidden');
+    $body.css('overflow', 'hidden');
     getImg('#puddingGif');
   });
 
@@ -133,6 +143,11 @@ $(function() {
         isSuper = false;
         $superShade.fadeOut("fast");
         $superModal.hide("fast");
+        if (newGames) {
+          newGames = false;
+          $html.css('overflow', 'auto');
+          $body.css('overflow', 'auto');
+        }
       }
 
       // project modal
