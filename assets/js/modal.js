@@ -14,7 +14,7 @@ $(function() {
   var $superModalImgWrap = $("#superModalImgWrap");
   var $superModalImg = $("#superModalImg");
   var $dataId;
-  var $imgTag;
+  var imgTag;
 
   var newGames = false;
 
@@ -23,6 +23,7 @@ $(function() {
     var viewportHeight = window.innerHeight;
     $dataId.height(`calc(${viewportHeight}px - var(--font-size-l) * 4)`);
     $superModal.height(`calc(${viewportHeight}px - var(--font-size-l) * 4)`);
+    console.log($superModal.height());
   }
   
   // show the project modal
@@ -62,7 +63,7 @@ $(function() {
     $superModal.css('margin-top', `calc(${$(document).scrollTop()}px + var(--font-size-l) * 2)`);
 
     // now place the image inside the super modal image container
-    $superModalImg.html($imgTag);
+    $superModalImg.html(imgTag);
 
     $superShade.fadeIn("fast");
     $superModal.show("fast");
@@ -94,29 +95,33 @@ $(function() {
   // display Beaver
   $("#beaver").on("click", function () {
     newGames = true;
-    setModalHeights();
     $html.css('overflow', 'hidden');
     $body.css('overflow', 'hidden');
+    var viewportHeight = window.innerHeight;
+    
+    $superModal.height(`calc(${viewportHeight}px - var(--font-size-l) * 4)`);
+    console.log($superModal.height());
     getImg('#beaverGif');
   });
 
   // display Pudding
   $("#rar").on("click", function () {
     newGames = true;
-    setModalHeights();
     $html.css('overflow', 'hidden');
     $body.css('overflow', 'hidden');
+    var viewportHeight = window.innerHeight;
+    $superModal.height(`calc(${viewportHeight}px - var(--font-size-l) * 4)`);
     getImg('#puddingGif');
   });
 
   function getImg(img)
   {
     var src = $(img).attr("src");
-    $imgTag = $('<img>');
-    $imgTag.attr("src", src);
+    imgTag = new Image();
+    imgTag.src = src;
 
-    imgWidth = $(img).width();
-    imgHeight = $(img).height();
+    imgWidth = imgTag.width;
+    imgHeight = imgTag.height;
     imgRatio = imgWidth / imgHeight;
 
     isSuper = true;
@@ -132,6 +137,11 @@ $(function() {
     isSuper = false;
     $superShade.fadeOut("fast");
     $superModal.hide("fast");
+    if (newGames) {
+      newGames = false;
+      $html.css('overflow', 'auto');
+      $body.css('overflow', 'auto');
+    }
   });
 
   // listener for closing modals on escape
