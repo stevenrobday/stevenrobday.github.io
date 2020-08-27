@@ -95,7 +95,7 @@ $(function() {
   });
 
   // display Pudding
-  $("#beaver").on("click", function () {
+  $("#rar").on("click", function () {
     getImg('#puddingGif');
   });
 
