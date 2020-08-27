@@ -366,6 +366,10 @@ main {
   margin: auto;
 }
 
+#newGames {
+  display: none;
+}
+
 /* PROJECTS */
 
 /* projects and contact sections */
