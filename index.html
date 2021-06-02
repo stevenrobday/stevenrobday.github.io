@@ -2,705 +2,1011 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Steven Day</title>
-  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:900" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="assets/js/navbar.js"></script>
-  <script src="assets/js/modal.js"></script>
-  <script src="assets/js/email.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steven Day</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:900" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/email.js"></script>
 </head>
 
 <body>
-  <header>
+<header>
     <!-- NAVBAR -->
     <nav>
-      <ul id="pages">
-        <li>
-          <a id="navAbout" data-id="#steveDay">
-            <span>About</span>
-          </a>
-        </li>
-        <li>
-          <a id="navProjects" data-id="#projects">
-            <span>Projects</span>
-          </a>
-        </li>
-        <li>
-          <a id="navContact" data-id="#contact">
-            <span>Contact</span>
-          </a>
-        </li>
-      </ul>
+        <ul id="pages">
+            <li>
+                <a id="navAbout" data-id="#steveDay">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a id="navProjects" data-id="#projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a id="navContact" data-id="#contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
     </nav>
-  </header>
-  <main>
+</header>
+<main>
     <!-- ABOUT -->
     <!-- top section -->
     <section id="steveDay">
-      <div id="photoContainer"></div>
-      <div id="info">
-        <div>
-          <p>
-            Steven Day
-          </p>
+        <div id="photoContainer"></div>
+        <div id="info">
+            <div>
+                <p>
+                    Steven Day
+                </p>
+            </div>
+            <div>
+                <p>
+                    Web Developer
+                </p>
+            </div>
+            <ul id="icons">
+                <li>
+                    <a href="https://github.com/stevenrobday/">
+                        <div id="github"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/stevenrobday/">
+                        <div id="linkedIn"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="assets/pdf/stevendayresume.pdf">
+                        <div id="resume"></div>
+                    </a>
+                </li>
+                <li>
+                    <address>
+                        <a href="mailto: stevenrobday@gmail.com">
+                            <div id="email"></div>
+                        </a>
+                    </address>
+                </li>
+            </ul>
         </div>
-        <div>
-          <p>
-            Web Developer
-          </p>
-        </div>
-        <ul id="icons">
-          <li>
-            <a target="_blank" href="https://github.com/stevenrobday/">
-              <div id="github"></div>
-            </a>
-          </li>
-          <li>
-            <a target="_blank" href="https://www.linkedin.com/in/stevenrobday/">
-              <div id="linkedIn"></div>
-            </a>
-          </li>
-          <li>
-            <a target="_blank" href="assets/pdf/stevendayresume.pdf">
-              <div id="resume"></div>
-            </a>
-          </li>
-          <li>
-            <address>
-              <a href="mailto: stevenrobday@gmail.com">
-                <div id="email"></div>
-              </a>
-            </address>
-          </li>
-        </ul>
-      </div>
     </section>
     <!-- bottom section -->
     <section id="story">
-      <p>
-        I was always curious about how video games and software worked. In 2014, I had an idea for a video game that was simple enough to be attainable for a first project, 
-        and absurd enough to justify the effort. I found programming to be engaging, challenging, and fun. At this time, I was working as a tech for a small retail-chain, 
-        so I built them a website and full-stack database applications. I attended a bootcamp through University of Arizona in 2018 to learn more. After that, I 
-        started contracting as a Web Developer. I'm also currently working on pixel art for <a class="newGames" id="beaver">Leave It to Beaver</a> and <a class="newGames" id="rar">Rock Against Reagan</a>.
-      </p>
-      <span id="newGames"><img id="beaverGif" src="assets/gif/beaver/beaver.gif"><img id="puddingGif" src="assets/gif/reagan/pudding.gif"></span>
+        <p>
+            I was always curious about how video games and software worked. In 2014, I had an idea for a video game that
+            was simple enough to be attainable for a first project,
+            and absurd enough to justify the effort. I found programming to be engaging, challenging, and fun. At this
+            time, I was working as a tech for a small retail-chain,
+            so I built them a website and full-stack database applications. I attended a bootcamp through University of
+            Arizona in 2018 to learn more. After that, I
+            started contracting as a Web Developer. I'm also currently working on pixel art for <a class="newGames"
+                                                                                                   id="beaver">Leave It
+            to Beaver</a> and <a class="newGames" id="rar">Rock Against Reagan</a>.
+        </p>
+        <span id="newGames"><img id="beaverGif" src="assets/gif/beaver/beaver.gif"><img id="puddingGif"
+                                                                                        src="assets/gif/reagan/pudding.gif"></span>
     </section>
     <!-- PROJECTS -->
     <section id="projects">
-      <!-- container for all project containers -->
-      <div class="examples">
-        <!-- pacmental container -->
-        <div class="exampleThumb">
-          <div class="thumbFilter"></div>
-          <img src="assets/png/pacmental/pacmental.png">
-          <div class="title">
-            <p>Pac-Mental</p>
-          </div>
-          <div class="technologies">
-            <p>
-              Technologies used: HTML5, CSS3, JavaScript, jQuery, MySQL, PHP, Howler.js
-            </p>
-          </div>
-          <div>
-            <p>
-              Pac-Man game featuring four new energizer types, expanding mazes, and more ghosts.
-            </p>
-          </div>
-          <div class="projectLinks">
-            <div class="button moreInfo" data-id="#pacmentalModal">
-              More info
+        <!-- container for all project containers -->
+        <!-- feed reader container -->
+        <div class="examples">
+            <div class="exampleThumb">
+                <div class="thumbFilter"></div>
+                <img src="assets/jpg/feedReader/feedThumb.jpg">
+                <div class="title">
+                    <p>RSS Reader</p>
+                </div>
+                <div class="technologies">
+                    <p>
+                        Technologies used: HTML5, CSS3, JavaScript, jQuery, WordPress
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Website that pulls feeds and displays them.
+                    </p>
+                </div>
+                <div class="projectLinks">
+                    <div class="button moreInfo" data-id="#rssReaderModal">
+                        More info
+                    </div>
+                    <a class="button" href="https://github.com/stevenrobday/rssreader">
+                        GitHub
+                    </a>
+                </div>
             </div>
-            <a class="button" href="http://thestevester.com/pacmental/index.html" target="_blank">
-              Play!
-            </a>
-          </div>
-        </div>
-        <!-- write-ups container -->
-        <div class="exampleThumb">
-          <div class="thumbFilter"></div>
-          <img src="assets/png/writeUps/writeUps.png">
-          <div class="title">
-            <p>Write-Ups Database</p>
-          </div>
-          <div class="technologies">
-            <p>
-              Technologies used: HTML5, CSS3, JavaScript, jQuery, PHP, MySQL, XAMPP, jSignature.js, Dropzone.js
-            </p>
-          </div>
-          <div>
-            <p>
-              Database to help a retail chain track and store employee write-ups.
-            </p>
-          </div>
-          <div class="projectLinks">
-            <div class="button moreInfo" data-id="#writeUpsModal">
-              More info
+            <!-- scanner container -->
+            <div class="exampleThumb">
+                <div class="thumbFilter"></div>
+                <img src="assets/jpg/scanner/packingSlip.jpg">
+                <div class="title">
+                    <p>Scanner App</p>
+                </div>
+                <div class="technologies">
+                    <p>
+                        Technologies used: HTML5, CSS3, JavaScript, jQuery, PHP, MySQL, TraversyMVC framework,
+                        ShipStation API
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Application for Android scanners.
+                    </p>
+                </div>
+                <div class="projectLinks">
+                    <div class="button moreInfo" data-id="#scannerModal">
+                        More info
+                    </div>
+                    <a class="button" href="https://github.com/stevenrobday/scanner">
+                        GitHub
+                    </a>
+                </div>
             </div>
-          </div>
-        </div>
-        <!-- fruity pebbles container -->
-        <div class="exampleThumb">
-          <div class="thumbFilter"></div>
-          <img src="assets/png/pebbles/pebbles.png">
-          <div class="title">
-            <p>Fruity Pebbles: The Game</p>
-          </div>
-          <div class="technologies">
-            <p>
-              Technologies used: HTML5, CSS3, JavaScript, Howler.js
-            </p>
-          </div>
-          <div>
-            <p>
-              Video game deconstruction of a Fruity Pebbles commercial.
-            </p>
-          </div>
-          <div class="projectLinks">
-            <div class="button moreInfo" data-id="#pebblesModal">
-              More info
+            <!-- profiles container -->
+            <div class="exampleThumb">
+                <div class="thumbFilter"></div>
+                <img src="assets/png/profiles/profile.png">
+                <div class="title">
+                    <p>Profiles App</p>
+                </div>
+                <div class="technologies">
+                    <p>
+                        Technologies used: HTML5, CSS3, JavaScript, jQuery, PHP, MySql, CodeIgniter, Bootstrap, TinyMCE
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        App that stores profiles.
+                    </p>
+                </div>
+                <div class="projectLinks">
+                    <div class="button moreInfo" data-id="#profilesModal">
+                        More info
+                    </div>
+                    <a class="button" href="https://github.com/stevenrobday/profiles">
+                        GitHub
+                    </a>
+                </div>
             </div>
-            <a class="button" href="http://thestevester.com/FruityPebblesTheGame/index.html" target="_blank">
-              Play!
-            </a>
-          </div>
-        </div>
-        <!-- trivia game container -->
-        <div class="exampleThumb">
-          <div class="thumbFilter"></div>
-          <img src="assets/png/triviaGame/startPage.png">
-          <div class="title">
-            <p>Trivia Game</p>
-          </div>
-          <div class="technologies">
-            <p>
-              Technologies used: HTML5, CSS3, JavaScript, jQuery
-            </p>
-          </div>
-          <div>
-            <p>
-              Trivia game for UA boot camp. Breaking Bad themed.
-            </p>
-          </div>
-          <div class="projectLinks">
-            <div class="button moreInfo" data-id="#triviaGameModal">
-              More info
+            <!-- reports container -->
+            <div class="exampleThumb">
+                <div class="thumbFilter"></div>
+                <img src="assets/png/reports/reportsThumb.png">
+                <div class="title">
+                    <p>Order Info App</p>
+                </div>
+                <div class="technologies">
+                    <p>
+                        Technologies used: HTML5, CSS3, JavaScript, jQuery, PHP, MySql, CodeIgniter, Bootstrap
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        App displaying order info from Shopify.
+                    </p>
+                </div>
+                <div class="projectLinks">
+                    <div class="button moreInfo" data-id="#reportsModal">
+                        More info
+                    </div>
+                    <a class="button" href="https://github.com/stevenrobday/orders">
+                        GitHub
+                    </a>
+                </div>
             </div>
-            <a class="button" href="https://stevenrobday.github.io/TriviaGame/" target="_blank">
-              Play!
-            </a>
-          </div>
-        </div>
-        <!-- hangman container -->
-        <div class="exampleThumb">
-          <div class="thumbFilter"></div>
-          <img src="assets/png/hangman/reagan.png">
-          <div class="title">
-            <p>Hangman</p>
-          </div>
-          <div class="technologies">
-            <p>
-              Technologies used: HTML5, CSS3, JavaScript
-            </p>
-          </div>
-          <div>
-            <p>
-              Hangman game for UA boot camp. 80s politician themed.
-            </p>
-          </div>
-          <div class="projectLinks">
-            <div class="button moreInfo" data-id="#hangmanModal">
-              More info
+            <!-- pacmental container -->
+            <div class="exampleThumb">
+                <div class="thumbFilter"></div>
+                <img src="assets/png/pacmental/pacmental.png">
+                <div class="title">
+                    <p>Pac-Mental</p>
+                </div>
+                <div class="technologies">
+                    <p>
+                        Technologies used: HTML5, CSS3, JavaScript, jQuery, MySQL, PHP, Howler.js
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Pac-Man game featuring four new energizer types, expanding mazes, and more ghosts.
+                    </p>
+                </div>
+                <div class="projectLinks">
+                    <div class="button moreInfo" data-id="#pacmentalModal">
+                        More info
+                    </div>
+                    <a class="button" href="http://thestevester.com/pacmental/index.html">
+                        Play!
+                    </a>
+                </div>
             </div>
-            <a class="button" href="https://stevenrobday.github.io/Word-Guess-Game/" target="_blank">
-              Play!
-            </a>
-          </div>
-        </div>
-        <!-- employee db container -->
-        <div class="exampleThumb">
-          <div class="thumbFilter"></div>
-          <img src="assets/png/employee/employee.png">
-          <div class="title">
-            <p>Employee Database</p>
-          </div>
-          <div class="technologies">
-            <p>
-              Technologies used: HTML5, CSS3, JavaScript, jQuery, PHP, MySQL, XAMPP, Dropzone.js
-            </p>
-          </div>
-          <div>
-            <p>
-              Database that stores employee information and pictures for a retail chain.
-            </p>
-          </div>
-          <div class="projectLinks">
-            <div class="button moreInfo" data-id="#employeeModal">
-              More info
+            <!-- write-ups container -->
+            <div class="exampleThumb">
+                <div class="thumbFilter"></div>
+                <img src="assets/png/writeUps/writeUps.png">
+                <div class="title">
+                    <p>Write-Ups Database</p>
+                </div>
+                <div class="technologies">
+                    <p>
+                        Technologies used: HTML5, CSS3, JavaScript, jQuery, PHP, MySQL, XAMPP, jSignature.js,
+                        Dropzone.js
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Database to help a retail chain track and store employee write-ups.
+                    </p>
+                </div>
+                <div class="projectLinks">
+                    <div class="button moreInfo" data-id="#writeUpsModal">
+                        More info
+                    </div>
+                </div>
             </div>
-          </div>
+            <!-- fruity pebbles container -->
+            <div class="exampleThumb">
+                <div class="thumbFilter"></div>
+                <img src="assets/png/pebbles/pebbles.png">
+                <div class="title">
+                    <p>Fruity Pebbles: The Game</p>
+                </div>
+                <div class="technologies">
+                    <p>
+                        Technologies used: HTML5, CSS3, JavaScript, Howler.js
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Video game deconstruction of a Fruity Pebbles commercial.
+                    </p>
+                </div>
+                <div class="projectLinks">
+                    <div class="button moreInfo" data-id="#pebblesModal">
+                        More info
+                    </div>
+                    <a class="button" href="http://thestevester.com/FruityPebblesTheGame/index.html">
+                        Play!
+                    </a>
+                </div>
+            </div>
+            <!-- trivia game container -->
+            <div class="exampleThumb">
+                <div class="thumbFilter"></div>
+                <img src="assets/png/triviaGame/startPage.png">
+                <div class="title">
+                    <p>Trivia Game</p>
+                </div>
+                <div class="technologies">
+                    <p>
+                        Technologies used: HTML5, CSS3, JavaScript, jQuery
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Trivia game for UA boot camp. Breaking Bad themed.
+                    </p>
+                </div>
+                <div class="projectLinks">
+                    <div class="button moreInfo" data-id="#triviaGameModal">
+                        More info
+                    </div>
+                    <a class="button" href="https://stevenrobday.github.io/TriviaGame/">
+                        Play!
+                    </a>
+                </div>
+            </div>
+            <!-- hangman container -->
+            <div class="exampleThumb">
+                <div class="thumbFilter"></div>
+                <img src="assets/png/hangman/reagan.png">
+                <div class="title">
+                    <p>Hangman</p>
+                </div>
+                <div class="technologies">
+                    <p>
+                        Technologies used: HTML5, CSS3, JavaScript
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Hangman game for UA boot camp. 80s politician themed.
+                    </p>
+                </div>
+                <div class="projectLinks">
+                    <div class="button moreInfo" data-id="#hangmanModal">
+                        More info
+                    </div>
+                    <a class="button" href="https://stevenrobday.github.io/Word-Guess-Game/">
+                        Play!
+                    </a>
+                </div>
+            </div>
+            <!-- employee db container -->
+            <div class="exampleThumb">
+                <div class="thumbFilter"></div>
+                <img src="assets/png/employee/employee.png">
+                <div class="title">
+                    <p>Employee Database</p>
+                </div>
+                <div class="technologies">
+                    <p>
+                        Technologies used: HTML5, CSS3, JavaScript, jQuery, PHP, MySQL, XAMPP, Dropzone.js
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Database that stores employee information and pictures for a retail chain.
+                    </p>
+                </div>
+                <div class="projectLinks">
+                    <div class="button moreInfo" data-id="#employeeModal">
+                        More info
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
     <!-- PROJECT MODALS -->
     <div id="modalShade"></div>
+    <!-- rss reader modal -->
+    <div class="modal" id="rssReaderModal">
+        <div class="modalWrapper">
+            <div class="modalHeader">
+                <div></div>
+                <div class="modalTitle">
+                    RSS Reader
+                </div>
+                <div class="close"></div>
+            </div>
+            <div class="modalBody">
+                <div class="summary">
+                    <p>
+                        Website for client that displays various feeds.
+                    </p>
+                </div>
+                <div class="exampleWrap accent2">
+                    <div class="exampleText">
+                        Articles from feeds.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/jpg/feedReader/feed.jpg"/>
+                    </div>
+                </div>
+                <div class="exampleWrap">
+                    <div class="exampleText">
+                        Individual article page.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/jpg/feedReader/article.jpg"/>
+                    </div>
+                </div>
+                <div class="exampleWrap accent2">
+                    <div class="exampleText">
+                        Individual video page.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/jpg/feedReader/youTube.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- scanner modal -->
+    <div class="modal" id="scannerModal">
+        <div class="modalWrapper">
+            <div class="modalHeader">
+                <div></div>
+                <div class="modalTitle">
+                    Scanner App
+                </div>
+                <div class="close"></div>
+            </div>
+            <div class="modalBody">
+                <div class="summary">
+                    <p>
+                        App for a client with Android barcode scanners that verifies and reports scans.
+                    </p>
+                </div>
+                <div class="exampleWrap accent2">
+                    <div class="exampleText">
+                        Login page.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/jpg/scanner/login.jpg"/>
+                    </div>
+                </div>
+                <div class="exampleWrap">
+                    <div class="exampleText">
+                        Scan barcode on packing slip to pull up order. Cron job runs to locally store orders awaiting
+                        shipment using ShipStation API.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/jpg/scanner/packingSlip.jpg"/>
+                    </div>
+                </div>
+                <div class="exampleWrap accent2">
+                    <div class="exampleText">
+                        Verify item by scanning or pressing Verify button. Quantity background of verified orders is
+                        green. Orders can be saved with Save button located
+                        underneath items, and returned to later.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/jpg/scanner/items.jpg"/>
+                    </div>
+                </div>
+                <div class="exampleWrap">
+                    <div class="exampleText">
+                        Once the last item is scanned, a label is downloaded using ShipStation API.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/jpg/scanner/label.jpg"/>
+                    </div>
+                </div>
+                <div class="exampleWrap accent2">
+                    <div class="exampleText">
+                        Completed orders can be viewed by manager on desktop.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/png/scanner/completed.png"/>
+                    </div>
+                </div>
+                <div class="exampleWrap">
+                    <div class="exampleText">
+                        Clicking on an order pops up more detail.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/png/scanner/modal.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- profiles modal -->
+    <div class="modal" id="profilesModal">
+        <div class="modalWrapper">
+            <div class="modalHeader">
+                <div></div>
+                <div class="modalTitle">
+                    Profiles App
+                </div>
+                <div class="close"></div>
+            </div>
+            <div class="modalBody">
+                <div class="summary">
+                    <p>
+                        App for client that stores text that can be pasted into EcomDash (used for formatting
+                        consistency).
+                    </p>
+                </div>
+                <div class="exampleWrap accent2">
+                    <div class="exampleText">
+                        Profiles can be selected and copied.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/png/profiles/profile.png"/>
+                    </div>
+                </div>
+                <div class="exampleWrap">
+                    <div class="exampleText">
+                        Profiles are added or edited using TinyMCE
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/png/profiles/edit.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- reports modal -->
+    <div class="modal" id="reportsModal">
+        <div class="modalWrapper">
+            <div class="modalHeader">
+                <div></div>
+                <div class="modalTitle">
+                    Reports App
+                </div>
+                <div class="close"></div>
+            </div>
+            <div class="modalBody">
+                <div class="summary">
+                    <p>
+                        App for client that displays order information from Shopify, and highlight any discrepancies between Shopify and QuickBooks.
+                    </p>
+                </div>
+                <div class="exampleWrap accent2">
+                    <div class="exampleText">
+                        Orders can be moved from New to Pending to Completed when checked and submitted.
+                        Orders can also be displayed between certain dates, or searched for.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/png/reports/reports.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- pac-mental modal -->
     <div class="modal" id="pacmentalModal">
-      <div class="modalWrapper">
-        <div class="modalHeader">
-          <div></div>
-          <div class="modalTitle">Pac-Mental</div>
-          <div class="close"></div>
+        <div class="modalWrapper">
+            <div class="modalHeader">
+                <div></div>
+                <div class="modalTitle">Pac-Mental</div>
+                <div class="close"></div>
+            </div>
+            <div class="modalBody">
+                <div class="summary">
+                    <p>
+                        <i>Pac-Mental</i> modifies the original <i>Pac-Man</i> and <i>Ms. Pac-Man</i> arcade games. I
+                        made it in 2016 with
+                        the help of
+                        <a href="http://www.gamasutra.com/view/feature/3938/the_pacman_dossier.php?print=1">The Pac-Man
+                            Dossier</a>
+                        by Jamey Pittman, and Shaun Williams's
+                        <a href="https://bitbucket.org/shaunew/pac-man">JavaScript rewrite</a>
+                        of the originals, both invaluable resources.
+                    </p>
+                </div>
+                <div id="energizersWrap" class="accent2">
+                    <div id="energizersText">
+                        <p>The energizers in <i>Pac-Mental</i> are elemental-powered.</p>
+                    </div>
+                    <div id="energizers">
+                        <div>
+                            <div>
+                                <img class="thumbnail" src="assets/gif/pacmental/earth.gif"/>
+                                <div>
+                                    <p>
+                                        Earth
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <img class="thumbnail" src="assets/gif/pacmental/fire.gif"/>
+                                <div>
+                                    <p>
+                                        Fire
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <img class="thumbnail" src="assets/gif/pacmental/air.gif"/>
+                                <div>
+                                    <p>
+                                        Air
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <img class="thumbnail" src="assets/gif/pacmental/water.gif"/>
+                                <div>
+                                    <p>
+                                        Water
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exampleWrap">
+                    <div class="exampleText">
+                        The ghosts and maze double after the first intermission.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/pacmental/level3.gif"/>
+                    </div>
+                </div>
+                <div class="exampleWrap accent2">
+                    <div class="exampleText">
+                        And triple after the second.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/pacmental/level6.gif"/>
+                    </div>
+                </div>
+                <div class="exampleWrap">
+                    <div class="exampleText">
+                        The intermissions are parodies of the original's. Here's my favorite (originally, Blinky rips
+                        his sheet on the nail).
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/pacmental/intermission2.gif"/>
+                    </div>
+                </div>
+                <div class="exampleWrap accent2">
+                    <div class="exampleText">
+                        The game has a leaderboard, as well.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/png/pacmental/leaderboard.png"/>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modalBody">
-          <div class="summary">
-            <p>
-              <i>Pac-Mental</i> modifies the original <i>Pac-Man</i> and <i>Ms. Pac-Man</i> arcade games. I made it in 2016 with
-              the help of
-              <a href="http://www.gamasutra.com/view/feature/3938/the_pacman_dossier.php?print=1" target="_blank">The Pac-Man
-                Dossier</a>
-              by Jamey Pittman, and Shaun Williams's
-              <a href="https://bitbucket.org/shaunew/pac-man" target="_blank">JavaScript rewrite</a>
-              of the originals, both invaluable resources.
-            </p>
-          </div>
-          <div id="energizersWrap" class="accent2">
-            <div id="energizersText">
-              <p>The energizers in <i>Pac-Mental</i> are elemental-powered.</p>
-            </div>
-            <div id="energizers">
-              <div>
-                <div>
-                  <img class="thumbnail" src="assets/gif/pacmental/earth.gif" />
-                  <div>
-                    <p>
-                      Earth
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  <img class="thumbnail" src="assets/gif/pacmental/fire.gif" />
-                  <div>
-                    <p>
-                      Fire
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <img class="thumbnail" src="assets/gif/pacmental/air.gif" />
-                  <div>
-                    <p>
-                      Air
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  <img class="thumbnail" src="assets/gif/pacmental/water.gif" />
-                  <div>
-                    <p>
-                      Water
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="exampleWrap">
-            <div class="exampleText">
-              The ghosts and maze double after the first intermission.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/pacmental/level3.gif" />
-            </div>
-          </div>
-          <div class="exampleWrap accent2">
-            <div class="exampleText">
-              And triple after the second.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/pacmental/level6.gif" />
-            </div>
-          </div>
-          <div class="exampleWrap">
-            <div class="exampleText">
-              The intermissions are parodies of the original's. Here's my favorite (originally, Blinky rips his sheet on the nail).
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/pacmental/intermission2.gif" />
-            </div>
-          </div>
-          <div class="exampleWrap accent2">
-            <div class="exampleText">
-              The game has a leaderboard, as well.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/png/pacmental/leaderboard.png" />
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
     <!-- write-ups modal -->
     <div class="modal" id="writeUpsModal">
-      <div class="modalWrapper">
-        <div class="modalHeader">
-          <div></div>
-          <div class="modalTitle">
-            Write-Ups Database
-          </div>
-          <div class="close"></div>
+        <div class="modalWrapper">
+            <div class="modalHeader">
+                <div></div>
+                <div class="modalTitle">
+                    Write-Ups Database
+                </div>
+                <div class="close"></div>
+            </div>
+            <div class="modalBody">
+                <div class="summary">
+                    <p>
+                        This application is a database for a retail chain that initially stored all write-ups on paper
+                        inside filing cabinets. It allows
+                        for easier tracking of who has been written up for that year, and how many write-ups they have
+                        received. I wrote
+                        this in 2017.
+                    </p>
+                </div>
+                <div class="exampleWrap accent2">
+                    <div class="exampleText">
+                        The main page is grouped by employee, then category of write-up. The count for each type is
+                        displayed. Records are revealed after
+                        clicking the category. Employees can be filtered by 'Active' (still employed with the company),
+                        'Inactive' (no longer employed with
+                        the company), or 'All' (both). By default, records are shown for the present year, but the user
+                        can switch to a previous year.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/writeUps/view.gif"/>
+                    </div>
+                </div>
+                <div class="exampleWrap">
+                    <div class="exampleText">
+                        Upper management can see all employees, while middle can only see the ones they manage (I'm
+                        using a key combo to log out).
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/writeUps/login.gif"/>
+                    </div>
+                </div>
+                <div class="exampleWrap accent2">
+                    <div class="exampleText">
+                        The user is able to add new employees from the Write-Ups Database into the Employee Database.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/writeUps/addEmp.gif"/>
+                    </div>
+                </div>
+                <div class="exampleWrap">
+                    <div class="exampleText">
+                        Employees can be edited from here as well.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/writeUps/editEmp.gif"/>
+                    </div>
+                </div>
+                <div class="exampleWrap accent2">
+                    <div class="exampleText">
+                        When adding a write-up, lists of employees and managers are populated from the Employee
+                        Database. Signatures can be drawn with
+                        a mouse or touchscreen, and are stored as Base32 strings inside the database.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/writeUps/addRecord.gif"/>
+                    </div>
+                </div>
+                <div class="exampleWrap">
+                    <div class="exampleText">
+                        Records can be edited easily as well.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/writeUps/editRecord.gif"/>
+                    </div>
+                </div>
+                <div class="exampleWrap accent2">
+                    <div class="exampleText">
+                        Employees can be searched within both the records section and the edit employee section.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/writeUps/search.gif"/>
+                    </div>
+                </div>
+                <div class="exampleWrap">
+                    <div class="exampleText">
+                        The user is also able to navigate their history.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/writeUps/navigate.gif"/>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modalBody">
-          <div class="summary">
-            <p>
-              This application is a database for a retail chain that initially stored all write-ups on paper inside filing cabinets. It allows
-              for easier tracking of who has been written up for that year, and how many write-ups they have received. I wrote 
-              this in 2017.
-            </p>
-          </div>
-          <div class="exampleWrap accent2">
-            <div class="exampleText">
-              The main page is grouped by employee, then category of write-up. The count for each type is displayed. Records are revealed after
-              clicking the category. Employees can be filtered by 'Active' (still employed with the company), 'Inactive' (no longer employed with 
-              the company), or 'All' (both). By default, records are shown for the present year, but the user can switch to a previous year.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/writeUps/view.gif" />
-            </div>
-          </div>
-          <div class="exampleWrap">
-            <div class="exampleText">
-              Upper management can see all employees, while middle can only see the ones they manage (I'm using a key combo to log out).
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/writeUps/login.gif" />
-            </div>
-          </div>
-          <div class="exampleWrap accent2">
-            <div class="exampleText">
-              The user is able to add new employees from the Write-Ups Database into the Employee Database. 
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/writeUps/addEmp.gif" />
-            </div>
-          </div>
-          <div class="exampleWrap">
-            <div class="exampleText">
-              Employees can be edited from here as well.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/writeUps/editEmp.gif" />
-            </div>
-          </div>
-          <div class="exampleWrap accent2">
-            <div class="exampleText">
-              When adding a write-up, lists of employees and managers are populated from the Employee Database. Signatures can be drawn with
-              a mouse or touchscreen, and are stored as Base32 strings inside the database.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/writeUps/addRecord.gif" />
-            </div>
-          </div>
-          <div class="exampleWrap">
-            <div class="exampleText">
-              Records can be edited easily as well.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/writeUps/editRecord.gif" />
-            </div>
-          </div>
-          <div class="exampleWrap accent2">
-            <div class="exampleText">
-              Employees can be searched within both the records section and the edit employee section.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/writeUps/search.gif" />
-            </div>
-          </div>
-          <div class="exampleWrap">
-            <div class="exampleText">
-              The user is also able to navigate their history.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/writeUps/navigate.gif" />
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
     <!-- fruity pebbles modal -->
     <div class="modal" id="pebblesModal">
-      <div class="modalWrapper">
-        <div class="modalHeader">
-          <div></div>
-          <div class="modalTitle">
-            Fruity Pebbles: The Game
-          </div>
-          <div class="close"></div>
+        <div class="modalWrapper">
+            <div class="modalHeader">
+                <div></div>
+                <div class="modalTitle">
+                    Fruity Pebbles: The Game
+                </div>
+                <div class="close"></div>
+            </div>
+            <div class="modalBody">
+                <div class="summary">
+                    <p>
+                        I was always curious how games worked, and had an idea for a simple and absurd one. So in 2014,
+                        I read an HTML5 game design
+                        book, and developed a very inefficient <i>Fruity Pebbles: The Game</i>. I rewrote it in 2016,
+                        and brought it to <i>ZapCon</i>, a local arcade convention. After that, it appeared on a
+                        podcast, YouTube,
+                        and even a top games of 2016 list.
+                    </p>
+                </div>
+                <div class="exampleWrap accent2">
+                    <div class="exampleText">
+                        <i>Fruity Pebbles: The Game</i> adds new content to a 1989 Fruity Pebbles commercial. Fred
+                        Flintstone's adventure begins
+                        with the original ad. It's important to the plot, so it can't be skipped.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/pebbles/pebblesCommercial.gif"/>
+                    </div>
+                </div>
+                <div class="exampleWrap">
+                    <div class="exampleText">
+                        Fred learns important tips for surviving this brutally difficult game in the tutorial.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/pebbles/tutorial.gif"/>
+                    </div>
+                </div>
+                <div class="exampleWrap accent2">
+                    <div class="exampleText">
+                        In the first stage, Fred must face off against multiplying Barnies.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/pebbles/stageOne.gif"/>
+                    </div>
+                </div>
+                <div class="exampleWrap">
+                    <div class="exampleText">
+                        In the second, Fred goes up against the Master Rapper, who turns out to be Barney.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/pebbles/stageTwo.gif"/>
+                    </div>
+                </div>
+                <div class="exampleWrap accent2">
+                    <div class="exampleText">
+                        Finally, Fred must utilize all the skills he's learned in order to defeat the final boss.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/pebbles/stageThree.gif"/>
+                    </div>
+                </div>
+                <div class="exampleWrap">
+                    <div class="exampleText">
+                        With MegaBarney defeated, and Fred's pebbles in their rightful stomach, peace is restored to
+                        Bedrock.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/pebbles/ending.gif"/>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modalBody">
-          <div class="summary">
-            <p>
-              I was always curious how games worked, and had an idea for a simple and absurd one. So in 2014, I read an HTML5 game design
-              book, and developed a very inefficient <i>Fruity Pebbles: The Game</i>. I rewrote it in 2016,
-              and brought it to <i>ZapCon</i>, a local arcade convention. After that, it appeared on a podcast, YouTube,
-              and even a top games of 2016 list.
-            </p>
-          </div>
-          <div class="exampleWrap accent2">
-            <div class="exampleText">
-              <i>Fruity Pebbles: The Game</i> adds new content to a 1989 Fruity Pebbles commercial. Fred Flintstone's adventure begins
-              with the original ad. It's important to the plot, so it can't be skipped.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/pebbles/pebblesCommercial.gif" />
-            </div>
-          </div>
-          <div class="exampleWrap">
-            <div class="exampleText">
-              Fred learns important tips for surviving this brutally difficult game in the tutorial.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/pebbles/tutorial.gif" />
-            </div>
-          </div>
-          <div class="exampleWrap accent2">
-            <div class="exampleText">
-              In the first stage, Fred must face off against multiplying Barnies.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/pebbles/stageOne.gif" />
-            </div>
-          </div>
-          <div class="exampleWrap">
-            <div class="exampleText">
-              In the second, Fred goes up against the Master Rapper, who turns out to be Barney.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/pebbles/stageTwo.gif" />
-            </div>
-          </div>
-          <div class="exampleWrap accent2">
-            <div class="exampleText">
-              Finally, Fred must utilize all the skills he's learned in order to defeat the final boss.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/pebbles/stageThree.gif" />
-            </div>
-          </div>
-          <div class="exampleWrap">
-            <div class="exampleText">
-              With MegaBarney defeated, and Fred's pebbles in their rightful stomach, peace is restored to Bedrock.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/pebbles/ending.gif" />
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
     <!-- employee db modal -->
     <div class="modal" id="employeeModal">
-      <div class="modalWrapper">
-        <div class="modalHeader">
-          <div></div>
-          <div class="modalTitle">
-            Employee Database
-          </div>
-          <div class="close"></div>
+        <div class="modalWrapper">
+            <div class="modalHeader">
+                <div></div>
+                <div class="modalTitle">
+                    Employee Database
+                </div>
+                <div class="close"></div>
+            </div>
+            <div class="modalBody">
+                <div class="summary">
+                    <p>
+                        First database application.
+                    </p>
+                </div>
+                <div class="exampleWrap accent2">
+                    <div class="exampleText">
+                        Employees can be filtered by 'Active', 'Inactive', 'All', or 'No Photo' (to see whose picture
+                        needs to be taken).
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/employee/viewSort.gif"/>
+                    </div>
+                </div>
+                <div class="exampleWrap">
+                    <div class="exampleText">
+                        When adding an employee, the picture can be browsed for, or dragged and dropped. It can also be
+                        uploaded later from
+                        a smartphone's camera.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/employee/add.gif"/>
+                    </div>
+                </div>
+                <div class="exampleWrap accent2">
+                    <div class="exampleText">
+                        Employee info can also be edited.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/employee/edit.gif"/>
+                    </div>
+                </div>
+                <div class="exampleWrap">
+                    <div class="exampleText">
+                        Users can search the database.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/employee/search.gif"/>
+                    </div>
+                </div>
+                <div class="exampleWrap accent2">
+                    <div class="exampleText">
+                        This application has a history panel, too.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/employee/nav.gif"/>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modalBody">
-          <div class="summary">
-            <p>
-              First database application.
-            </p>
-          </div>
-          <div class="exampleWrap accent2">
-            <div class="exampleText">
-              Employees can be filtered by 'Active', 'Inactive', 'All', or 'No Photo' (to see whose picture needs to be taken).
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/employee/viewSort.gif" />
-            </div>
-          </div>
-          <div class="exampleWrap">
-            <div class="exampleText">
-              When adding an employee, the picture can be browsed for, or dragged and dropped. It can also be uploaded later from 
-              a smartphone's camera.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/employee/add.gif" />
-            </div>
-          </div>
-          <div class="exampleWrap accent2">
-            <div class="exampleText">
-              Employee info can also be edited.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/employee/edit.gif" />
-            </div>
-          </div>
-          <div class="exampleWrap">
-            <div class="exampleText">
-              Users can search the database.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/employee/search.gif" />
-            </div>
-          </div>
-          <div class="exampleWrap accent2">
-            <div class="exampleText">
-              This application has a history panel, too.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/employee/nav.gif" />
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
     <!-- trivia game modal -->
     <div class="modal" id="triviaGameModal">
-      <div class="modalWrapper">
-        <div class="modalHeader">
-          <div></div>
-          <div class="modalTitle">
-            Trivia Game
-          </div>
-          <div class="close"></div>
+        <div class="modalWrapper">
+            <div class="modalHeader">
+                <div></div>
+                <div class="modalTitle">
+                    Trivia Game
+                </div>
+                <div class="close"></div>
+            </div>
+            <div class="modalBody">
+                <div class="summary">
+                    <p>
+                        This was a trivia game assignment for the UA summer boot camp. I made it Breaking Bad themed.
+                    </p>
+                </div>
+                <div class="exampleWrap accent2">
+                    <div class="exampleText">
+                        In your journey to destroy everyone and everything around you, you will be faced with ten
+                        challenging questions.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/png/triviaGame/question.png"/>
+                    </div>
+                </div>
+                <div class="exampleWrap">
+                    <div class="exampleText">
+                        A clip showing the correct answer plays after each guess.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/triviaGame/answer.gif"/>
+                    </div>
+                </div>
+                <div class="exampleWrap accent2">
+                    <div class="exampleText">
+                        Which season the user progresses to depends on how well they scored.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/gif/triviaGame/results.gif"/>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modalBody">
-          <div class="summary">
-            <p>
-              This was a trivia game assignment for the UA summer boot camp. I made it Breaking Bad themed. 
-            </p>
-          </div>
-          <div class="exampleWrap accent2">
-            <div class="exampleText">
-              In your journey to destroy everyone and everything around you, you will be faced with ten challenging questions.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/png/triviaGame/question.png" />
-            </div>
-          </div>
-          <div class="exampleWrap">
-            <div class="exampleText">
-              A clip showing the correct answer plays after each guess.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/triviaGame/answer.gif" />
-            </div>
-          </div>
-          <div class="exampleWrap accent2">
-            <div class="exampleText">
-              Which season the user progresses to depends on how well they scored.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/gif/triviaGame/results.gif" />
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
     <!-- hangman modal -->
     <div class="modal" id="hangmanModal">
-      <div class="modalWrapper">
-        <div class="modalHeader">
-          <div></div>
-          <div class="modalTitle">
-            Hangman
-          </div>
-          <div class="close"></div>
+        <div class="modalWrapper">
+            <div class="modalHeader">
+                <div></div>
+                <div class="modalTitle">
+                    Hangman
+                </div>
+                <div class="close"></div>
+            </div>
+            <div class="modalBody">
+                <div class="summary">
+                    <p>
+                        This was one of the first assignments for the UA boot camp. I made it 80s politician themed,
+                        hosted by Ronald Reagan
+                        himself. Who doesn't like being mocked by the Gipper, after all?
+                    </p>
+                </div>
+                <div class="exampleWrap accent2">
+                    <div class="exampleText">
+                        Guess correctly, or you'll squander your remaining years in office.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/png/hangman/guess.png"/>
+                    </div>
+                </div>
+                <div class="exampleWrap">
+                    <div class="exampleText">
+                        Win the round, and you'll be rewarded with political satire so outdated, you won't be offended!
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/png/hangman/dukakis.png"/>
+                    </div>
+                </div>
+                <div class="exampleWrap accent2">
+                    <div class="exampleText">
+                        Otherwise, you're a communist spy.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/png/hangman/gameOver.png"/>
+                    </div>
+                </div>
+                <div class="exampleWrap">
+                    <div class="exampleText">
+                        The game also features virtual keys for mobile devices.
+                    </div>
+                    <div class="exampleImg">
+                        <img class="thumbnail" src="assets/png/hangman/virtualKeys.png"/>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modalBody">
-          <div class="summary">
-            <p>
-              This was one of the first assignments for the UA boot camp. I made it 80s politician themed, hosted by Ronald Reagan 
-              himself. Who doesn't like being mocked by the Gipper, after all?
-            </p>
-          </div>
-          <div class="exampleWrap accent2">
-            <div class="exampleText">
-              Guess correctly, or you'll squander your remaining years in office.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/png/hangman/guess.png" />
-            </div>
-          </div>
-          <div class="exampleWrap">
-            <div class="exampleText">
-              Win the round, and you'll be rewarded with political satire so outdated, you won't be offended!
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/png/hangman/dukakis.png" />
-            </div>
-          </div>
-          <div class="exampleWrap accent2">
-            <div class="exampleText">
-              Otherwise, you're a communist spy.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/png/hangman/gameOver.png" />
-            </div>
-          </div>
-          <div class="exampleWrap">
-            <div class="exampleText">
-              The game also features virtual keys for mobile devices.
-            </div>
-            <div class="exampleImg">
-              <img class="thumbnail" src="assets/png/hangman/virtualKeys.png" />
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
     <!-- img/gif modal for project modal -->
     <div id="superShade"></div>
     <div id="superModal">
-      <div id="superModalImgWrap">
-        <div id="superCloseWrap">
-          <div id="superClose"></div>
+        <div id="superModalImgWrap">
+            <div id="superCloseWrap">
+                <div id="superClose"></div>
+            </div>
+            <div id="superModalImg"></div>
         </div>
-        <div id="superModalImg"></div>
-      </div>
     </div>
     <!-- CONTACT -->
     <section id="contact">
-      <div id="requestMessage">
-        Send me a message!
-      </div>
-      <form id="contactForm" method="post" action="https://www.thestevester.com/assets/email.php">
-        <div class="field">
-          <label for="name">Name:</label>
-          <input type="text" id="formName" name="name" required>
+        <div id="requestMessage">
+            Send me a message!
         </div>
-        <div class="field">
-          <label for="email">Email:</label>
-          <input type="email" id="formEmail" name="email" required>
-        </div>
-        <div class="field">
-          <label for="message">Message:</label>
-          <textarea id="formMessage" name="message" required></textarea>
-        </div>
-        <div class="field" id="status">
-        </div>
-        <div class="field">
-          <button type="submit">Send</button>
-        </div>
-      </form>
+        <form id="contactForm" method="post" action="https://www.thestevester.com/assets/email.php">
+            <div class="field">
+                <label for="name">Name:</label>
+                <input type="text" id="formName" name="name" required>
+            </div>
+            <div class="field">
+                <label for="email">Email:</label>
+                <input type="email" id="formEmail" name="email" required>
+            </div>
+            <div class="field">
+                <label for="message">Message:</label>
+                <textarea id="formMessage" name="message" required></textarea>
+            </div>
+            <div class="field" id="status">
+            </div>
+            <div class="field">
+                <button type="submit">Send</button>
+            </div>
+        </form>
     </section>
-  </main>
-  <!-- FOOTER -->
-  <footer>
+</main>
+<!-- FOOTER -->
+<footer>
     <div>
-      © 2021
+        © 2021
     </div>
-  </footer>
+</footer>
 </body>
 
 </html>
