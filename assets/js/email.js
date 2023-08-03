@@ -1,5 +1,4 @@
 $(function () {
-
   var $form = $("#contactForm");
   var $status = $("#status");
   var $name = $("#formName");
@@ -13,9 +12,9 @@ $(function () {
     var formData = $form.serialize();
 
     $.ajax({
-      type: 'POST',
-      url: $form.attr('action'),
-      data: formData
+      type: "POST",
+      url: $form.attr("action"),
+      data: formData,
     })
       .done(function (response) {
         // display response
@@ -24,9 +23,9 @@ $(function () {
         $status.text(response);
 
         // clear form
-        $name.val('');
-        $email.val('');
-        $message.val('');
+        $name.val("");
+        $email.val("");
+        $message.val("");
       })
       .fail(function (data) {
         var response = data.responseText;
@@ -35,7 +34,7 @@ $(function () {
         $status.removeClass("success");
         $status.addClass("error");
 
-        if (response !== '') {
+        if (response !== "") {
           $status.text(response);
         } else {
           $status.text("An error occurred and your message could not be sent.");

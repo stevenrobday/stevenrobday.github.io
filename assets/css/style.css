@@ -12,8 +12,8 @@
   --accent2-color: #fffdfa;
   --accent3-color: #464646;
   --navbar-text-color: #767575;
-  --button-color: #3784AA;
-  --success-color: #0CAA30;
+  --button-color: #3784aa;
+  --success-color: #0caa30;
   --error-color: #f74356;
 
   /* NAVBAR dynamic var */
@@ -45,7 +45,7 @@
 
 /* 23.5 x 16px = 376px */
 @media screen and (min-width: 23.5rem) {
-  :root {  
+  :root {
     --photo-diameter: 150px;
     --info-margin: 10px;
 
@@ -61,13 +61,13 @@
 
 /* 416px */
 @media screen and (min-width: 26rem) {
-  :root {  
+  :root {
     --photo-diameter: 200px;
 
     --thumb-width: 304px;
     --thumb-height: 114px;
     --modal-img-height: 140px;
-    
+
     --form-width: 366px;
   }
 }
@@ -140,7 +140,6 @@
     --thumb-width: 504px;
     --thumb-height: 189px;
     --modal-img-height: 275px;
-
   }
 }
 
@@ -184,7 +183,7 @@
 
     --thumb-width: 808px;
     --thumb-height: 303px;
-    --modal-img-height: 350px; 
+    --modal-img-height: 350px;
 
     --form-width: 500px;
   }
@@ -194,7 +193,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 /* had to set body position to relative to disable background scrolling 
@@ -222,7 +221,7 @@ nav {
 
 /* nav links */
 ul {
-	list-style: none;
+  list-style: none;
 }
 
 #pages {
@@ -244,7 +243,7 @@ ul {
   font-size: var(--font-size-m);
 }
 
-#pages span{
+#pages span {
   padding: 0 var(--font-size-m);
 }
 
@@ -276,7 +275,7 @@ main {
 #photoContainer {
   background: url(../jpg/steveDay.jpg) no-repeat center;
   background-size: 100% 100%;
-  height: var(--photo-diameter); 
+  height: var(--photo-diameter);
   width: var(--photo-diameter);
   border-radius: 50%;
   border: var(--photo-border) solid var(--accent3-color);
@@ -298,7 +297,7 @@ main {
   line-height: 1;
 }
 
-#info > div:nth-child(2){
+#info > div:nth-child(2) {
   font-size: var(--font-size-l);
   line-height: 1;
 }
@@ -345,7 +344,8 @@ main {
   background: url(../svg/emailHover.svg) no-repeat center;
 }
 
-#icons li div, #icons li div:hover {
+#icons li div,
+#icons li div:hover {
   background-size: auto 100%;
   height: var(--font-size-l);
   width: calc(var(--font-size-l) * 1.8);
@@ -379,7 +379,8 @@ main {
 /* PROJECTS */
 
 /* projects and contact sections */
-#projects, #contact {
+#projects,
+#contact {
   min-height: calc(100vh - var(--font-size-l) * 2);
   display: flex;
   padding: var(--font-size-l) 0;
@@ -399,7 +400,7 @@ main {
 
 /* container for each project */
 .exampleThumb {
-  display: flex; 
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
@@ -425,17 +426,18 @@ main {
 }
 
 .exampleThumb:hover .thumbFilter {
-  opacity: .1;
+  opacity: 0.1;
 }
 
 /* image at top of each project container */
 .exampleThumb img {
   width: var(--thumb-width);
-  height: var(--thumb-height); 
+  height: var(--thumb-height);
 }
 
 /* project title, technologies used */
-.title, .technologies {
+.title,
+.technologies {
   margin: calc(var(--font-size-s) / 3) 0;
 }
 
@@ -462,7 +464,8 @@ main {
 }
 
 /* buttons inside project containers and contact form */
-.button, button {
+.button,
+button {
   background-color: var(--button-color);
   color: var(--accent1-color);
   border: none;
@@ -482,35 +485,43 @@ main {
 }
 
 /* input from contact form joins in... */
-.button, input, button {
+.button,
+input,
+button {
   height: calc(var(--font-size-l) * 1.25);
 }
 
 /* and now with the textarea */
-.button, input, textarea, button {
+.button,
+input,
+textarea,
+button {
   border-radius: 6px;
 }
 
 /* button transitions */
-.button:hover, button:hover {
+.button:hover,
+button:hover {
   transform: translate(2px, 2px);
-  opacity: .8;
+  opacity: 0.8;
 }
 
-.button:active, button:active {
+.button:active,
+button:active {
   transform: translate(2px, 4px);
 }
 
 /* bg shade for modal and super modal */
-#modalShade, #superShade {
-	display: none;
-	background: var(--accent3-color);
-  position: fixed; 
-  left: 0; 
+#modalShade,
+#superShade {
+  display: none;
+  background: var(--accent3-color);
+  position: fixed;
+  left: 0;
   top: 0;
-  width: 100%; 
+  width: 100%;
   height: 100%;
-  opacity: .3;
+  opacity: 0.3;
   z-index: 2;
 }
 
@@ -518,7 +529,8 @@ main {
 because the body is relative, it's positioned under the navbar. height of 
 both elements re-adjusted with js for mobile browsers (mobile chrome/safari 
 includes address bar in vh measurement) */
-.modal, #superModal {
+.modal,
+#superModal {
   display: none;
   position: absolute;
   top: 0;
@@ -531,7 +543,7 @@ includes address bar in vh measurement) */
 
 .modal {
   background-color: var(--accent1-color);
-  width: var(--modal-width); 
+  width: var(--modal-width);
 }
 
 #superModal {
@@ -576,7 +588,7 @@ that way the second (the title) gets centered and the third
 
 /* top paragraph of each project modal */
 .summary {
-  text-align: left;
+  text-align: center;
   margin: 0 auto;
   width: var(--modal-width);
   padding: var(--font-size-xs);
@@ -595,7 +607,9 @@ that way the second (the title) gets centered and the third
 
 /* text for these sections */
 .exampleText {
-  margin: auto var(--modal-example-text-margin-right) var(--modal-example-text-margin-bottom) var(--modal-example-text-margin-left);
+  margin: auto var(--modal-example-text-margin-right)
+    var(--modal-example-text-margin-bottom)
+    var(--modal-example-text-margin-left);
   text-align: var(--modal-example-text-align);
 }
 
@@ -620,7 +634,8 @@ that way the second (the title) gets centered and the third
 }
 
 #energizersText {
-  margin: auto var(--modal-example-text-margin-right) auto var(--modal-example-text-margin-right);
+  margin: auto var(--modal-example-text-margin-right) auto
+    var(--modal-example-text-margin-right);
 }
 
 /* wrap for energizer gifs */
@@ -651,16 +666,23 @@ so it will only break in the middle of the row */
 }
 
 /* close 'X' for modal and super modal */
-.close, #superClose {
+.close,
+#superClose {
   background: url(../svg/close.svg) no-repeat center;
   cursor: pointer;
 }
 
-.close:hover, #superClose:hover, #superCloseWrap:hover > #superClose {
+.close:hover,
+#superClose:hover,
+#superCloseWrap:hover > #superClose {
   background: url(../svg/closeHover.svg) no-repeat center;
 }
 
-.close, #superClose, .close:hover, #superClose:hover, #superCloseWrap:hover #superClose {
+.close,
+#superClose,
+.close:hover,
+#superClose:hover,
+#superCloseWrap:hover #superClose {
   background-size: auto 100%;
   height: var(--font-size-xs);
   width: var(--font-size-xs);
@@ -716,19 +738,22 @@ so it will only break in the middle of the row */
 .field {
   display: flex;
   flex-direction: column;
-  margin: calc(var(--font-size-xs)/2) 0;
+  margin: calc(var(--font-size-xs) / 2) 0;
 }
 
 label {
   font-weight: 700;
-  margin: calc(var(--font-size-xs)/5) 0;
+  margin: calc(var(--font-size-xs) / 5) 0;
 }
 
-label, input, textarea {
+label,
+input,
+textarea {
   font-size: var(--font-size-xs);
 }
 
-input, textarea {
+input,
+textarea {
   padding: calc(var(--font-size-xs) / 2);
   border: 2px solid var(--accent1-color);
 }
