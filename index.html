@@ -96,7 +96,7 @@
           <a class="newGames" id="rar">Rock Against Reagan</a>.
         </p>
         <span id="newGames"
-          ><img id="beaverGif" src="assets/gif/beaver/beaver.gif" /><img
+          ><img id="beaverGif" src="assets/png/beaver/beaver.png" /><img
             id="puddingGif"
             src="assets/gif/reagan/pudding.gif"
         /></span>
@@ -127,6 +127,34 @@
                 GitHub
               </a>
               <a class="button" href="https://rrbs.org"> View! </a>
+            </div>
+          </div>
+          <!-- pixelator container -->
+          <div class="exampleThumb">
+            <div class="thumbFilter"></div>
+            <img src="assets/png/pixelator/bass.png" />
+            <div class="title">
+              <p>Pixelator</p>
+            </div>
+            <div class="technologies">
+              <p>Technologies used: HTML5, Canvas API, CSS3, JavaScript</p>
+            </div>
+            <div>
+              <p>
+                Web app that automates the conversion of images into detailed
+                pixel art.
+              </p>
+            </div>
+            <div class="projectLinks">
+              <div class="button moreInfo" data-id="#pixelatorModal">
+                More info
+              </div>
+              <a
+                class="button"
+                href="https://github.com/stevenrobday/Pixelator"
+              >
+                GitHub
+              </a>
             </div>
           </div>
           <!-- feed reader container -->
@@ -182,7 +210,7 @@
             </div>
           </div>
           <!-- profiles container -->
-          <div class="exampleThumb">
+          <!-- <div class="exampleThumb">
             <div class="thumbFilter"></div>
             <img src="assets/png/profiles/profile.png" />
             <div class="title">
@@ -205,9 +233,9 @@
                 GitHub
               </a>
             </div>
-          </div>
+          </div> -->
           <!-- reports container -->
-          <div class="exampleThumb">
+          <!-- <div class="exampleThumb">
             <div class="thumbFilter"></div>
             <img src="assets/png/reports/reportsThumb.png" />
             <div class="title">
@@ -230,7 +258,7 @@
                 GitHub
               </a>
             </div>
-          </div>
+          </div> -->
           <!-- pacmental container -->
           <div class="exampleThumb">
             <div class="thumbFilter"></div>
@@ -527,6 +555,83 @@
                 <img
                   class="thumbnail"
                   src="assets/png/rrbs/passwordReset.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- pixelator reader modal -->
+      <div class="modal" id="pixelatorModal">
+        <div class="modalWrapper">
+          <div class="modalHeader">
+            <div></div>
+            <div class="modalTitle">Pixelator</div>
+            <div class="close"></div>
+          </div>
+          <div class="modalBody">
+            <div class="summary">
+              <p>
+                Website that automates the conversion of images into detailed
+                pixel art. I made this when I realized doing it pixel by pixel
+                took far too long, and using "color indexing" in any photo
+                editor removed too much detail.
+              </p>
+            </div>
+            <div class="exampleWrap accent2">
+              <div class="exampleText">
+                The app requires the original image, and a mask of its different
+                regions. The colors of the mask appear in the left hand column.
+                The top row is the 4 colors the image will be converted to, with
+                dithering colors in-between (these have the red border). The app
+                will automatically generate starting values. The values entered
+                can be anywhere from 0 to 255.
+              </div>
+              <div class="exampleImg">
+                <img
+                  class="thumbnail"
+                  src="assets/png/pixelator/pixelatorStart.png"
+                />
+              </div>
+            </div>
+            <div class="exampleWrap">
+              <div class="exampleText">The app includes a color picker.</div>
+              <div class="exampleImg">
+                <img
+                  class="thumbnail"
+                  src="assets/png/pixelator/colorPicker.png"
+                />
+              </div>
+            </div>
+            <div class="exampleWrap accent2">
+              <div class="exampleText">
+                The pixelated image on the right will be generated on the fly as
+                values are adjusted. Dithered colors can be disabled. A CSV file
+                of the values can be exported and imported.
+              </div>
+              <div class="exampleImg">
+                <img
+                  class="thumbnail"
+                  src="assets/gif/pixelator/adjustValues.gif"
+                />
+              </div>
+            </div>
+            <div class="exampleWrap">
+              <div class="exampleText">
+                Touched up and animated gif of the final result.
+              </div>
+              <div class="exampleImg">
+                <img class="thumbnail" src="assets/gif/pixelator/bass.gif" />
+              </div>
+            </div>
+            <div class="exampleWrap accent2">
+              <div class="exampleText">
+                Here's that bass after getting caught.
+              </div>
+              <div class="exampleImg">
+                <img
+                  class="thumbnail"
+                  src="assets/gif/pixelator/bassCaught.gif"
                 />
               </div>
             </div>
@@ -1200,7 +1305,7 @@
     </main>
     <!-- FOOTER -->
     <footer>
-      <div>© 2021</div>
+      <div>© 2023</div>
     </footer>
   </body>
 </html>
